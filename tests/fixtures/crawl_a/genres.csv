@@ -1,0 +1,5 @@
+genre,is_target_category
+Action,True
+Comedy,False
+Drama,True
+Sci-Fi,True

@@ -1,0 +1,4 @@
+person_id,primary_name,birth_year,death_year,primary_professions,known_for_title_ids,imdb_url,name_record_missing
+nm0000001,Ann Actor,1960,,"[""actress"", ""producer""]","[""tt0000001"", ""tt9999999""]",https://www.imdb.com/name/nm0000001/,False
+nm0000002,Bob Director,1950,2020,"[""director"", ""writer""]","[""tt0000002""]",https://www.imdb.com/name/nm0000002/,False
+nm0000003,Cat Composer,,,"[""composer""]",[],https://www.imdb.com/name/nm0000003/,False

@@ -1,0 +1,6 @@
+{
+  "sources": [
+    {"dataset": "title.basics", "url": "https://datasets.imdbws.com/title.basics.tsv.gz"},
+    {"dataset": "name.basics", "url": "https://datasets.imdbws.com/name.basics.tsv.gz"}
+  ]
+}

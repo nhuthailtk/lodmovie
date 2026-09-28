@@ -1,0 +1,6 @@
+imdb_id,ordering,person_id,category,job,characters
+tt0000001,1,nm0000001,actress,,"[""Hero"", ""Villain""]"
+tt0000001,2,nm0000002,director,,
+tt0000001,3,nm0000003,composer,composer,
+tt0000002,1,nm0000002,director,,
+tt0000003,1,nm0000001,actress,,"[""Captain""]"

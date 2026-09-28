@@ -1,0 +1,4 @@
+imdb_id,primary_title,original_title,title_type,is_adult,start_year,end_year,runtime_minutes,average_rating,num_votes,genres,selected_for_categories,imdb_url
+tt0000001,Alpha Movie,Alpha Film,movie,False,1990,,100,7.5,1000,"[""Action"", ""Comedy""]","[""Action""]",https://www.imdb.com/title/tt0000001/
+tt0000002,Beta Movie,Beta Movie,movie,False,2001,,,6.0,2000,"[""Drama""]","[""Drama""]",https://www.imdb.com/title/tt0000002/
+tt0000003,Gamma Movie,第一类型危险,movie,False,2010,,95,5.5,1500,"[""Sci-Fi""]","[""Sci-Fi""]",https://www.imdb.com/title/tt0000003/

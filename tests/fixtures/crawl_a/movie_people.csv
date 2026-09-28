@@ -1,0 +1,6 @@
+imdb_id,person_id,role,sources
+tt0000001,nm0000001,actor,"[""title.principals""]"
+tt0000001,nm0000002,director,"[""title.crew""]"
+tt0000002,nm0000002,director,"[""title.crew"", ""title.principals""]"
+tt0000002,nm0000002,writer,"[""title.crew""]"
+tt0000003,nm0000001,actor,"[""title.principals""]"

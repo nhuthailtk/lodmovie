@@ -1,0 +1,3 @@
+person_id,primary_name,birth_year,death_year,primary_professions,known_for_title_ids,imdb_url,name_record_missing
+nm0000001,Ann Actor,1960,,"[""actress"", ""producer""]","[""tt0000001"", ""tt9999999""]",https://www.imdb.com/name/nm0000001/,False
+nm0000004,Dan Writer,1970,,"[""writer"", ""director""]","[""tt0000005""]",https://www.imdb.com/name/nm0000004/,False
