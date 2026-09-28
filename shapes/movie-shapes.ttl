@@ -1,0 +1,94 @@
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix mo:   <https://lod-movie.felix-nguyen.io.vn/ontology#> .
+@prefix ms:   <https://lod-movie.felix-nguyen.io.vn/shapes#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+ms:MovieShape a sh:NodeShape ;
+    sh:targetClass mo:Movie ;
+    sh:property [
+        sh:path rdfs:label ; sh:minCount 1 ; sh:uniqueLang true ;
+        sh:message "A movie needs a label, and at most one label per language."
+    ] , [
+        sh:path mo:primaryTitle ; sh:minCount 1 ; sh:maxCount 1
+    ] , [
+        sh:path mo:imdbId ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^tt[0-9]+$"
+    ] , [
+        sh:path mo:releaseYear ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer
+    ] , [
+        sh:path mo:runtimeMinutes ; sh:maxCount 1 ; sh:datatype xsd:integer
+    ] , [
+        sh:path mo:numVotes ; sh:maxCount 1 ; sh:datatype xsd:integer
+    ] , [
+        sh:path mo:averageRating ; sh:maxCount 1 ; sh:datatype xsd:decimal ;
+        sh:minInclusive 0 ; sh:maxInclusive 10
+    ] , [
+        sh:path mo:hasGenre ; sh:minCount 1 ; sh:class mo:Genre
+    ] , [
+        sh:path mo:directedBy ; sh:class mo:Person
+    ] , [
+        sh:path mo:hasActor ; sh:class mo:Person
+    ] , [
+        sh:path mo:writtenBy ; sh:class mo:Person
+    ] , [
+        sh:path mo:hasCredit ; sh:class mo:Credit
+    ] .
+
+ms:MovieTitleLanguagesShape a sh:NodeShape ;
+    sh:targetClass mo:Movie ;
+    sh:property [
+        sh:path rdfs:label ; sh:severity sh:Warning ;
+        sh:qualifiedValueShape [ sh:languageIn ( "en" ) ] ; sh:qualifiedMinCount 1 ;
+        sh:message "Movie has no English (@en) title; add it to translations/movie_titles.csv."
+    ] , [
+        sh:path rdfs:label ; sh:severity sh:Warning ;
+        sh:qualifiedValueShape [ sh:languageIn ( "vi" ) ] ; sh:qualifiedMinCount 1 ;
+        sh:message "Movie has no Vietnamese (@vi) title; add it to translations/movie_titles.csv."
+    ] .
+
+ms:PersonShape a sh:NodeShape ;
+    sh:targetClass mo:Person ;
+    sh:property [
+        sh:path rdfs:label ; sh:minCount 1 ; sh:maxCount 1
+    ] , [
+        sh:path mo:imdbId ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^nm[0-9]+$"
+    ] , [
+        sh:path mo:birthYear ; sh:maxCount 1 ; sh:datatype xsd:integer
+    ] , [
+        sh:path mo:deathYear ; sh:maxCount 1 ; sh:datatype xsd:integer
+    ] , [
+        sh:path mo:primaryProfession ; sh:class mo:Profession
+    ] , [
+        sh:path mo:knownFor ; sh:class mo:Movie
+    ] .
+
+ms:CreditShape a sh:NodeShape ;
+    sh:targetClass mo:Credit ;
+    sh:property [
+        sh:path mo:creditedPerson ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mo:Person
+    ] , [
+        sh:path mo:creditRole ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mo:Profession
+    ] , [
+        sh:path mo:billingOrder ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer
+    ] , [
+        sh:path [ sh:inversePath mo:hasCredit ] ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mo:Movie ;
+        sh:message "A credit must belong to exactly one movie."
+    ] .
+
+ms:ConceptShape a sh:NodeShape ;
+    sh:targetClass mo:Genre , mo:Profession ;
+    sh:property [
+        sh:path skos:prefLabel ; sh:minCount 1
+    ] , [
+        sh:path skos:inScheme ; sh:minCount 1 ; sh:maxCount 1
+    ] .
+
+ms:SameAsShape a sh:NodeShape ;
+    sh:targetSubjectsOf owl:sameAs ;
+    sh:property [
+        sh:path owl:sameAs ; sh:nodeKind sh:IRI ;
+        sh:pattern "^(http://www\\.wikidata\\.org/entity/Q[0-9]+|http://dbpedia\\.org/resource/.+)$" ;
+        sh:message "owl:sameAs must point to a Wikidata entity or a DBpedia resource."
+    ] .
