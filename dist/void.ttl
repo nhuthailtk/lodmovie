@@ -1,0 +1,78 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mo: <https://lod-movie.felix-nguyen.io.vn/ontology#> .
+@prefix movie: <https://lod-movie.felix-nguyen.io.vn/resource/movie/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://dbpedia.org/> a void:Dataset .
+
+<http://www.wikidata.org/> a void:Dataset .
+
+<https://lod-movie.felix-nguyen.io.vn/dataset/linkset/dbpedia> a void:Linkset ;
+    void:linkPredicate owl:sameAs,
+        skos:closeMatch,
+        skos:exactMatch ;
+    void:objectsTarget <http://dbpedia.org/> ;
+    void:subjectsTarget <https://lod-movie.felix-nguyen.io.vn/dataset> ;
+    void:triples 3063 .
+
+<https://lod-movie.felix-nguyen.io.vn/dataset/linkset/wikidata> a void:Linkset ;
+    void:linkPredicate owl:sameAs,
+        skos:closeMatch,
+        skos:exactMatch ;
+    void:objectsTarget <http://www.wikidata.org/> ;
+    void:subjectsTarget <https://lod-movie.felix-nguyen.io.vn/dataset> ;
+    void:triples 4099 .
+
+<https://lod-movie.felix-nguyen.io.vn/dataset/partition/credit> void:class mo:Credit ;
+    void:entities 6204 .
+
+<https://lod-movie.felix-nguyen.io.vn/dataset/partition/genre> void:class mo:Genre ;
+    void:entities 19 .
+
+<https://lod-movie.felix-nguyen.io.vn/dataset/partition/movie> void:class mo:Movie ;
+    void:entities 300 .
+
+<https://lod-movie.felix-nguyen.io.vn/dataset/partition/person> void:class mo:Person ;
+    void:entities 5476 .
+
+<https://lod-movie.felix-nguyen.io.vn/dataset/partition/profession> void:class mo:Profession ;
+    void:entities 42 .
+
+<https://lod-movie.felix-nguyen.io.vn/dataset> a void:Dataset,
+        dcat:Dataset ;
+    dcterms:description "Linked Open Data about 300 movies and 5476 people from the IMDb non-commercial datasets, linked to Wikidata and DBpedia. English and Vietnamese titles were translated with Claude Code (300 machine-translated, 0 reviewed by a person)."@en ;
+    dcterms:license <https://developer.imdb.com/non-commercial-datasets/> ;
+    dcterms:modified "2026-09-28T08:57:32+00:00"^^xsd:dateTime ;
+    dcterms:source <https://datasets.imdbws.com/name.basics.tsv.gz>,
+        <https://datasets.imdbws.com/title.basics.tsv.gz>,
+        <https://datasets.imdbws.com/title.crew.tsv.gz>,
+        <https://datasets.imdbws.com/title.principals.tsv.gz>,
+        <https://datasets.imdbws.com/title.ratings.tsv.gz> ;
+    dcterms:title "LOD Movie"@en ;
+    void:classPartition <https://lod-movie.felix-nguyen.io.vn/dataset/partition/credit>,
+        <https://lod-movie.felix-nguyen.io.vn/dataset/partition/genre>,
+        <https://lod-movie.felix-nguyen.io.vn/dataset/partition/movie>,
+        <https://lod-movie.felix-nguyen.io.vn/dataset/partition/person>,
+        <https://lod-movie.felix-nguyen.io.vn/dataset/partition/profession> ;
+    void:dataDump <https://lod-movie.felix-nguyen.io.vn/downloads/all.ttl.gz> ;
+    void:entities 12043 ;
+    void:exampleResource movie:tt0079718 ;
+    void:sparqlEndpoint <https://lod-movie.felix-nguyen.io.vn/sparql> ;
+    void:subset <https://lod-movie.felix-nguyen.io.vn/dataset/linkset/dbpedia>,
+        <https://lod-movie.felix-nguyen.io.vn/dataset/linkset/wikidata> ;
+    void:triples 104247 ;
+    void:uriSpace "https://lod-movie.felix-nguyen.io.vn/resource/" ;
+    void:vocabulary dbo:,
+        skos:,
+        foaf:,
+        mo:,
+        schema: ;
+    owl:versionInfo "1.0.0" .
+
