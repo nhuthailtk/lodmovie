@@ -45,3 +45,25 @@ py -3.14 -m venv .venv
    existing URIs and links do not change.
 
 To correct a title, edit `translations/movie_titles.csv` and set `source` to `reviewed`.
+
+## Website (`web/`)
+
+Next.js app that serves `dist/` as Linked Data at `https://lod-movie.felix-nguyen.io.vn/`:
+
+| URL | What |
+|---|---|
+| `/sparql` | SPARQL 1.1 endpoint (GET/POST) and YASGUI editor |
+| `/resource/{type}/{id}` | Linked Data URIs — 303 to `/page/…` (HTML) or `/data/….ttl|jsonld|nt|rdf` |
+| `/ontology`, `/dataset` | Ontology and VoID URIs — HTML or RDF by `Accept` |
+| `/movies`, `/people`, `/search` | Browse and search |
+| `/explore` | Interactive triple explorer |
+
+```bash
+cd web
+npm install
+npm run dev        # http://localhost:3000 (copies ../dist first)
+npm run build && npm start
+```
+
+Deploy: Vercel project with root directory `web/` and "Include files outside the root directory" enabled.
+New data: run the pipeline, commit `dist/`, push — Vercel rebuilds the site.
