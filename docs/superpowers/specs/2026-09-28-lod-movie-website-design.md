@@ -61,7 +61,6 @@ repo/
     src/lib/…                ← store, SPARQL, content negotiation, queries, Wikidata client
     src/app/…                ← routes (pages and route handlers)
     src/components/…         ← UI components (client components for YASGUI, Cytoscape, Wikidata panel)
-    tests/…                  ← Vitest
 ```
 
 ### 3.1 Triple store (`src/lib/store.ts`)
@@ -259,23 +258,18 @@ every feature; a "try a query" snippet that opens example 1 in the editor.
 | Data files missing at build | build fails in `prebuild` with the missing file names |
 | Store fails to load at runtime | `500` page "dataset unavailable"; logged |
 
-## 8. Testing
+## 8. Verification
 
-- **Vitest unit tests** (`web/tests/`):
-  - `conneg`: Accept parsing with q-values, HTML vs RDF decisions, extensions ↔ media types.
-  - `store`: loads a small fixture (subset of `dist`), named graphs present, union default graph.
-  - `sparql` handler: GET/POST forms, result formats, `LIMIT` injection and header, UPDATE rejected,
-    syntax error → 400, CORS headers.
-  - `/resource` handler: 303 targets per Accept, 404 for unknown, `Vary: Accept`.
-  - `/data` handler: formats per extension, content types, 404.
-  - `queries`: browse/filter query builders produce the expected rows on the fixture.
-  - `/api/wikidata`: response mapping from a recorded Wikidata result; QID validation; error path
-    (network mocked — tests never touch the network).
-- **Build check:** `npm run build` succeeds (catches type errors and pre-rendering failures).
-- **Local smoke script** (`scripts/smoke.mjs`): against `npm start` or a deployment URL, checks the
-  303s, RDF formats, the SPARQL endpoint with each result format, and that key pages return 200.
-- **Manual browser check** before deploy: YASGUI runs an example; ontology diagram and explorer
-  render, drag and expand; Wikidata panel loads; layout works at phone width.
+By the user's decision there is **no automated test suite and no smoke-test script** for this
+sub-project. Verification is:
+
+- **Build check:** `npm run build` succeeds (type errors and pre-rendering failures).
+- **Manual checks during development** (not committed): `curl` requests against `npm start` for the
+  303 redirects, RDF formats, `/ontology` and `/dataset` negotiation, and the SPARQL endpoint with
+  each result format, `LIMIT` injection and UPDATE rejection.
+- **Manual browser check** before deploy and after deploy on the live domain: YASGUI runs an
+  example; browse filters work; ontology diagram and explorer render, drag and expand; Wikidata panel
+  loads; layout works at phone width.
 
 ## 9. Deployment
 
@@ -283,7 +277,7 @@ every feature; a "try a query" snippet that opens example 1 in the editor.
   `web/`, framework Next.js, "Include files outside the root directory" enabled (needed for
   `../dist`). No environment variables are required.
 - Assign domain `lod-movie.felix-nguyen.io.vn` to the project (DNS already points to Vercel).
-- After deploy, run `node scripts/smoke.mjs https://lod-movie.felix-nguyen.io.vn`.
+- After deploy, repeat the manual checks (§8) on `https://lod-movie.felix-nguyen.io.vn`.
 - Redeploy flow for new data: run the pipeline → commit `dist/` → push → Vercel rebuilds.
 
 ## 10. Growth and limits
