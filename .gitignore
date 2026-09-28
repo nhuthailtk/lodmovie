@@ -10,3 +10,5 @@ translations/todo.csv
 dist.tmp/
 .superpowers/
 dist.old/
+web/node_modules/
+web/.next/

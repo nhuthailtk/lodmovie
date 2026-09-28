@@ -1,0 +1,33 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "predev": "node scripts/prepare-data.mjs",
+    "dev": "next dev",
+    "prebuild": "node scripts/prepare-data.mjs",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@zazuko/yasgui": "^4.6.2",
+    "cytoscape": "^3.34.3",
+    "next": "16.3.6",
+    "oxigraph": "^0.5.11",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "sparqljs": "^3.7.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/sparqljs": "^3.1.12",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
