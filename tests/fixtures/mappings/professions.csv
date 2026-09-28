@@ -1,0 +1,3 @@
+source_value,wikidata_qid,dbpedia_resource,match_type
+actress,Q33999,Actor,close
+director,Q2526255,Film_director,exact

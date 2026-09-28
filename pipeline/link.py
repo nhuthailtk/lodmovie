@@ -13,15 +13,20 @@ from pathlib import Path
 from urllib.parse import unquote
 
 import requests
-from rdflib import URIRef
+from rdflib import Graph, URIRef
+from rdflib.namespace import OWL, SKOS
 
 from .config import (
     DBR,
     USER_AGENT,
+    WD,
     WIKIDATA_BATCH_SIZE,
     WIKIDATA_ENDPOINT,
     WIKIDATA_PAUSE_SECONDS,
+    bind_namespaces,
 )
+from .load import Crawl
+from .uris import genre_uri, movie_uri, person_uri, profession_uri
 
 STORE_FIELDS = ["imdb_id", "wikidata_qid", "enwiki_title", "checked_at"]
 
@@ -173,3 +178,93 @@ def resolve_links(
                 warnings.append(f"{imdb_id}: several Wikidata items {[qid, *others]}, kept {qid}")
             store[imdb_id] = LinkRow(imdb_id, qid, title, checked_at)
     return warnings
+
+
+MAPPING_FIELDS = ["source_value", "wikidata_qid", "dbpedia_resource", "match_type"]
+MATCH_PREDICATE = {"exact": SKOS.exactMatch, "close": SKOS.closeMatch}
+
+
+@dataclass(frozen=True)
+class Mapping:
+    source_value: str
+    wikidata_qid: str
+    dbpedia_resource: str  # English Wikipedia / DBpedia title, may be empty
+    match_type: str  # "exact" or "close"
+
+
+def load_mappings(path: Path) -> dict[str, Mapping]:
+    """Hand-checked concept mappings; rows without a QID mean 'deliberately unmapped'."""
+    if not path.exists():
+        return {}
+    mappings: dict[str, Mapping] = {}
+    with path.open(encoding="utf-8-sig", newline="") as f:
+        for row in csv.DictReader(f):
+            mapping = Mapping(**{k: (row.get(k) or "").strip() for k in MAPPING_FIELDS})
+            if not mapping.wikidata_qid:
+                continue
+            if mapping.match_type not in MATCH_PREDICATE:
+                raise ValueError(f"{path}: {mapping.source_value}: match_type must be exact or close")
+            mappings[mapping.source_value] = mapping
+    return mappings
+
+
+def build_link_graph(
+    crawl: Crawl,
+    movie_links: dict[str, LinkRow],
+    person_links: dict[str, LinkRow],
+    genre_map: dict[str, Mapping],
+    profession_map: dict[str, Mapping],
+) -> tuple[Graph, dict]:
+    graph = bind_namespaces(Graph())
+    report = {
+        "movies": _entity_links(graph, crawl.movies.keys(), movie_links, movie_uri),
+        "people": _entity_links(graph, crawl.people.keys(), person_links, person_uri),
+        "genres": _concept_links(graph, crawl.genres.keys(), genre_map, genre_uri),
+        "professions": _concept_links(graph, crawl.professions, profession_map, profession_uri),
+    }
+    return graph, report
+
+
+def _entity_links(graph: Graph, ids, store: dict[str, LinkRow], to_uri) -> dict:
+    ids = sorted(ids)
+    wikidata = dbpedia = 0
+    unmatched, unchecked = [], []
+    for imdb_id in ids:
+        row = store.get(imdb_id)
+        if row is None:
+            unchecked.append(imdb_id)
+            continue
+        if not row.wikidata_qid:
+            unmatched.append(imdb_id)
+            continue
+        subject = to_uri(imdb_id)
+        graph.add((subject, OWL.sameAs, WD[row.wikidata_qid]))
+        wikidata += 1
+        if row.enwiki_title:
+            graph.add((subject, OWL.sameAs, dbpedia_iri(row.enwiki_title)))
+            dbpedia += 1
+    total = len(ids)
+    return {
+        "total": total,
+        "wikidata": wikidata,
+        "dbpedia": dbpedia,
+        "wikidata_pct": round(100 * wikidata / total, 1) if total else 0.0,
+        "unmatched": unmatched,
+        "unchecked": unchecked,
+    }
+
+
+def _concept_links(graph: Graph, values, mappings: dict[str, Mapping], to_uri) -> dict:
+    values = sorted(values)
+    unmapped = []
+    for value in values:
+        mapping = mappings.get(value)
+        if mapping is None:
+            unmapped.append(value)
+            continue
+        predicate = MATCH_PREDICATE[mapping.match_type]
+        subject = to_uri(value)
+        graph.add((subject, predicate, WD[mapping.wikidata_qid]))
+        if mapping.dbpedia_resource:
+            graph.add((subject, predicate, dbpedia_iri(mapping.dbpedia_resource)))
+    return {"total": len(values), "mapped": len(values) - len(unmapped), "unmapped": unmapped}
