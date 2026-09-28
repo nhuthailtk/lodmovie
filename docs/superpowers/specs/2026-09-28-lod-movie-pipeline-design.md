@@ -21,8 +21,8 @@ is used only as a reference.
 4. All output passes SHACL validation; the build refuses to publish invalid data.
 5. The dataset can grow: later crawls are added without changing existing URIs or re-querying
    already-linked IDs.
-6. Every movie has an English and a Vietnamese title (language-tagged `@en` / `@vi`), produced
-   by our own translation step and stored in our dataset.
+6. Every movie has an English and a Vietnamese title (language-tagged `@en` / `@vi`),
+   translated by Claude Code and stored in our dataset.
 
 **Non-goals**
 
@@ -153,10 +153,11 @@ Input: typed records from `load.py`. Output: `rdflib.Graph` for `dist/data.nt`.
   row gets only `mo:primaryTitle` plus a fallback `rdfs:label` without a language tag, and a
   build warning.
 
-## 5a. Bilingual movie titles (English + Vietnamese) — `pipeline/translate.py`
+## 5a. Bilingual movie titles (English + Vietnamese) — `translations/movie_titles.csv`
 
-The crawl has no translated titles (`with_akas: false`), so we produce them ourselves with the
-Claude API and store them **inside our dataset**.
+The crawl has no translated titles (`with_akas: false`), so we produce them ourselves and store
+them **inside our dataset**. The translation is done **by Claude Code in a working session**
+(no API key, no API script, no cost); the pipeline only reads the result.
 
 ### Translation store
 
@@ -168,34 +169,29 @@ Claude API and store them **inside our dataset**.
 | `primary_title` | Source title the translation was made from (to detect changes) |
 | `title_en` | English title |
 | `title_vi` | Vietnamese title |
-| `source` | `machine` (from the API) or `reviewed` (checked/edited by a person) |
-| `model` | Model ID used, e.g. `claude-opus-5` (empty for manual rows) |
-| `translated_at` | ISO timestamp |
+| `source` | `machine` (translated by Claude Code) or `reviewed` (checked/edited by a person) |
+| `translated_at` | ISO date |
 
-- Rows with `source = reviewed` are **never overwritten** by the script, even with `--refresh`.
-- To correct a title: edit the CSV and set `source` to `reviewed`.
+- To correct a title: edit the CSV and set `source` to `reviewed`. Reviewed rows are never
+  replaced when re-translating.
 
-### Translation step
+### Translation rules (used by Claude Code)
 
-Separate command: `python -m pipeline.translate [--input DIR ...] [--refresh] [--dry-run]`.
-It is **not** part of `pipeline.build`, so builds stay offline, deterministic and free.
+- If a well-known official English / Vietnamese release title exists, use it; otherwise give
+  a natural translation (not word-for-word). Keep proper names (people, places, franchises).
+- `title_en` equals the primary title when that is already English; otherwise use the
+  English release title or translate `original_title`.
+- Context per movie: primary title, original title, year, genres.
+- Vietnamese uses proper diacritics, UTF-8, sentence-style capitalisation.
 
-- Selects movies with no row, or whose `primary_title` changed since translation
-  (`--refresh`: all non-reviewed rows). `--dry-run` lists them without calling the API.
-- Batches ~50 movies per request. Each item sends `imdb_id`, primary title, original title,
-  year and genres as context.
-- Instructions to the model: if a well-known official English / Vietnamese release title
-  exists, use it; otherwise give a natural translation; keep proper names; `title_en` equals
-  the primary title when that is already English.
-- Anthropic Python SDK (`anthropic`), model `claude-opus-5`, structured output via
-  `client.messages.parse()` with a Pydantic schema (list of `{imdb_id, title_en, title_vi}`)
-  so responses are always valid JSON. Server-side refusal fallbacks enabled; the script
-  checks `stop_reason` before reading content.
-- Every returned `imdb_id` must match a requested one; missing / empty items are retried once
-  in a smaller batch, then left untranslated and reported.
-- Credentials: `ANTHROPIC_API_KEY` or an `ant auth login` profile; the key is never written
-  to the repo.
-- Expected cost for the current 300 movies: well under US$1.
+### Worklist helper — `pipeline/translate.py` (no network)
+
+`python -m pipeline.translate --todo [--input DIR ...]` writes `translations/todo.csv` with
+the movies that need translating (no row, or `primary_title` changed and not `reviewed`), plus
+context columns (`original_title`, `year`, `genres`). Claude Code fills in `title_en` /
+`title_vi`, then `python -m pipeline.translate --merge` validates the rows (every ID known,
+both titles non-empty, no duplicates) and merges them into `movie_titles.csv` with
+`source = machine`. This makes translating future imports a repeatable two-command step.
 
 ### RDF output
 
@@ -207,9 +203,9 @@ It is **not** part of `pipeline.build`, so builds stay offline, deterministic an
     schema:name "Time Bandits"@en , "<Vietnamese title>"@vi .
 ```
 
-Provenance: per-title origin lives in the CSV (`source`, `model`); `void.ttl` states that
-Vietnamese and English labels are machine-translated with Claude unless marked reviewed, and
-reports the count of machine vs reviewed titles.
+Provenance: per-title origin lives in the CSV (`source`); `void.ttl` states that English and
+Vietnamese labels were translated with Claude Code unless marked reviewed, and reports the count
+of machine vs reviewed titles.
 
 ## 6. Linking (5★) — `pipeline/link.py`
 
@@ -298,8 +294,8 @@ Plus Python checks: every referenced IRI in our namespace has a type; no blank n
 - Nothing assumes counts or a fixed genre list; unknown genres/professions become concepts and
   are reported as unmapped until added to `mappings/`.
 - Every build records `dcterms:modified` and a dataset version in VoID.
-- New movies: run `python -m pipeline.translate` — only untranslated movies are sent to the API;
-  existing (especially reviewed) titles are untouched.
+- New movies: `python -m pipeline.translate --todo` lists only untranslated movies; Claude Code
+  translates them; `--merge` adds them. Existing (especially reviewed) titles are untouched.
 - Known ceiling for sub-project 2: in-memory serverless Oxigraph is comfortable up to
   ~1M triples (~8–10× today). Beyond that, move to a hosted triple store behind the same
   `/sparql` URL.
@@ -319,7 +315,7 @@ code/
     load.py        CSV → dataclasses; multi-input merge/dedupe; row-level warnings
     transform.py   records → data graph (4★)
     link.py        Wikidata client, link store, link graph (5★)
-    translate.py   Claude API title translation → translations/movie_titles.csv (separate CLI)
+    translate.py   translation worklist (--todo) and validated merge (--merge); no network
     void.py        dataset description with computed stats
     validate.py    SHACL + referential checks
     build.py       CLI entry point
@@ -336,8 +332,7 @@ directory and moved into `dist/` only after validation passes.
 `dist/` contents: `ontology.ttl`, `data.nt`, `links.nt`, `void.ttl`, `all.ttl.gz`
 (everything combined), `link_report.json`, `build_report.json`.
 
-Dependencies: `rdflib`, `pyshacl`, `requests`, `anthropic`, `pydantic`, `pytest` in
-`requirements.txt`. Target
+Dependencies: `rdflib`, `pyshacl`, `requests`, `pytest` in `requirements.txt`. Target
 Python 3.14 (installed); if a dependency is incompatible, pin Python 3.12 via a venv.
 
 ## 11. Error handling
@@ -349,7 +344,7 @@ Python 3.14 (installed); if a dependency is incompatible, pin Python 3.12 via a 
 | SHACL or referential violation | Exit non-zero, print first 20 violations, leave `dist/` untouched |
 | Unknown genre / profession | Create concept, warn as unmapped |
 | Movie without translation row | Untagged fallback label, warn; build continues |
-| Translation API error / refusal | `translate` reports affected IDs, writes the rows that succeeded, exits non-zero |
+| Invalid rows in `todo.csv` on merge | `--merge` rejects them with reasons, merges the valid rows, exits non-zero |
 
 Console summary: input counts, triples per layer, link coverage, warnings.
 
@@ -362,9 +357,9 @@ Console summary: input counts, triples per layer, link coverage, warnings.
 - Load: BOM handling, JSON list parsing, malformed-row skipping, multi-input dedupe.
 - Link: recorded Wikidata responses (no network); lowest-QID rule; DBpedia IRI derivation;
   incremental mode queries only new IDs; offline fallback.
-- Translate: fake Anthropic client (no network, no cost); only new / changed movies are sent;
-  `reviewed` rows never overwritten; mismatched or missing IDs handled; transform emits
-  `@en` / `@vi` labels and the untagged fallback.
+- Translate: `--todo` lists only new / changed movies; `--merge` rejects unknown IDs and empty
+  titles and never overwrites `reviewed` rows; transform emits `@en` / `@vi` labels and the
+  untagged fallback.
 - Validation: a deliberately broken graph fails the SHACL shapes.
 - Growth: build A, then A+B → every triple about A's resources is unchanged.
 - Smoke: full build on the real `data/` passes validation.
