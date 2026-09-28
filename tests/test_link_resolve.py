@@ -135,3 +135,20 @@ def test_resolve_keeps_successful_batches_on_failure():
     assert sorted(store) == ["tt0", "tt1"]
     assert store["tt0"].wikidata_qid == "Q9"
     assert any("2 ID(s) left unchecked" in w for w in warnings)
+
+
+class BrokenJsonResponse(FakeResponse):
+    def json(self):
+        raise requests.JSONDecodeError("Expecting value", "<html>", 0)
+
+
+def test_lookup_non_json_body_raises_wikidata_error():
+    session = FakeSession([BrokenJsonResponse(200)])
+    with pytest.raises(WikidataError, match="JSON"):
+        WikidataClient(session=session, sleep=no_sleep).lookup(["tt0000001"])
+
+
+def test_lookup_unexpected_json_raises_wikidata_error():
+    session = FakeSession([FakeResponse(200, {"error": "maintenance"})])
+    with pytest.raises(WikidataError, match="unexpected"):
+        WikidataClient(session=session, sleep=no_sleep).lookup(["tt0000001"])

@@ -9,8 +9,8 @@
 ms:MovieShape a sh:NodeShape ;
     sh:targetClass mo:Movie ;
     sh:property [
-        sh:path rdfs:label ; sh:minCount 1 ; sh:uniqueLang true ;
-        sh:message "A movie needs a label, and at most one label per language."
+        sh:path rdfs:label ; sh:minCount 1 ; sh:uniqueLang true ; sh:minLength 1 ;
+        sh:message "A movie needs non-empty labels, and at most one label per language."
     ] , [
         sh:path mo:primaryTitle ; sh:minCount 1 ; sh:maxCount 1
     ] , [

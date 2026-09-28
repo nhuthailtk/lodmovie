@@ -71,11 +71,14 @@ def run_build(
     if not offline and client is None:
         client = WikidataClient(cache_dir=links_dir / "cache")
     active_client = None if offline else client
-    link_warnings = resolve_links(crawl.movies.keys(), movie_store, active_client, refresh=refresh)
-    link_warnings += resolve_links(crawl.people.keys(), person_store, active_client, refresh=refresh)
-    if not offline:
-        save_link_store(links_dir / "movies.csv", movie_store)
-        save_link_store(links_dir / "people.csv", person_store)
+    try:
+        link_warnings = resolve_links(crawl.movies.keys(), movie_store, active_client, refresh=refresh)
+        link_warnings += resolve_links(crawl.people.keys(), person_store, active_client, refresh=refresh)
+    finally:
+        # Keep every batch already fetched, even on Ctrl-C or an unexpected error.
+        if not offline:
+            save_link_store(links_dir / "movies.csv", movie_store)
+            save_link_store(links_dir / "people.csv", person_store)
 
     links, link_report = build_link_graph(
         crawl,
@@ -138,9 +141,22 @@ def _write_outputs(out: Path, ontology_path: Path, ontology: Graph, data: Graph,
     for name, report in (("link_report.json", link_report), ("build_report.json", build_report)):
         (tmp / name).write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
 
+    # Rename before deleting: a locked file in the old output can never leave dist/ half-deleted.
+    old = out.with_name(out.name + ".old")
+    _remove_quietly(old)
     if out.exists():
-        shutil.rmtree(out)
+        out.rename(old)
     tmp.rename(out)
+    _remove_quietly(old)
+
+
+def _remove_quietly(path: Path) -> None:
+    if not path.exists():
+        return
+    try:
+        shutil.rmtree(path)
+    except OSError as exc:
+        print(f"  note: could not remove {path} ({exc}); delete it by hand")
 
 
 def _write_ntriples(graph: Graph, path: Path) -> None:

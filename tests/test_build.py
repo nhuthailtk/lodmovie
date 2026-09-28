@@ -2,6 +2,7 @@ import gzip
 import json
 import shutil
 from datetime import datetime, timezone
+from pathlib import Path
 
 import pytest
 from rdflib import Graph
@@ -99,3 +100,36 @@ def test_too_many_bad_rows_stops_the_build(tmp_path, links_dir):
         f.write("tt0000009,Bad,Bad,movie,False,nineteen,,90,5.0,10,[],[],x\n")
     assert build(tmp_path, links_dir, inputs=[crawl]) == 2
     assert not (tmp_path / "dist").exists()
+
+
+class InterruptingClient(FakeClient):
+    def lookup(self, imdb_ids):
+        if self.batches:
+            raise KeyboardInterrupt
+        return super().lookup(imdb_ids)
+
+
+def test_interrupted_resolution_still_saves_finished_batches(tmp_path, links_dir):
+    client = InterruptingClient({"tt0000002": [("Q30", "Beta_Movie")]})
+    with pytest.raises(KeyboardInterrupt):
+        build(tmp_path, links_dir, offline=False, client=client)
+    store = load_link_store(links_dir / "movies.csv")
+    assert store["tt0000002"].wikidata_qid == "Q30"
+    assert "tt0000003" in store
+
+
+def test_dist_is_replaced_even_if_old_output_cannot_be_deleted(tmp_path, links_dir, monkeypatch):
+    out = tmp_path / "dist"
+    out.mkdir()
+    (out / "marker.txt").write_text("old build", encoding="utf-8")
+    real_rmtree = shutil.rmtree
+
+    def locked_rmtree(path, *args, **kwargs):
+        if Path(path).name in ("dist", "dist.old"):
+            raise PermissionError("file is locked by another process")
+        return real_rmtree(path, *args, **kwargs)
+
+    monkeypatch.setattr("pipeline.build.shutil.rmtree", locked_rmtree)
+    assert build(tmp_path, links_dir) == 0
+    assert (out / "data.nt").exists()
+    assert not (out / "marker.txt").exists()

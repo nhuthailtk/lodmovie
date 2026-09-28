@@ -123,3 +123,11 @@ def test_cli_todo_then_merge(tmp_path):
     assert load_titles(titles_path)["tt0000003"].title_vi == "Phim Gamma"
     write_csv(todo, TODO_HEADER, [["tt0000404", "", "", "", "", "X", "Y"]])
     assert main(["--merge", *common]) == 1
+
+
+def test_load_titles_rejects_empty_title(tmp_path):
+    path = tmp_path / "t.csv"
+    write_csv(path, ["imdb_id", "primary_title", "title_en", "title_vi", "source", "translated_at"],
+              [["tt1", "A", "A", "", "reviewed", "2026-01-01"]])
+    with pytest.raises(ValueError, match="title_vi"):
+        load_titles(path)

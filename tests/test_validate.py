@@ -70,3 +70,10 @@ def test_blank_node_is_a_violation(ontology, graphs):
     data, links = graphs
     data.add((movie_uri("tt0000001"), MO.job, BNode()))
     assert any("blank node" in v for v in validate(ontology, data, links).violations)
+
+
+def test_empty_label_is_a_violation(ontology, graphs):
+    data, links = graphs
+    data.remove((movie_uri("tt0000001"), RDFS.label, Literal("Phim Alpha", lang="vi")))
+    data.add((movie_uri("tt0000001"), RDFS.label, Literal("", lang="vi")))
+    assert not validate(ontology, data, links).conforms

@@ -76,8 +76,12 @@ class WikidataClient:
             self.cache_dir.mkdir(parents=True, exist_ok=True)
             name = hashlib.sha1(query.encode("utf-8")).hexdigest()[:16]
             (self.cache_dir / f"{name}.json").write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+        try:
+            bindings = data["results"]["bindings"]
+        except (KeyError, TypeError):
+            raise WikidataError(f"unexpected response: {str(data)[:200]}") from None
         result: dict[str, list[tuple[str, str]]] = {}
-        for binding in data["results"]["bindings"]:
+        for binding in bindings:
             imdb_id = binding["imdb"]["value"]
             qid = binding["item"]["value"].rsplit("/", 1)[1]
             title = enwiki_title(binding["article"]["value"]) if "article" in binding else ""
@@ -94,7 +98,10 @@ class WikidataClient:
                 error = str(exc)
             else:
                 if response.status_code == 200:
-                    return response.json()
+                    try:
+                        return response.json()
+                    except ValueError:
+                        raise WikidataError(f"response is not JSON: {response.text[:200]}") from None
                 if response.status_code != 429 and response.status_code < 500:
                     raise WikidataError(f"HTTP {response.status_code}: {response.text[:200]}")
                 error = f"HTTP {response.status_code}"

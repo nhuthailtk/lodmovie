@@ -41,6 +41,9 @@ def load_titles(path: Path) -> dict[str, TitleRow]:
             row = TitleRow(**{key: (raw.get(key) or "").strip() for key in FIELDS})
             if row.source not in SOURCES:
                 raise ValueError(f"{path}: {row.imdb_id}: source must be one of {SOURCES}, got {row.source!r}")
+            for key in ("title_en", "title_vi"):
+                if not getattr(row, key):
+                    raise ValueError(f"{path}: {row.imdb_id}: {key} is empty")
             rows[row.imdb_id] = row
     return rows
 
