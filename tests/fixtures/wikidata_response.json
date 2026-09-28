@@ -1,0 +1,17 @@
+{
+  "head": {"vars": ["imdb", "item", "article"]},
+  "results": {
+    "bindings": [
+      {"imdb": {"type": "literal", "value": "tt0000001"},
+       "item": {"type": "uri", "value": "http://www.wikidata.org/entity/Q100"}},
+      {"imdb": {"type": "literal", "value": "tt0000001"},
+       "item": {"type": "uri", "value": "http://www.wikidata.org/entity/Q50"},
+       "article": {"type": "uri", "value": "https://en.wikipedia.org/wiki/Alpha_Movie"}},
+      {"imdb": {"type": "literal", "value": "nm0000001"},
+       "item": {"type": "uri", "value": "http://www.wikidata.org/entity/Q200"},
+       "article": {"type": "uri", "value": "https://en.wikipedia.org/wiki/Ann_Act%C3%B6r_(actress)"}},
+      {"imdb": {"type": "literal", "value": "tt0000002"},
+       "item": {"type": "uri", "value": "http://www.wikidata.org/entity/Q300"}}
+    ]
+  }
+}
