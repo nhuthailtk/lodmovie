@@ -6,6 +6,8 @@ import { ONTOLOGY } from "@/lib/config";
 import { ontologyDiagram, ontologyHeader, ontologyTerms, RELATION_LABELS, type OntologyTerm, type TermKind } from "@/lib/ontology";
 
 export const metadata = { title: "Ontology" };
+// Same URL serves RDF to machines (proxy.ts); rendering per request lets the Vary: Accept header reach the HTML variant.
+export const dynamic = "force-dynamic";
 
 const GROUPS: [TermKind, string][] = [
   ["Class", "Classes"],

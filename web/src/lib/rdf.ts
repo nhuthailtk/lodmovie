@@ -25,6 +25,8 @@ export function pageHref(iri: string): string | null {
   if (iri.startsWith(MO)) return `/ontology#${iri.slice(MO.length)}`;
   if (iri === ONTOLOGY) return "/ontology";
   if (iri === DATASET) return "/dataset";
+  if (iri.startsWith(`${DATASET}/linkset/`)) return "/dataset#linksets";
+  if (iri.startsWith(`${DATASET}/partition/`)) return "/dataset#statistics";
   return null;
 }
 

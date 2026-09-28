@@ -15,13 +15,13 @@ function fail(status: number, message: string): Response {
   return new Response(`${message}\n`, { status, headers: { ...CORS, "Content-Type": "text/plain; charset=utf-8" } });
 }
 
-function answer(req: Request, query: string | null, params: URLSearchParams): Response {
+async function answer(req: Request, query: string | null, params: URLSearchParams): Promise<Response> {
   if (params.has("default-graph-uri") || params.has("named-graph-uri")) {
     return fail(400, "default-graph-uri and named-graph-uri are not supported; use GRAPH <…> in the query (graphs: …/graph/data, …/graph/links, …/graph/ontology, …/graph/void).");
   }
   if (!query?.trim()) return fail(400, "Missing 'query' parameter. Open /sparql in a browser for the query editor.");
   try {
-    const result = runQuery(query, req.headers.get("accept"), params.get("format"));
+    const result = await runQuery(query, req.headers.get("accept"), params.get("format"));
     const headers: Record<string, string> = {
       ...CORS,
       "Content-Type": `${result.contentType}; charset=utf-8`,

@@ -20,7 +20,9 @@ export type MovieSort = keyof typeof MOVIE_SORTS;
 export type MovieFilters = { q: string; genre: string; from?: number; to?: number; rating?: number; sort: MovieSort; page: number };
 export type PeopleFilters = { q: string; profession: string; sort: "movies" | "name"; page: number };
 
-const SLUG = /^[a-z0-9-]*$/;
+// A slug must start with a letter or digit to be a valid SPARQL prefixed-name local part.
+const SLUG = /^([a-z0-9][a-z0-9-]*)?$/;
+const MAX_PAGE = 10_000;
 
 function param(sp: SearchParams, key: string): string {
   const value = sp[key];
@@ -34,7 +36,7 @@ function numberParam(sp: SearchParams, key: string): number | undefined {
 }
 
 function pageParam(sp: SearchParams): number {
-  return Math.max(1, Math.floor(numberParam(sp, "page") ?? 1));
+  return Math.min(MAX_PAGE, Math.max(1, Math.floor(numberParam(sp, "page") ?? 1)));
 }
 
 export function parseMovieFilters(sp: SearchParams): MovieFilters {

@@ -4,7 +4,7 @@ import oxigraph from "oxigraph";
 import { GRAPH } from "./config";
 import { withPrefixes, type Row, type Term } from "./rdf";
 
-const FILES = [
+export const STORE_FILES = [
   ["data.nt", "application/n-triples", GRAPH.data],
   ["links.nt", "application/n-triples", GRAPH.links],
   ["ontology.ttl", "text/turtle", GRAPH.ontology],
@@ -20,7 +20,7 @@ export function getStore(): oxigraph.Store {
   if (store) return store;
   const loaded = new oxigraph.Store();
   const dir = path.join(process.cwd(), "data");
-  for (const [file, format, graph] of FILES) {
+  for (const [file, format, graph] of STORE_FILES) {
     loaded.load(readFileSync(path.join(dir, file), "utf8"), { format, to_graph_name: oxigraph.namedNode(graph) });
   }
   store = loaded;

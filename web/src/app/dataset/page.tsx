@@ -10,6 +10,8 @@ import { datasetStats, voidMeta } from "@/lib/queries";
 import { sparqlHref } from "@/lib/rdf";
 
 export const metadata = { title: "Dataset" };
+// Same URL serves RDF to machines (proxy.ts); rendering per request lets the Vary: Accept header reach the HTML variant.
+export const dynamic = "force-dynamic";
 
 const DOWNLOADS = [
   ["all.ttl.gz", "Everything: ontology, data, links and VoID (gzipped Turtle)"],
@@ -69,7 +71,7 @@ export default function DatasetPage() {
         </div>
       </Section>
 
-      <Section title="Statistics">
+      <Section title="Statistics" id="statistics">
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
           <Stat label="Triples (data + links)" value={stats.triples} />
           {Object.entries(stats.classes).map(([name, n]) => (

@@ -1,7 +1,7 @@
 import { Generator, Parser } from "sparqljs";
 import { MAX_RESPONSE_BYTES, RESULT_LIMIT } from "./config";
 import { parseAccept, RDF_TYPES } from "./conneg";
-import { getStore } from "./store";
+import { QUERY_TIMEOUT_MS, QueryTimeout, runInWorker } from "./sparql-runner";
 
 export const RESULT_TYPES = {
   json: "application/sparql-results+json",
@@ -57,13 +57,16 @@ function chooseType(form: Form, accept: string | null, format: string | null): s
   return offered[0];
 }
 
-export function runQuery(text: string, accept: string | null, format: string | null): SparqlResult {
+export async function runQuery(text: string, accept: string | null, format: string | null): Promise<SparqlResult> {
   const prepared = prepareQuery(text);
   const contentType = chooseType(prepared.form, accept, format);
   let body: string;
   try {
-    body = getStore().query(prepared.query, { use_default_graph_as_union: true, results_format: contentType }) as string;
+    body = await runInWorker(prepared.query, contentType);
   } catch (error) {
+    if (error instanceof QueryTimeout) {
+      throw new SparqlError(`The query ran longer than ${QUERY_TIMEOUT_MS / 1000} seconds and was stopped. Add a LIMIT or narrow the query.`, 504);
+    }
     throw new SparqlError(`Query failed: ${error instanceof Error ? error.message : String(error)}`, 400);
   }
   if (Buffer.byteLength(body) > MAX_RESPONSE_BYTES) {
