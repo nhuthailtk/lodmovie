@@ -1,0 +1,4 @@
+rdflib==7.6.0
+pyshacl==0.40.1
+requests>=2.32
+pytest>=8

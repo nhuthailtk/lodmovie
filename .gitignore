@@ -6,3 +6,6 @@ links/cache/
 .env*
 node_modules/
 .vercel/
+translations/todo.csv
+dist.tmp/
+.superpowers/
