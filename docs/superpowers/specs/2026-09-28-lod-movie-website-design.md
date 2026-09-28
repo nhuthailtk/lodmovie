@@ -118,7 +118,8 @@ responses send `Vary: Accept`.
 | `/page/{type}/{id}` | HTML view (movie, person, genre, profession, credit; generic view for anything else) |
 | `/data/{type}/{id}.{ext}` | RDF description of the resource (§4.3) in the format of the extension; `404` if unknown |
 | `/ontology` | Ontology URI (hash namespace `…/ontology#Term`). HTML → ontology docs page; RDF → `ontology.ttl` in the negotiated format. `200` with `Vary: Accept` (hash URIs need no 303) |
-| `/dataset` | VoID dataset URI. HTML → dataset docs page; RDF → the VoID graph in the negotiated format. `200` with `Vary: Accept` |
+| `/dataset` | VoID dataset URI. HTML → dataset docs page; RDF → the VoID graph in the negotiated format. `200`; RDF responses send `Vary: Accept`, the HTML variant is rendered per request with `Cache-Control: no-store` (Next.js controls `Vary` on pages) |
+| `/dataset/{linkset|partition}/{id}` | VoID sub-resources minted in `void.ttl`: RDF description for machines, `303` to the matching section of `/dataset` for browsers |
 | `/sparql` | SPARQL endpoint (§5). Browser without `query` → YASGUI page |
 | `/explore?uri=…` | Interactive triple-graph explorer (§6.4); default start: Jurassic Park |
 | `/downloads/…` | Static files: `all.ttl.gz`, `ontology.ttl`, `data.nt`, `links.nt`, `void.ttl` |
@@ -150,7 +151,8 @@ For resource `R`: all triples `R ?p ?o` (all graphs) plus incoming triples `?s ?
     `X-LOD-Result-Limit: 10000`. Parse errors → `400` with the parser message.
   - Responses larger than 4 MB (Vercel's response limit is 4.5 MB) → `413` with advice to add
     `LIMIT` or narrow the query.
-  - Function `maxDuration` 10 s; a query running longer is terminated by the platform (`504`).
+  - Public queries run in a worker thread that is killed after **8 s** (`504` with advice); pages keep
+    responding while a heavy query runs. Function `maxDuration` is 10 s.
 - **CORS:** `Access-Control-Allow-Origin: *` on GET/POST/OPTIONS so other sites and notebooks can
   query it.
 - **YASGUI page:** endpoint preset to `/sparql`; prefixes preset (`mo`, `rdfs`, `owl`, `skos`,
@@ -252,7 +254,7 @@ every feature; a "try a query" snippet that opens example 1 in the editor.
 | SPARQL syntax error | `400`, body = parser message (plain text) |
 | SPARQL UPDATE or unsupported protocol parameter | `400` with explanation |
 | Result too large | `413` with advice |
-| Query exceeds 10 s | platform `504`; documented on the SPARQL page |
+| Query exceeds 8 s | worker killed, `504` with advice; documented on the SPARQL page |
 | Unsupported `Accept` on RDF routes | `406` listing supported types |
 | Wikidata slow/down | panel message; page unaffected; errors not cached |
 | Data files missing at build | build fails in `prebuild` with the missing file names |

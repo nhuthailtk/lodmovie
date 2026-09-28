@@ -18,7 +18,7 @@ export default function SparqlPage() {
           <code> Accept</code> header or a <code>format</code> parameter.
         </p>
         <p className="text-sm">
-          Results are capped at {RESULT_LIMIT.toLocaleString("en-US")} rows and queries stop after 10 seconds. Named graphs:{" "}
+          Results are capped at {RESULT_LIMIT.toLocaleString("en-US")} rows and queries stop after 8 seconds. Named graphs:{" "}
           {Object.values(GRAPH).map((g) => <code key={g} className="mr-2">&lt;{g}&gt;</code>)}
         </p>
       </PageHeader>
