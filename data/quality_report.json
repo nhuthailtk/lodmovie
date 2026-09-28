@@ -1,0 +1,81 @@
+{
+  "unique_movies": 300,
+  "people": 5476,
+  "movie_genre_edges": 758,
+  "movie_person_edges": 3942,
+  "principal_credits": 6204,
+  "title_variants": 0,
+  "rdf_triples_including_ontology": 115459,
+  "categories": {
+    "Action": {
+      "eligible_movies": 7773,
+      "sampled_movies": 50,
+      "actual_members_in_union": 91,
+      "quota_met": true
+    },
+    "Comedy": {
+      "eligible_movies": 13644,
+      "sampled_movies": 50,
+      "actual_members_in_union": 112,
+      "quota_met": true
+    },
+    "Drama": {
+      "eligible_movies": 21775,
+      "sampled_movies": 50,
+      "actual_members_in_union": 153,
+      "quota_met": true
+    },
+    "Horror": {
+      "eligible_movies": 5427,
+      "sampled_movies": 50,
+      "actual_members_in_union": 72,
+      "quota_met": true
+    },
+    "Romance": {
+      "eligible_movies": 6323,
+      "sampled_movies": 50,
+      "actual_members_in_union": 73,
+      "quota_met": true
+    },
+    "Sci-Fi": {
+      "eligible_movies": 1888,
+      "sampled_movies": 50,
+      "actual_members_in_union": 62,
+      "quota_met": true
+    }
+  },
+  "all_genre_membership_counts": {
+    "Action": 91,
+    "Adventure": 38,
+    "Animation": 7,
+    "Biography": 9,
+    "Comedy": 112,
+    "Crime": 30,
+    "Drama": 153,
+    "Family": 6,
+    "Fantasy": 15,
+    "History": 6,
+    "Horror": 72,
+    "Music": 4,
+    "Musical": 4,
+    "Mystery": 20,
+    "Romance": 73,
+    "Sci-Fi": 62,
+    "Sport": 3,
+    "Thriller": 48,
+    "War": 5
+  },
+  "missing_movie_fields": {
+    "primary_title": 0,
+    "original_title": 0,
+    "start_year": 0,
+    "runtime_minutes": 0,
+    "average_rating": 0,
+    "num_votes": 0
+  },
+  "movies_without_director": [],
+  "movies_without_principal_actor": [],
+  "missing_name_records": [],
+  "missing_crew_records": [],
+  "note": "50 samples per target category can overlap; union membership may exceed 50. All original IMDb genres are preserved."
+}

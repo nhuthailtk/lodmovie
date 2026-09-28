@@ -1,0 +1,79 @@
+{
+  "project": "imdb-semantic-web",
+  "generated_at_utc": "2026-09-23T07:39:33.407116+00:00",
+  "config": {
+    "categories": [
+      "Action",
+      "Comedy",
+      "Drama",
+      "Horror",
+      "Romance",
+      "Sci-Fi"
+    ],
+    "per_category": 50,
+    "seed": 42,
+    "start_year": 1980,
+    "end_year": 2025,
+    "min_votes": 1000,
+    "with_akas": false,
+    "allow_shortfall": false,
+    "sampling": "independent uniform reservoir samples per genre",
+    "title_type": "movie",
+    "is_adult": false
+  },
+  "sources": [
+    {
+      "dataset": "title.ratings",
+      "url": "https://datasets.imdbws.com/title.ratings.tsv.gz",
+      "bytes": 8653716,
+      "sha256": "0c2bdf0977757d899586bcd06c8bf022e8084ff774cb11f944bd68574efba93a",
+      "retrieved_at_utc": "2026-09-23T07:33:52.701485+00:00",
+      "http_last_modified": "Tue, 22 Sep 2026 12:43:54 GMT",
+      "http_etag": "\"a33f5ef420929de283d837517a412377-2\""
+    },
+    {
+      "dataset": "title.basics",
+      "url": "https://datasets.imdbws.com/title.basics.tsv.gz",
+      "bytes": 227480593,
+      "sha256": "1802cf22b8ad4c97572d3339865d50da6bb759ff813ca8c9bb234d460554c5ea",
+      "retrieved_at_utc": "2026-09-23T07:34:46.405410+00:00",
+      "http_last_modified": "Tue, 22 Sep 2026 12:42:53 GMT",
+      "http_etag": "\"24311ca3e5d3069d32d61fa068f43912-28\""
+    },
+    {
+      "dataset": "title.crew",
+      "url": "https://datasets.imdbws.com/title.crew.tsv.gz",
+      "bytes": 83230018,
+      "sha256": "b704614245ff8576066a251b60d1b192cc8100e3aeaa1a19363b6592296a3aed",
+      "retrieved_at_utc": "2026-09-23T07:35:11.301819+00:00",
+      "http_last_modified": "Tue, 22 Sep 2026 12:43:38 GMT",
+      "http_etag": "\"03a6737a9047f753fd0fc16aa83c7668-10\""
+    },
+    {
+      "dataset": "title.principals",
+      "url": "https://datasets.imdbws.com/title.principals.tsv.gz",
+      "bytes": 783606049,
+      "sha256": "934337952c2a5aee758e73f14d5ffe47e8b809335dfd258eaf3ac2077608fdc7",
+      "retrieved_at_utc": "2026-09-23T07:37:47.675288+00:00",
+      "http_last_modified": "Tue, 22 Sep 2026 12:44:14 GMT",
+      "http_etag": "\"101d83d9a8ceeb8a1b8ea01e2865b77b-94\""
+    },
+    {
+      "dataset": "name.basics",
+      "url": "https://datasets.imdbws.com/name.basics.tsv.gz",
+      "bytes": 310199093,
+      "sha256": "7454dd235379b3f740f335e59d797389ff331bb34f29d793a78671229f807727",
+      "retrieved_at_utc": "2026-09-23T07:39:23.480545+00:00",
+      "http_last_modified": "Tue, 22 Sep 2026 12:44:00 GMT",
+      "http_etag": "\"547c39bb9dc66e83ad2a4f1a7ec54501-37\""
+    }
+  ],
+  "python_version": "3.14.4 (main, Jul  5 2026, 22:50:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "limitations": [
+    "Principal cast/crew only, not complete film credits.",
+    "No plot, poster, budget, box office, production country or spoken language.",
+    "AKA region/language describe the localized title, not production country or spoken language.",
+    "Source files may have different modification dates; consult source metadata.",
+    "Seed is reproducible only with identical source files and filters."
+  ]
+}

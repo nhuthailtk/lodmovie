@@ -1,0 +1,6160 @@
+[
+  {
+    "imdb_id": "tt0079718",
+    "primary_title": "Flatfoot in Egypt",
+    "original_title": "Piedone d'Egitto",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1980,
+    "end_year": null,
+    "runtime_minutes": 108,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Crime"
+    ],
+    "average_rating": 6.1,
+    "num_votes": 4033,
+    "imdb_url": "https://www.imdb.com/title/tt0079718/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt0081633",
+    "primary_title": "Time Bandits",
+    "original_title": "Time Bandits",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1981,
+    "end_year": null,
+    "runtime_minutes": 110,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Fantasy"
+    ],
+    "average_rating": 6.9,
+    "num_votes": 74971,
+    "imdb_url": "https://www.imdb.com/title/tt0081633/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0083199",
+    "primary_title": "Dangerous Encounters of the First Kind",
+    "original_title": "Di yi lei xing wei xian",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1980,
+    "end_year": null,
+    "runtime_minutes": 95,
+    "genres": [
+      "Action",
+      "Crime",
+      "Thriller"
+    ],
+    "average_rating": 7.3,
+    "num_votes": 1410,
+    "imdb_url": "https://www.imdb.com/title/tt0083199/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt0085426",
+    "primary_title": "The Last Battle",
+    "original_title": "Le dernier combat",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1983,
+    "end_year": null,
+    "runtime_minutes": 92,
+    "genres": [
+      "Sci-Fi"
+    ],
+    "average_rating": 6.7,
+    "num_votes": 7126,
+    "imdb_url": "https://www.imdb.com/title/tt0085426/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0085750",
+    "primary_title": "Jaws 3-D",
+    "original_title": "Jaws 3-D",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1983,
+    "end_year": null,
+    "runtime_minutes": 98,
+    "genres": [
+      "Adventure",
+      "Horror",
+      "Thriller"
+    ],
+    "average_rating": 3.8,
+    "num_votes": 53597,
+    "imdb_url": "https://www.imdb.com/title/tt0085750/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt0086856",
+    "primary_title": "The Adventures of Buckaroo Banzai Across the 8th Dimension",
+    "original_title": "The Adventures of Buckaroo Banzai Across the 8th Dimension",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1984,
+    "end_year": null,
+    "runtime_minutes": 103,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 33431,
+    "imdb_url": "https://www.imdb.com/title/tt0086856/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0087065",
+    "primary_title": "Cloak & Dagger",
+    "original_title": "Cloak & Dagger",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1984,
+    "end_year": null,
+    "runtime_minutes": 101,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Crime"
+    ],
+    "average_rating": 6.6,
+    "num_votes": 9354,
+    "imdb_url": "https://www.imdb.com/title/tt0087065/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt0087354",
+    "primary_title": "Grace Quigley",
+    "original_title": "Grace Quigley",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1984,
+    "end_year": null,
+    "runtime_minutes": 87,
+    "genres": [
+      "Comedy"
+    ],
+    "average_rating": 5.8,
+    "num_votes": 1051,
+    "imdb_url": "https://www.imdb.com/title/tt0087354/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0087821",
+    "primary_title": "Full Moon in Paris",
+    "original_title": "Les Nuits de la pleine lune",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1984,
+    "end_year": null,
+    "runtime_minutes": 101,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 7.2,
+    "num_votes": 6118,
+    "imdb_url": "https://www.imdb.com/title/tt0087821/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0090274",
+    "primary_title": "Volunteers",
+    "original_title": "Volunteers",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1985,
+    "end_year": null,
+    "runtime_minutes": 107,
+    "genres": [
+      "Adventure",
+      "Comedy"
+    ],
+    "average_rating": 5.5,
+    "num_votes": 11845,
+    "imdb_url": "https://www.imdb.com/title/tt0090274/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0090956",
+    "primary_title": "Eastern Condors",
+    "original_title": "Dung fong tuk ying",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1987,
+    "end_year": null,
+    "runtime_minutes": 93,
+    "genres": [
+      "Action",
+      "Adventure",
+      "War"
+    ],
+    "average_rating": 7.1,
+    "num_votes": 3714,
+    "imdb_url": "https://www.imdb.com/title/tt0090956/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt0091630",
+    "primary_title": "Night of the Creeps",
+    "original_title": "Night of the Creeps",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1986,
+    "end_year": null,
+    "runtime_minutes": 88,
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.7,
+    "num_votes": 29215,
+    "imdb_url": "https://www.imdb.com/title/tt0091630/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0092656",
+    "primary_title": "The Big Town",
+    "original_title": "The Big Town",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1987,
+    "end_year": null,
+    "runtime_minutes": 109,
+    "genres": [
+      "Drama",
+      "Romance",
+      "Thriller"
+    ],
+    "average_rating": 5.9,
+    "num_votes": 2876,
+    "imdb_url": "https://www.imdb.com/title/tt0092656/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0093771",
+    "primary_title": "A Prayer for the Dying",
+    "original_title": "A Prayer for the Dying",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1987,
+    "end_year": null,
+    "runtime_minutes": 107,
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "average_rating": 6.3,
+    "num_votes": 6475,
+    "imdb_url": "https://www.imdb.com/title/tt0093771/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt0094336",
+    "primary_title": "Withnail and I",
+    "original_title": "Withnail & I",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1987,
+    "end_year": null,
+    "runtime_minutes": 107,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 7.5,
+    "num_votes": 53081,
+    "imdb_url": "https://www.imdb.com/title/tt0094336/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0094961",
+    "primary_title": "Dead Heat",
+    "original_title": "Dead Heat",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1988,
+    "end_year": null,
+    "runtime_minutes": 84,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Horror"
+    ],
+    "average_rating": 6.1,
+    "num_votes": 10575,
+    "imdb_url": "https://www.imdb.com/title/tt0094961/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt0095047",
+    "primary_title": "Doin' Time on Planet Earth",
+    "original_title": "Doin' Time on Planet Earth",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1988,
+    "end_year": null,
+    "runtime_minutes": 85,
+    "genres": [
+      "Comedy",
+      "Sci-Fi"
+    ],
+    "average_rating": 4.7,
+    "num_votes": 1702,
+    "imdb_url": "https://www.imdb.com/title/tt0095047/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0096087",
+    "primary_title": "Shakedown",
+    "original_title": "Shakedown",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1988,
+    "end_year": null,
+    "runtime_minutes": 97,
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "average_rating": 6.0,
+    "num_votes": 4546,
+    "imdb_url": "https://www.imdb.com/title/tt0096087/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0096344",
+    "primary_title": "The Unnamable",
+    "original_title": "The Unnamable",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1988,
+    "end_year": null,
+    "runtime_minutes": 87,
+    "genres": [
+      "Horror"
+    ],
+    "average_rating": 4.8,
+    "num_votes": 3613,
+    "imdb_url": "https://www.imdb.com/title/tt0096344/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt0096827",
+    "primary_title": "Apoorva Sagodharargal",
+    "original_title": "Apoorva Sagodharargal",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1989,
+    "end_year": null,
+    "runtime_minutes": 157,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 8.3,
+    "num_votes": 5158,
+    "imdb_url": "https://www.imdb.com/title/tt0096827/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt0096919",
+    "primary_title": "Beyond Dream's Door",
+    "original_title": "Beyond Dream's Door",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1989,
+    "end_year": null,
+    "runtime_minutes": 80,
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Horror"
+    ],
+    "average_rating": 5.4,
+    "num_votes": 1081,
+    "imdb_url": "https://www.imdb.com/title/tt0096919/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt0097074",
+    "primary_title": "Cohen and Tate",
+    "original_title": "Cohen and Tate",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1988,
+    "end_year": null,
+    "runtime_minutes": 86,
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "average_rating": 6.3,
+    "num_votes": 3092,
+    "imdb_url": "https://www.imdb.com/title/tt0097074/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0097244",
+    "primary_title": "God of Gamblers",
+    "original_title": "Do san",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1989,
+    "end_year": null,
+    "runtime_minutes": 126,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "average_rating": 7.2,
+    "num_votes": 7401,
+    "imdb_url": "https://www.imdb.com/title/tt0097244/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0097388",
+    "primary_title": "Friday the 13th Part VIII: Jason Takes Manhattan",
+    "original_title": "Friday the 13th Part VIII: Jason Takes Manhattan",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1989,
+    "end_year": null,
+    "runtime_minutes": 100,
+    "genres": [
+      "Adventure",
+      "Horror",
+      "Thriller"
+    ],
+    "average_rating": 4.5,
+    "num_votes": 49076,
+    "imdb_url": "https://www.imdb.com/title/tt0097388/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt0097438",
+    "primary_title": "Gleaming the Cube",
+    "original_title": "Gleaming the Cube",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1989,
+    "end_year": null,
+    "runtime_minutes": 105,
+    "genres": [
+      "Action",
+      "Drama",
+      "Mystery"
+    ],
+    "average_rating": 6.3,
+    "num_votes": 10052,
+    "imdb_url": "https://www.imdb.com/title/tt0097438/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt0097530",
+    "primary_title": "How I Got Into College",
+    "original_title": "How I Got Into College",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1989,
+    "end_year": null,
+    "runtime_minutes": 86,
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "average_rating": 5.8,
+    "num_votes": 2524,
+    "imdb_url": "https://www.imdb.com/title/tt0097530/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0098097",
+    "primary_title": "Pink Cadillac",
+    "original_title": "Pink Cadillac",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1989,
+    "end_year": null,
+    "runtime_minutes": 122,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Crime"
+    ],
+    "average_rating": 5.4,
+    "num_votes": 13317,
+    "imdb_url": "https://www.imdb.com/title/tt0098097/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0098319",
+    "primary_title": "Shirley Valentine",
+    "original_title": "Shirley Valentine",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1989,
+    "end_year": null,
+    "runtime_minutes": 108,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 7.3,
+    "num_votes": 10016,
+    "imdb_url": "https://www.imdb.com/title/tt0098319/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0098375",
+    "primary_title": "Spontaneous Combustion",
+    "original_title": "Spontaneous Combustion",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1989,
+    "end_year": null,
+    "runtime_minutes": 97,
+    "genres": [
+      "Horror",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "average_rating": 4.9,
+    "num_votes": 3534,
+    "imdb_url": "https://www.imdb.com/title/tt0098375/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0099108",
+    "primary_title": "Basket Case 2",
+    "original_title": "Basket Case 2",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1990,
+    "end_year": null,
+    "runtime_minutes": 90,
+    "genres": [
+      "Comedy",
+      "Horror"
+    ],
+    "average_rating": 5.4,
+    "num_votes": 6521,
+    "imdb_url": "https://www.imdb.com/title/tt0099108/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt0099172",
+    "primary_title": "Braca po materi",
+    "original_title": "Braca po materi",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1988,
+    "end_year": null,
+    "runtime_minutes": 105,
+    "genres": [
+      "Drama"
+    ],
+    "average_rating": 7.9,
+    "num_votes": 1436,
+    "imdb_url": "https://www.imdb.com/title/tt0099172/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0100234",
+    "primary_title": "Close-Up",
+    "original_title": "Nema-ye nazdik",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1990,
+    "end_year": null,
+    "runtime_minutes": 98,
+    "genres": [
+      "Biography",
+      "Crime",
+      "Drama"
+    ],
+    "average_rating": 8.2,
+    "num_votes": 27475,
+    "imdb_url": "https://www.imdb.com/title/tt0100234/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0101748",
+    "primary_title": "Dogfight",
+    "original_title": "Dogfight",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1991,
+    "end_year": null,
+    "runtime_minutes": 94,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 7.3,
+    "num_votes": 11455,
+    "imdb_url": "https://www.imdb.com/title/tt0101748/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0103956",
+    "primary_title": "Child's Play 3",
+    "original_title": "Child's Play 3",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1991,
+    "end_year": null,
+    "runtime_minutes": 90,
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "average_rating": 5.2,
+    "num_votes": 52252,
+    "imdb_url": "https://www.imdb.com/title/tt0103956/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt0104759",
+    "primary_title": "The Lost World",
+    "original_title": "The Lost World",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1992,
+    "end_year": null,
+    "runtime_minutes": 99,
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "average_rating": 5.4,
+    "num_votes": 1492,
+    "imdb_url": "https://www.imdb.com/title/tt0104759/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0105150",
+    "primary_title": "The Playboys",
+    "original_title": "The Playboys",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1992,
+    "end_year": null,
+    "runtime_minutes": 117,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 1399,
+    "imdb_url": "https://www.imdb.com/title/tt0105150/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0106417",
+    "primary_title": "Sailor Moon R: The Movie: The Promise of the Rose",
+    "original_title": "Gekijô-ban - Bishôjo senshi Sêrâ Mûn R",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1993,
+    "end_year": null,
+    "runtime_minutes": 61,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "average_rating": 7.6,
+    "num_votes": 3182,
+    "imdb_url": "https://www.imdb.com/title/tt0106417/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt0107290",
+    "primary_title": "Jurassic Park",
+    "original_title": "Jurassic Park",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1993,
+    "end_year": null,
+    "runtime_minutes": 127,
+    "genres": [
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "average_rating": 8.2,
+    "num_votes": 1199984,
+    "imdb_url": "https://www.imdb.com/title/tt0107290/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0107668",
+    "primary_title": "Nemesis",
+    "original_title": "Nemesis",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1992,
+    "end_year": null,
+    "runtime_minutes": 96,
+    "genres": [
+      "Action",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "average_rating": 5.4,
+    "num_votes": 7891,
+    "imdb_url": "https://www.imdb.com/title/tt0107668/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0108606",
+    "primary_title": "Heroic Trio 2: Executioners",
+    "original_title": "Yin doi hou hap zyun",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1993,
+    "end_year": null,
+    "runtime_minutes": 101,
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "average_rating": 5.8,
+    "num_votes": 1910,
+    "imdb_url": "https://www.imdb.com/title/tt0108606/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0109665",
+    "primary_title": "Dream Lover",
+    "original_title": "Dream Lover",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1994,
+    "end_year": null,
+    "runtime_minutes": 103,
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 7810,
+    "imdb_url": "https://www.imdb.com/title/tt0109665/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0110391",
+    "primary_title": "Love Affair",
+    "original_title": "Love Affair",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1994,
+    "end_year": null,
+    "runtime_minutes": 108,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.0,
+    "num_votes": 5429,
+    "imdb_url": "https://www.imdb.com/title/tt0110391/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0112553",
+    "primary_title": "Bombay",
+    "original_title": "Bombay",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1995,
+    "end_year": null,
+    "runtime_minutes": 130,
+    "genres": [
+      "Drama",
+      "Musical",
+      "Romance"
+    ],
+    "average_rating": 8.1,
+    "num_votes": 15333,
+    "imdb_url": "https://www.imdb.com/title/tt0112553/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0113481",
+    "primary_title": "Johnny Mnemonic",
+    "original_title": "Johnny Mnemonic",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1995,
+    "end_year": null,
+    "runtime_minutes": 96,
+    "genres": [
+      "Action",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "average_rating": 5.6,
+    "num_votes": 82266,
+    "imdb_url": "https://www.imdb.com/title/tt0113481/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0114496",
+    "primary_title": "Something to Talk About",
+    "original_title": "Something to Talk About",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1995,
+    "end_year": null,
+    "runtime_minutes": 106,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 5.8,
+    "num_votes": 15378,
+    "imdb_url": "https://www.imdb.com/title/tt0114496/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0117128",
+    "primary_title": "Mystery Science Theater 3000: The Movie",
+    "original_title": "Mystery Science Theater 3000: The Movie",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1996,
+    "end_year": null,
+    "runtime_minutes": 73,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Fantasy"
+    ],
+    "average_rating": 7.1,
+    "num_votes": 19361,
+    "imdb_url": "https://www.imdb.com/title/tt0117128/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0117959",
+    "primary_title": "The Truce",
+    "original_title": "La tregua",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1997,
+    "end_year": null,
+    "runtime_minutes": 125,
+    "genres": [
+      "Drama",
+      "War"
+    ],
+    "average_rating": 6.6,
+    "num_votes": 1980,
+    "imdb_url": "https://www.imdb.com/title/tt0117959/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0118015",
+    "primary_title": "Family Resemblances",
+    "original_title": "Un air de famille",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1996,
+    "end_year": null,
+    "runtime_minutes": 110,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 7.4,
+    "num_votes": 5902,
+    "imdb_url": "https://www.imdb.com/title/tt0118015/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0118040",
+    "primary_title": "Unforgettable",
+    "original_title": "Unforgettable",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1996,
+    "end_year": null,
+    "runtime_minutes": 117,
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.0,
+    "num_votes": 6498,
+    "imdb_url": "https://www.imdb.com/title/tt0118040/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0118583",
+    "primary_title": "Alien: Resurrection",
+    "original_title": "Alien: Resurrection",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1997,
+    "end_year": null,
+    "runtime_minutes": 109,
+    "genres": [
+      "Action",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 294702,
+    "imdb_url": "https://www.imdb.com/title/tt0118583/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0119822",
+    "primary_title": "As Good as It Gets",
+    "original_title": "As Good as It Gets",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1997,
+    "end_year": null,
+    "runtime_minutes": 139,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 7.7,
+    "num_votes": 340439,
+    "imdb_url": "https://www.imdb.com/title/tt0119822/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0138703",
+    "primary_title": "Phantasm IV: Oblivion",
+    "original_title": "Phantasm IV: Oblivion",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1998,
+    "end_year": null,
+    "runtime_minutes": 90,
+    "genres": [
+      "Fantasy",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "average_rating": 5.5,
+    "num_votes": 9280,
+    "imdb_url": "https://www.imdb.com/title/tt0138703/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0141098",
+    "primary_title": "Forces of Nature",
+    "original_title": "Forces of Nature",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1999,
+    "end_year": null,
+    "runtime_minutes": 105,
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "average_rating": 5.5,
+    "num_votes": 37772,
+    "imdb_url": "https://www.imdb.com/title/tt0141098/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0150464",
+    "primary_title": "In All Innocence",
+    "original_title": "En plein coeur",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1998,
+    "end_year": null,
+    "runtime_minutes": 101,
+    "genres": [
+      "Crime",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 1058,
+    "imdb_url": "https://www.imdb.com/title/tt0150464/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0152256",
+    "primary_title": "Saagar",
+    "original_title": "Saagar",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1985,
+    "end_year": null,
+    "runtime_minutes": 186,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.9,
+    "num_votes": 1168,
+    "imdb_url": "https://www.imdb.com/title/tt0152256/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0165832",
+    "primary_title": "Interstate 60",
+    "original_title": "Interstate 60: Episodes of the Road",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2002,
+    "end_year": null,
+    "runtime_minutes": 116,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 7.5,
+    "num_votes": 41607,
+    "imdb_url": "https://www.imdb.com/title/tt0165832/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0169164",
+    "primary_title": "Radio Arrow",
+    "original_title": "Radiofreccia",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1998,
+    "end_year": null,
+    "runtime_minutes": 112,
+    "genres": [
+      "Drama"
+    ],
+    "average_rating": 7.0,
+    "num_votes": 2670,
+    "imdb_url": "https://www.imdb.com/title/tt0169164/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0174336",
+    "primary_title": "Whipped",
+    "original_title": "Whipped",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2000,
+    "end_year": null,
+    "runtime_minutes": 82,
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "average_rating": 4.5,
+    "num_votes": 4550,
+    "imdb_url": "https://www.imdb.com/title/tt0174336/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0179182",
+    "primary_title": "Forever Mine",
+    "original_title": "Forever Mine",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1999,
+    "end_year": null,
+    "runtime_minutes": 115,
+    "genres": [
+      "Crime",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 5.3,
+    "num_votes": 2946,
+    "imdb_url": "https://www.imdb.com/title/tt0179182/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0192455",
+    "primary_title": "Picking Up the Pieces",
+    "original_title": "Picking Up the Pieces",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2000,
+    "end_year": null,
+    "runtime_minutes": 95,
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Fantasy"
+    ],
+    "average_rating": 4.7,
+    "num_votes": 4049,
+    "imdb_url": "https://www.imdb.com/title/tt0192455/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0212380",
+    "primary_title": "Blow Dry",
+    "original_title": "Blow Dry",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2001,
+    "end_year": null,
+    "runtime_minutes": 90,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 9657,
+    "imdb_url": "https://www.imdb.com/title/tt0212380/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0228333",
+    "primary_title": "Ghosts of Mars",
+    "original_title": "Ghosts of Mars",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2001,
+    "end_year": null,
+    "runtime_minutes": 98,
+    "genres": [
+      "Action",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "average_rating": 4.9,
+    "num_votes": 62508,
+    "imdb_url": "https://www.imdb.com/title/tt0228333/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt0242285",
+    "primary_title": "The Art of Dying",
+    "original_title": "El arte de morir",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2000,
+    "end_year": null,
+    "runtime_minutes": 102,
+    "genres": [
+      "Fantasy",
+      "Horror",
+      "Mystery"
+    ],
+    "average_rating": 5.1,
+    "num_votes": 1068,
+    "imdb_url": "https://www.imdb.com/title/tt0242285/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt0250224",
+    "primary_title": "Crazy/Beautiful",
+    "original_title": "Crazy/Beautiful",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2001,
+    "end_year": null,
+    "runtime_minutes": 99,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.4,
+    "num_votes": 27830,
+    "imdb_url": "https://www.imdb.com/title/tt0250224/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0253754",
+    "primary_title": "Star Trek: Nemesis",
+    "original_title": "Star Trek: Nemesis",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2002,
+    "end_year": null,
+    "runtime_minutes": 116,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.4,
+    "num_votes": 88601,
+    "imdb_url": "https://www.imdb.com/title/tt0253754/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0275692",
+    "primary_title": "Sol Goode",
+    "original_title": "Sol Goode",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2003,
+    "end_year": null,
+    "runtime_minutes": 99,
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "average_rating": 5.2,
+    "num_votes": 1453,
+    "imdb_url": "https://www.imdb.com/title/tt0275692/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0283269",
+    "primary_title": "Boomerang",
+    "original_title": "Boomerang",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2001,
+    "end_year": null,
+    "runtime_minutes": 87,
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Mystery"
+    ],
+    "average_rating": 7.4,
+    "num_votes": 1872,
+    "imdb_url": "https://www.imdb.com/title/tt0283269/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0286751",
+    "primary_title": "Pulse",
+    "original_title": "Kairo",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2001,
+    "end_year": null,
+    "runtime_minutes": 119,
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.6,
+    "num_votes": 32402,
+    "imdb_url": "https://www.imdb.com/title/tt0286751/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt0307681",
+    "primary_title": "I Not Stupid",
+    "original_title": "Xiaohai bu ben",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2002,
+    "end_year": null,
+    "runtime_minutes": 105,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 7.2,
+    "num_votes": 1323,
+    "imdb_url": "https://www.imdb.com/title/tt0307681/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0310313",
+    "primary_title": "A New Life",
+    "original_title": "La Vie nouvelle",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2002,
+    "end_year": null,
+    "runtime_minutes": 102,
+    "genres": [
+      "Drama",
+      "Horror"
+    ],
+    "average_rating": 6.3,
+    "num_votes": 1265,
+    "imdb_url": "https://www.imdb.com/title/tt0310313/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt0323120",
+    "primary_title": "Loving Annabelle",
+    "original_title": "Loving Annabelle",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2006,
+    "end_year": null,
+    "runtime_minutes": 77,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 14440,
+    "imdb_url": "https://www.imdb.com/title/tt0323120/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0330136",
+    "primary_title": "Charly",
+    "original_title": "Charly",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2002,
+    "end_year": null,
+    "runtime_minutes": 103,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.3,
+    "num_votes": 1224,
+    "imdb_url": "https://www.imdb.com/title/tt0330136/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0331282",
+    "primary_title": "Little Night Music",
+    "original_title": "Mala nocna muzika",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2002,
+    "end_year": null,
+    "runtime_minutes": 95,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Thriller"
+    ],
+    "average_rating": 7.0,
+    "num_votes": 2144,
+    "imdb_url": "https://www.imdb.com/title/tt0331282/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0354243",
+    "primary_title": "Zhou Yu's Train",
+    "original_title": "Zhou Yu de huo che",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2002,
+    "end_year": null,
+    "runtime_minutes": 97,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.4,
+    "num_votes": 1664,
+    "imdb_url": "https://www.imdb.com/title/tt0354243/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0354538",
+    "primary_title": "Ek Aur Ek Gyarah: By Hook or by Crook",
+    "original_title": "Ek Aur Ek Gyarah: By Hook or by Crook",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2003,
+    "end_year": null,
+    "runtime_minutes": 144,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Crime"
+    ],
+    "average_rating": 5.4,
+    "num_votes": 2531,
+    "imdb_url": "https://www.imdb.com/title/tt0354538/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0366842",
+    "primary_title": "Turkish Tales",
+    "original_title": "Ömerçip",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2003,
+    "end_year": null,
+    "runtime_minutes": 94,
+    "genres": [
+      "Comedy"
+    ],
+    "average_rating": 2.7,
+    "num_votes": 1982,
+    "imdb_url": "https://www.imdb.com/title/tt0366842/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0372237",
+    "primary_title": "Guess Who",
+    "original_title": "Guess Who",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2005,
+    "end_year": null,
+    "runtime_minutes": 105,
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "average_rating": 5.9,
+    "num_votes": 49968,
+    "imdb_url": "https://www.imdb.com/title/tt0372237/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0374271",
+    "primary_title": "In Your Name",
+    "original_title": "Tere Naam",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2003,
+    "end_year": null,
+    "runtime_minutes": 132,
+    "genres": [
+      "Action",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 7.2,
+    "num_votes": 22857,
+    "imdb_url": "https://www.imdb.com/title/tt0374271/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt0375104",
+    "primary_title": "Bobby Jones: Stroke of Genius",
+    "original_title": "Bobby Jones: Stroke of Genius",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2004,
+    "end_year": null,
+    "runtime_minutes": 120,
+    "genres": [
+      "Biography",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.6,
+    "num_votes": 4341,
+    "imdb_url": "https://www.imdb.com/title/tt0375104/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0388377",
+    "primary_title": "River Queen",
+    "original_title": "River Queen",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2005,
+    "end_year": null,
+    "runtime_minutes": 114,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "average_rating": 5.9,
+    "num_votes": 2876,
+    "imdb_url": "https://www.imdb.com/title/tt0388377/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0401248",
+    "primary_title": "Beautiful Boxer",
+    "original_title": "Beautiful Boxer",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2003,
+    "end_year": null,
+    "runtime_minutes": 118,
+    "genres": [
+      "Action",
+      "Biography",
+      "Drama"
+    ],
+    "average_rating": 7.2,
+    "num_votes": 3393,
+    "imdb_url": "https://www.imdb.com/title/tt0401248/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0403217",
+    "primary_title": "Last Days",
+    "original_title": "Last Days",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2005,
+    "end_year": null,
+    "runtime_minutes": 97,
+    "genres": [
+      "Drama",
+      "Music"
+    ],
+    "average_rating": 5.7,
+    "num_votes": 25010,
+    "imdb_url": "https://www.imdb.com/title/tt0403217/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0429052",
+    "primary_title": "Saint-Jacques... La Mecque",
+    "original_title": "Saint-Jacques... La Mecque",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2005,
+    "end_year": null,
+    "runtime_minutes": 110,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 6.3,
+    "num_votes": 1488,
+    "imdb_url": "https://www.imdb.com/title/tt0429052/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0432637",
+    "primary_title": "Krrish",
+    "original_title": "Krrish",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2006,
+    "end_year": null,
+    "runtime_minutes": 154,
+    "genres": [
+      "Action",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.5,
+    "num_votes": 28960,
+    "imdb_url": "https://www.imdb.com/title/tt0432637/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0433387",
+    "primary_title": "Harsh Times",
+    "original_title": "Harsh Times",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2005,
+    "end_year": null,
+    "runtime_minutes": 116,
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "average_rating": 6.8,
+    "num_votes": 71219,
+    "imdb_url": "https://www.imdb.com/title/tt0433387/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt0439418",
+    "primary_title": "7/G Rainbow Colony",
+    "original_title": "7/G Rainbow Colony",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2004,
+    "end_year": null,
+    "runtime_minutes": 186,
+    "genres": [
+      "Drama",
+      "Musical",
+      "Romance"
+    ],
+    "average_rating": 7.9,
+    "num_votes": 3455,
+    "imdb_url": "https://www.imdb.com/title/tt0439418/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0444112",
+    "primary_title": "Orchestra Seats",
+    "original_title": "Fauteuils d'orchestre",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2006,
+    "end_year": null,
+    "runtime_minutes": 106,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.7,
+    "num_votes": 4628,
+    "imdb_url": "https://www.imdb.com/title/tt0444112/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0448075",
+    "primary_title": "The Night Listener",
+    "original_title": "The Night Listener",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2006,
+    "end_year": null,
+    "runtime_minutes": 91,
+    "genres": [
+      "Crime",
+      "Drama",
+      "Horror"
+    ],
+    "average_rating": 5.9,
+    "num_votes": 16621,
+    "imdb_url": "https://www.imdb.com/title/tt0448075/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt0452664",
+    "primary_title": "Party Crashers",
+    "original_title": "Os Penetras",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2012,
+    "end_year": null,
+    "runtime_minutes": 88,
+    "genres": [
+      "Comedy"
+    ],
+    "average_rating": 5.3,
+    "num_votes": 1120,
+    "imdb_url": "https://www.imdb.com/title/tt0452664/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0452668",
+    "primary_title": "Pterosaurus",
+    "original_title": "Pterodactyl",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2004,
+    "end_year": null,
+    "runtime_minutes": 89,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Horror"
+    ],
+    "average_rating": 3.2,
+    "num_votes": 2650,
+    "imdb_url": "https://www.imdb.com/title/tt0452668/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt0455362",
+    "primary_title": "The Breed",
+    "original_title": "The Breed",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2006,
+    "end_year": null,
+    "runtime_minutes": 91,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Horror"
+    ],
+    "average_rating": 5.1,
+    "num_votes": 15447,
+    "imdb_url": "https://www.imdb.com/title/tt0455362/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt0459293",
+    "primary_title": "Gandhi, My Father",
+    "original_title": "Gandhi, My Father",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2007,
+    "end_year": null,
+    "runtime_minutes": 136,
+    "genres": [
+      "Biography",
+      "Drama",
+      "History"
+    ],
+    "average_rating": 7.3,
+    "num_votes": 1907,
+    "imdb_url": "https://www.imdb.com/title/tt0459293/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0460394",
+    "primary_title": "Aithe",
+    "original_title": "Aithe",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2003,
+    "end_year": null,
+    "runtime_minutes": 132,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "average_rating": 7.9,
+    "num_votes": 1668,
+    "imdb_url": "https://www.imdb.com/title/tt0460394/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0462465",
+    "primary_title": "Outlander",
+    "original_title": "Outlander",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2008,
+    "end_year": null,
+    "runtime_minutes": 115,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 82323,
+    "imdb_url": "https://www.imdb.com/title/tt0462465/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0464160",
+    "primary_title": "Chup Chup Ke",
+    "original_title": "Chup Chup Ke",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2006,
+    "end_year": null,
+    "runtime_minutes": 164,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 7.1,
+    "num_votes": 16252,
+    "imdb_url": "https://www.imdb.com/title/tt0464160/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0466103",
+    "primary_title": "Pyl",
+    "original_title": "Pyl",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2005,
+    "end_year": null,
+    "runtime_minutes": 107,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "average_rating": 7.1,
+    "num_votes": 1854,
+    "imdb_url": "https://www.imdb.com/title/tt0466103/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0470967",
+    "primary_title": "Voice",
+    "original_title": "Yeogo goedam 4: Moksori",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2005,
+    "end_year": null,
+    "runtime_minutes": 104,
+    "genres": [
+      "Horror"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 1793,
+    "imdb_url": "https://www.imdb.com/title/tt0470967/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt0471041",
+    "primary_title": "The Tournament",
+    "original_title": "The Tournament",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2009,
+    "end_year": null,
+    "runtime_minutes": 95,
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "average_rating": 6.0,
+    "num_votes": 37288,
+    "imdb_url": "https://www.imdb.com/title/tt0471041/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt0481354",
+    "primary_title": "The Imam",
+    "original_title": "The Imam",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2005,
+    "end_year": null,
+    "runtime_minutes": 110,
+    "genres": [
+      "Drama"
+    ],
+    "average_rating": 4.9,
+    "num_votes": 1198,
+    "imdb_url": "https://www.imdb.com/title/tt0481354/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0483631",
+    "primary_title": "Gettin' It",
+    "original_title": "Gettin' It",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2006,
+    "end_year": null,
+    "runtime_minutes": 93,
+    "genres": [
+      "Comedy"
+    ],
+    "average_rating": 3.3,
+    "num_votes": 1195,
+    "imdb_url": "https://www.imdb.com/title/tt0483631/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0487011",
+    "primary_title": "Anandabhadram",
+    "original_title": "Anandabhadram",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2005,
+    "end_year": null,
+    "runtime_minutes": 130,
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Horror"
+    ],
+    "average_rating": 7.3,
+    "num_votes": 1321,
+    "imdb_url": "https://www.imdb.com/title/tt0487011/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt0758752",
+    "primary_title": "Love & Other Drugs",
+    "original_title": "Love & Other Drugs",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2010,
+    "end_year": null,
+    "runtime_minutes": 112,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.7,
+    "num_votes": 255885,
+    "imdb_url": "https://www.imdb.com/title/tt0758752/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0758762",
+    "primary_title": "The Last Sentinel",
+    "original_title": "The Last Sentinel",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2007,
+    "end_year": null,
+    "runtime_minutes": 93,
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "average_rating": 3.6,
+    "num_votes": 2021,
+    "imdb_url": "https://www.imdb.com/title/tt0758762/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt0768218",
+    "primary_title": "The Mysteries of Pittsburgh",
+    "original_title": "The Mysteries of Pittsburgh",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2008,
+    "end_year": null,
+    "runtime_minutes": 95,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 5.4,
+    "num_votes": 3613,
+    "imdb_url": "https://www.imdb.com/title/tt0768218/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0780583",
+    "primary_title": "Flight of the Living Dead",
+    "original_title": "Plane Dead",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2007,
+    "end_year": null,
+    "runtime_minutes": 89,
+    "genres": [
+      "Horror",
+      "Sci-Fi"
+    ],
+    "average_rating": 5.1,
+    "num_votes": 10061,
+    "imdb_url": "https://www.imdb.com/title/tt0780583/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0790602",
+    "primary_title": "Nitro",
+    "original_title": "Nitro",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2007,
+    "end_year": null,
+    "runtime_minutes": 105,
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
+    ],
+    "average_rating": 5.4,
+    "num_votes": 1862,
+    "imdb_url": "https://www.imdb.com/title/tt0790602/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0826631",
+    "primary_title": "Exam",
+    "original_title": "Sinav",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2006,
+    "end_year": null,
+    "runtime_minutes": 120,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 6.7,
+    "num_votes": 12721,
+    "imdb_url": "https://www.imdb.com/title/tt0826631/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt0836700",
+    "primary_title": "Summer Hours",
+    "original_title": "L'heure d'été",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2008,
+    "end_year": null,
+    "runtime_minutes": 103,
+    "genres": [
+      "Drama",
+      "Family"
+    ],
+    "average_rating": 7.1,
+    "num_votes": 8751,
+    "imdb_url": "https://www.imdb.com/title/tt0836700/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0843878",
+    "primary_title": "UKM: The Ultimate Killing Machine",
+    "original_title": "UKM: The Ultimate Killing Machine",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2006,
+    "end_year": null,
+    "runtime_minutes": 85,
+    "genres": [
+      "Horror",
+      "Sci-Fi"
+    ],
+    "average_rating": 3.1,
+    "num_votes": 1112,
+    "imdb_url": "https://www.imdb.com/title/tt0843878/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt0844319",
+    "primary_title": "Kaidan",
+    "original_title": "Kaidan",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2007,
+    "end_year": null,
+    "runtime_minutes": 115,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Romance"
+    ],
+    "average_rating": 6.1,
+    "num_votes": 1308,
+    "imdb_url": "https://www.imdb.com/title/tt0844319/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt0870111",
+    "primary_title": "Frost/Nixon",
+    "original_title": "Frost/Nixon",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2008,
+    "end_year": null,
+    "runtime_minutes": 122,
+    "genres": [
+      "Biography",
+      "Drama",
+      "History"
+    ],
+    "average_rating": 7.6,
+    "num_votes": 116440,
+    "imdb_url": "https://www.imdb.com/title/tt0870111/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0870944",
+    "primary_title": "Tears for You",
+    "original_title": "Nada sô sô",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2006,
+    "end_year": null,
+    "runtime_minutes": 118,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.7,
+    "num_votes": 1268,
+    "imdb_url": "https://www.imdb.com/title/tt0870944/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0892769",
+    "primary_title": "How to Train Your Dragon",
+    "original_title": "How to Train Your Dragon",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2010,
+    "end_year": null,
+    "runtime_minutes": 98,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "average_rating": 8.1,
+    "num_votes": 909464,
+    "imdb_url": "https://www.imdb.com/title/tt0892769/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt0896923",
+    "primary_title": "The City of Your Final Destination",
+    "original_title": "The City of Your Final Destination",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2009,
+    "end_year": null,
+    "runtime_minutes": 117,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.3,
+    "num_votes": 3436,
+    "imdb_url": "https://www.imdb.com/title/tt0896923/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt0902290",
+    "primary_title": "I Sell the Dead",
+    "original_title": "I Sell the Dead",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2008,
+    "end_year": null,
+    "runtime_minutes": 85,
+    "genres": [
+      "Comedy",
+      "Horror"
+    ],
+    "average_rating": 6.0,
+    "num_votes": 11618,
+    "imdb_url": "https://www.imdb.com/title/tt0902290/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt0914798",
+    "primary_title": "The Boy in the Striped Pajamas",
+    "original_title": "The Boy in the Striped Pajamas",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2008,
+    "end_year": null,
+    "runtime_minutes": 94,
+    "genres": [
+      "Drama",
+      "War"
+    ],
+    "average_rating": 7.7,
+    "num_votes": 278367,
+    "imdb_url": "https://www.imdb.com/title/tt0914798/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt0937378",
+    "primary_title": "Wolf",
+    "original_title": "Varg",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2008,
+    "end_year": null,
+    "runtime_minutes": 95,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "average_rating": 6.1,
+    "num_votes": 1500,
+    "imdb_url": "https://www.imdb.com/title/tt0937378/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt0960890",
+    "primary_title": "Zombie Strippers!",
+    "original_title": "Zombie Strippers!",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2008,
+    "end_year": null,
+    "runtime_minutes": 94,
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "average_rating": 4.1,
+    "num_votes": 19749,
+    "imdb_url": "https://www.imdb.com/title/tt0960890/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0963194",
+    "primary_title": "Repo! The Genetic Opera",
+    "original_title": "Repo! The Genetic Opera",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2008,
+    "end_year": null,
+    "runtime_minutes": 98,
+    "genres": [
+      "Horror",
+      "Musical",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.4,
+    "num_votes": 28760,
+    "imdb_url": "https://www.imdb.com/title/tt0963194/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt0995868",
+    "primary_title": "Pele: Birth of a Legend",
+    "original_title": "Pelé: Birth of a Legend",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2016,
+    "end_year": null,
+    "runtime_minutes": 107,
+    "genres": [
+      "Biography",
+      "Drama",
+      "Sport"
+    ],
+    "average_rating": 7.1,
+    "num_votes": 23924,
+    "imdb_url": "https://www.imdb.com/title/tt0995868/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt1001508",
+    "primary_title": "He's Just Not That Into You",
+    "original_title": "He's Just Not That Into You",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2009,
+    "end_year": null,
+    "runtime_minutes": 129,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.4,
+    "num_votes": 197862,
+    "imdb_url": "https://www.imdb.com/title/tt1001508/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt10110614",
+    "primary_title": "Apples",
+    "original_title": "Mila",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2020,
+    "end_year": null,
+    "runtime_minutes": 91,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.8,
+    "num_votes": 6247,
+    "imdb_url": "https://www.imdb.com/title/tt10110614/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt10260844",
+    "primary_title": "Queen of Spades",
+    "original_title": "Queen of Spades",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2021,
+    "end_year": null,
+    "runtime_minutes": 91,
+    "genres": [
+      "Horror"
+    ],
+    "average_rating": 3.8,
+    "num_votes": 1001,
+    "imdb_url": "https://www.imdb.com/title/tt10260844/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt10329842",
+    "primary_title": "Hero",
+    "original_title": "Geroy",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2019,
+    "end_year": null,
+    "runtime_minutes": 121,
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "average_rating": 4.7,
+    "num_votes": 3714,
+    "imdb_url": "https://www.imdb.com/title/tt10329842/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt1034303",
+    "primary_title": "Defiance",
+    "original_title": "Defiance",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2008,
+    "end_year": null,
+    "runtime_minutes": 137,
+    "genres": [
+      "Action",
+      "Drama",
+      "History"
+    ],
+    "average_rating": 7.1,
+    "num_votes": 161853,
+    "imdb_url": "https://www.imdb.com/title/tt1034303/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt10370042",
+    "primary_title": "Rising Wolf",
+    "original_title": "Ascendant",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2021,
+    "end_year": null,
+    "runtime_minutes": 102,
+    "genres": [
+      "Fantasy",
+      "Mystery",
+      "Sci-Fi"
+    ],
+    "average_rating": 3.6,
+    "num_votes": 1028,
+    "imdb_url": "https://www.imdb.com/title/tt10370042/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt10399608",
+    "primary_title": "Piggy",
+    "original_title": "Cerdita",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2022,
+    "end_year": null,
+    "runtime_minutes": 99,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Thriller"
+    ],
+    "average_rating": 6.1,
+    "num_votes": 16441,
+    "imdb_url": "https://www.imdb.com/title/tt10399608/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt10676052",
+    "primary_title": "The Fantastic Four: First Steps",
+    "original_title": "The Fantastic Four: First Steps",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2025,
+    "end_year": null,
+    "runtime_minutes": 115,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.8,
+    "num_votes": 291765,
+    "imdb_url": "https://www.imdb.com/title/tt10676052/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt10713340",
+    "primary_title": "Held",
+    "original_title": "Held",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2020,
+    "end_year": null,
+    "runtime_minutes": 94,
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "average_rating": 5.3,
+    "num_votes": 3388,
+    "imdb_url": "https://www.imdb.com/title/tt10713340/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt1078588",
+    "primary_title": "My Sister's Keeper",
+    "original_title": "My Sister's Keeper",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2009,
+    "end_year": null,
+    "runtime_minutes": 109,
+    "genres": [
+      "Drama",
+      "Family"
+    ],
+    "average_rating": 7.3,
+    "num_votes": 103549,
+    "imdb_url": "https://www.imdb.com/title/tt1078588/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt10928086",
+    "primary_title": "Knocking",
+    "original_title": "Knackningar",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2021,
+    "end_year": null,
+    "runtime_minutes": 78,
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "average_rating": 5.7,
+    "num_votes": 1885,
+    "imdb_url": "https://www.imdb.com/title/tt10928086/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt11107074",
+    "primary_title": "My Hero Academia: Heroes Rising",
+    "original_title": "Boku no Hîrô Akademia za Mûbî Hîrôzu: Raijingu",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2019,
+    "end_year": null,
+    "runtime_minutes": 104,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "average_rating": 7.8,
+    "num_votes": 13322,
+    "imdb_url": "https://www.imdb.com/title/tt11107074/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt11225626",
+    "primary_title": "Am I OK?",
+    "original_title": "Am I OK?",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2022,
+    "end_year": null,
+    "runtime_minutes": 86,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.1,
+    "num_votes": 15769,
+    "imdb_url": "https://www.imdb.com/title/tt11225626/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt11261532",
+    "primary_title": "The Mannequin",
+    "original_title": "The Mannequin",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2025,
+    "end_year": null,
+    "runtime_minutes": 85,
+    "genres": [
+      "Crime",
+      "Drama",
+      "Horror"
+    ],
+    "average_rating": 4.7,
+    "num_votes": 1312,
+    "imdb_url": "https://www.imdb.com/title/tt11261532/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt1135095",
+    "primary_title": "Tell Tale",
+    "original_title": "Tell-Tale",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2009,
+    "end_year": null,
+    "runtime_minutes": 93,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "average_rating": 5.3,
+    "num_votes": 5438,
+    "imdb_url": "https://www.imdb.com/title/tt1135095/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt1135961",
+    "primary_title": "Bangkok Love Story",
+    "original_title": "Phuean... Ku rak mueng wa",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2007,
+    "end_year": null,
+    "runtime_minutes": 90,
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "average_rating": 5.8,
+    "num_votes": 1601,
+    "imdb_url": "https://www.imdb.com/title/tt1135961/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt11608126",
+    "primary_title": "Heir of the Witch",
+    "original_title": "Heir of the Witch",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2023,
+    "end_year": null,
+    "runtime_minutes": 94,
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "average_rating": 4.0,
+    "num_votes": 1275,
+    "imdb_url": "https://www.imdb.com/title/tt11608126/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt11610804",
+    "primary_title": "Haute Couture",
+    "original_title": "Haute couture",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2021,
+    "end_year": null,
+    "runtime_minutes": 100,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 1584,
+    "imdb_url": "https://www.imdb.com/title/tt11610804/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt1161418",
+    "primary_title": "Gentlemen Broncos",
+    "original_title": "Gentlemen Broncos",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2009,
+    "end_year": null,
+    "runtime_minutes": 90,
+    "genres": [
+      "Comedy",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 14698,
+    "imdb_url": "https://www.imdb.com/title/tt1161418/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt1181791",
+    "primary_title": "Black Death",
+    "original_title": "Black Death",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2010,
+    "end_year": null,
+    "runtime_minutes": 102,
+    "genres": [
+      "Action",
+      "Drama",
+      "History"
+    ],
+    "average_rating": 6.4,
+    "num_votes": 55087,
+    "imdb_url": "https://www.imdb.com/title/tt1181791/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt11866370",
+    "primary_title": "Aranmanai 3",
+    "original_title": "Aranmanai 3",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2021,
+    "end_year": null,
+    "runtime_minutes": 155,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Horror"
+    ],
+    "average_rating": 4.1,
+    "num_votes": 1587,
+    "imdb_url": "https://www.imdb.com/title/tt11866370/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt1194616",
+    "primary_title": "LOL (Laughing Out Loud)",
+    "original_title": "LOL (Laughing Out Loud) ®",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2008,
+    "end_year": null,
+    "runtime_minutes": 103,
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "average_rating": 6.3,
+    "num_votes": 10416,
+    "imdb_url": "https://www.imdb.com/title/tt1194616/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt1209361",
+    "primary_title": "Sutures",
+    "original_title": "Sutures",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2009,
+    "end_year": null,
+    "runtime_minutes": 83,
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "average_rating": 4.1,
+    "num_votes": 1597,
+    "imdb_url": "https://www.imdb.com/title/tt1209361/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt12163074",
+    "primary_title": "The Resort",
+    "original_title": "The Resort",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2021,
+    "end_year": null,
+    "runtime_minutes": 76,
+    "genres": [
+      "Horror"
+    ],
+    "average_rating": 3.1,
+    "num_votes": 4804,
+    "imdb_url": "https://www.imdb.com/title/tt12163074/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt1239446",
+    "primary_title": "The Last Days of Emma Blank",
+    "original_title": "De laatste dagen van Emma Blank",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2009,
+    "end_year": null,
+    "runtime_minutes": 89,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 6.8,
+    "num_votes": 2437,
+    "imdb_url": "https://www.imdb.com/title/tt1239446/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt12585076",
+    "primary_title": "Moonshot",
+    "original_title": "Moonshot",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2022,
+    "end_year": null,
+    "runtime_minutes": 104,
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Sci-Fi"
+    ],
+    "average_rating": 5.6,
+    "num_votes": 6893,
+    "imdb_url": "https://www.imdb.com/title/tt12585076/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt1274596",
+    "primary_title": "USS Seaviper",
+    "original_title": "USS Seaviper",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2012,
+    "end_year": null,
+    "runtime_minutes": 102,
+    "genres": [
+      "Action",
+      "Drama",
+      "War"
+    ],
+    "average_rating": 2.5,
+    "num_votes": 1038,
+    "imdb_url": "https://www.imdb.com/title/tt1274596/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt12763920",
+    "primary_title": "Deliver Us from Evil",
+    "original_title": "Daman akeseo guhasoseo",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2020,
+    "end_year": null,
+    "runtime_minutes": 114,
+    "genres": [
+      "Action",
+      "Crime",
+      "Thriller"
+    ],
+    "average_rating": 6.8,
+    "num_votes": 7714,
+    "imdb_url": "https://www.imdb.com/title/tt12763920/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt12857614",
+    "primary_title": "Love, Life & Pakodi",
+    "original_title": "Love, Life & Pakodi",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2021,
+    "end_year": null,
+    "runtime_minutes": 114,
+    "genres": [
+      "Romance"
+    ],
+    "average_rating": 5.4,
+    "num_votes": 3172,
+    "imdb_url": "https://www.imdb.com/title/tt12857614/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt12875782",
+    "primary_title": "Freaks: You're One of Us",
+    "original_title": "Freaks - Du bist eine von uns",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2020,
+    "end_year": null,
+    "runtime_minutes": 92,
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "average_rating": 5.4,
+    "num_votes": 7566,
+    "imdb_url": "https://www.imdb.com/title/tt12875782/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt13043436",
+    "primary_title": "The Humans and the Mongoose",
+    "original_title": "El Ens W El Nems",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2021,
+    "end_year": null,
+    "runtime_minutes": 120,
+    "genres": [
+      "Comedy",
+      "Fantasy",
+      "Horror"
+    ],
+    "average_rating": 5.0,
+    "num_votes": 1809,
+    "imdb_url": "https://www.imdb.com/title/tt13043436/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt1322930",
+    "primary_title": "Alone",
+    "original_title": "Issiz Adam",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2008,
+    "end_year": null,
+    "runtime_minutes": 113,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.8,
+    "num_votes": 26282,
+    "imdb_url": "https://www.imdb.com/title/tt1322930/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt1329454",
+    "primary_title": "Vengeance",
+    "original_title": "Fuk sau",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2009,
+    "end_year": null,
+    "runtime_minutes": 108,
+    "genres": [
+      "Action",
+      "Crime",
+      "Thriller"
+    ],
+    "average_rating": 6.6,
+    "num_votes": 7320,
+    "imdb_url": "https://www.imdb.com/title/tt1329454/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt13316790",
+    "primary_title": "Off Track",
+    "original_title": "Ur spår",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2022,
+    "end_year": null,
+    "runtime_minutes": 108,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 3139,
+    "imdb_url": "https://www.imdb.com/title/tt13316790/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt1336608",
+    "primary_title": "Rock of Ages",
+    "original_title": "Rock of Ages",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2012,
+    "end_year": null,
+    "runtime_minutes": 123,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Musical"
+    ],
+    "average_rating": 5.9,
+    "num_votes": 85134,
+    "imdb_url": "https://www.imdb.com/title/tt1336608/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt1341188",
+    "primary_title": "How Do You Know",
+    "original_title": "How Do You Know",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2010,
+    "end_year": null,
+    "runtime_minutes": 121,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 5.4,
+    "num_votes": 58106,
+    "imdb_url": "https://www.imdb.com/title/tt1341188/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt1341338",
+    "primary_title": "Good Luck, Have Fun, Don't Die",
+    "original_title": "Good Luck, Have Fun, Don't Die",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2025,
+    "end_year": null,
+    "runtime_minutes": 134,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "average_rating": 7.0,
+    "num_votes": 78909,
+    "imdb_url": "https://www.imdb.com/title/tt1341338/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt13515090",
+    "primary_title": "Joyride",
+    "original_title": "Joyride",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2022,
+    "end_year": null,
+    "runtime_minutes": 94,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 3809,
+    "imdb_url": "https://www.imdb.com/title/tt13515090/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt13801462",
+    "primary_title": "Gandhi Godse Ek Yudh",
+    "original_title": "Gandhi Godse Ek Yudh",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2023,
+    "end_year": null,
+    "runtime_minutes": 110,
+    "genres": [
+      "Drama",
+      "History"
+    ],
+    "average_rating": 6.6,
+    "num_votes": 8551,
+    "imdb_url": "https://www.imdb.com/title/tt13801462/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt13866142",
+    "primary_title": "Wish You",
+    "original_title": "Wish You",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2021,
+    "end_year": null,
+    "runtime_minutes": 102,
+    "genres": [
+      "Drama",
+      "Music",
+      "Romance"
+    ],
+    "average_rating": 6.4,
+    "num_votes": 1420,
+    "imdb_url": "https://www.imdb.com/title/tt13866142/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt1386703",
+    "primary_title": "Total Recall",
+    "original_title": "Total Recall",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2012,
+    "end_year": null,
+    "runtime_minutes": 118,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 277772,
+    "imdb_url": "https://www.imdb.com/title/tt1386703/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt13918550",
+    "primary_title": "Black Site",
+    "original_title": "Black Site",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2022,
+    "end_year": null,
+    "runtime_minutes": 93,
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "average_rating": 4.5,
+    "num_votes": 5173,
+    "imdb_url": "https://www.imdb.com/title/tt13918550/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt13989030",
+    "primary_title": "The Royal Treatment",
+    "original_title": "The Royal Treatment",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2022,
+    "end_year": null,
+    "runtime_minutes": 96,
+    "genres": [
+      "Comedy",
+      "Family",
+      "Romance"
+    ],
+    "average_rating": 5.3,
+    "num_votes": 12984,
+    "imdb_url": "https://www.imdb.com/title/tt13989030/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt1414378",
+    "primary_title": "Tracker",
+    "original_title": "Tracker",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2010,
+    "end_year": null,
+    "runtime_minutes": 102,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "average_rating": 6.5,
+    "num_votes": 4466,
+    "imdb_url": "https://www.imdb.com/title/tt1414378/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt1418712",
+    "primary_title": "Outpost: Black Sun",
+    "original_title": "Outpost: Black Sun",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2012,
+    "end_year": null,
+    "runtime_minutes": 101,
+    "genres": [
+      "Action",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "average_rating": 4.9,
+    "num_votes": 6020,
+    "imdb_url": "https://www.imdb.com/title/tt1418712/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt1424310",
+    "primary_title": "Chinese Zodiac",
+    "original_title": "Shi er shengxiao",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2012,
+    "end_year": null,
+    "runtime_minutes": 109,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "average_rating": 6.0,
+    "num_votes": 26569,
+    "imdb_url": "https://www.imdb.com/title/tt1424310/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt1430110",
+    "primary_title": "Rapt",
+    "original_title": "Rapt",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2009,
+    "end_year": null,
+    "runtime_minutes": 125,
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "average_rating": 6.7,
+    "num_votes": 2280,
+    "imdb_url": "https://www.imdb.com/title/tt1430110/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt1438173",
+    "primary_title": "Bait",
+    "original_title": "Bait",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2012,
+    "end_year": null,
+    "runtime_minutes": 93,
+    "genres": [
+      "Action",
+      "Fantasy",
+      "Horror"
+    ],
+    "average_rating": 5.2,
+    "num_votes": 21419,
+    "imdb_url": "https://www.imdb.com/title/tt1438173/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt14463484",
+    "primary_title": "Through My Window",
+    "original_title": "A través de mi ventana",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2022,
+    "end_year": null,
+    "runtime_minutes": 116,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 5.5,
+    "num_votes": 26400,
+    "imdb_url": "https://www.imdb.com/title/tt14463484/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt1452628",
+    "primary_title": "Vanishing on 7th Street",
+    "original_title": "Vanishing on 7th Street",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2010,
+    "end_year": null,
+    "runtime_minutes": 92,
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "average_rating": 4.9,
+    "num_votes": 28482,
+    "imdb_url": "https://www.imdb.com/title/tt1452628/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt14564000",
+    "primary_title": "Guntur Kaaram",
+    "original_title": "Guntur Kaaram",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2024,
+    "end_year": null,
+    "runtime_minutes": 159,
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "average_rating": 5.4,
+    "num_votes": 25516,
+    "imdb_url": "https://www.imdb.com/title/tt14564000/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt14604100",
+    "primary_title": "Friday the 13th Vengeance 2: Bloodlines",
+    "original_title": "Friday the 13th Vengeance 2: Bloodlines",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2022,
+    "end_year": null,
+    "runtime_minutes": 108,
+    "genres": [
+      "Horror"
+    ],
+    "average_rating": 5.2,
+    "num_votes": 1783,
+    "imdb_url": "https://www.imdb.com/title/tt14604100/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt1464540",
+    "primary_title": "I Am Number Four",
+    "original_title": "I Am Number Four",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2011,
+    "end_year": null,
+    "runtime_minutes": 111,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.1,
+    "num_votes": 254148,
+    "imdb_url": "https://www.imdb.com/title/tt1464540/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt14722598",
+    "primary_title": "Rainbow",
+    "original_title": "Rainbow",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2022,
+    "end_year": null,
+    "runtime_minutes": 117,
+    "genres": [
+      "Drama"
+    ],
+    "average_rating": 4.7,
+    "num_votes": 1231,
+    "imdb_url": "https://www.imdb.com/title/tt14722598/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt14917354",
+    "primary_title": "The House",
+    "original_title": "Das Haus",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2021,
+    "end_year": null,
+    "runtime_minutes": 90,
+    "genres": [
+      "Drama",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "average_rating": 5.6,
+    "num_votes": 2579,
+    "imdb_url": "https://www.imdb.com/title/tt14917354/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt1496872",
+    "primary_title": "Siva Manasula Sakthi",
+    "original_title": "Siva Manasula Sakthi",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2009,
+    "end_year": null,
+    "runtime_minutes": 138,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 7.1,
+    "num_votes": 2254,
+    "imdb_url": "https://www.imdb.com/title/tt1496872/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt15005606",
+    "primary_title": "Peter Five Eight",
+    "original_title": "Peter Five Eight",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2024,
+    "end_year": null,
+    "runtime_minutes": 100,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 3.3,
+    "num_votes": 1321,
+    "imdb_url": "https://www.imdb.com/title/tt15005606/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt15009428",
+    "primary_title": "Argylle",
+    "original_title": "Argylle",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2024,
+    "end_year": null,
+    "runtime_minutes": 139,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "average_rating": 5.6,
+    "num_votes": 102420,
+    "imdb_url": "https://www.imdb.com/title/tt15009428/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt15165236",
+    "primary_title": "The Hand",
+    "original_title": "The Hand",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2020,
+    "end_year": null,
+    "runtime_minutes": 56,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 7.3,
+    "num_votes": 1695,
+    "imdb_url": "https://www.imdb.com/title/tt15165236/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt15262370",
+    "primary_title": "Maneater",
+    "original_title": "Maneater",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2022,
+    "end_year": null,
+    "runtime_minutes": 87,
+    "genres": [
+      "Action",
+      "Horror",
+      "Thriller"
+    ],
+    "average_rating": 3.2,
+    "num_votes": 2739,
+    "imdb_url": "https://www.imdb.com/title/tt15262370/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt15309808",
+    "primary_title": "Michael",
+    "original_title": "Michael",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2023,
+    "end_year": null,
+    "runtime_minutes": 152,
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "average_rating": 5.0,
+    "num_votes": 1705,
+    "imdb_url": "https://www.imdb.com/title/tt15309808/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt1535616",
+    "primary_title": "The Divide",
+    "original_title": "The Divide",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2011,
+    "end_year": null,
+    "runtime_minutes": 112,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "average_rating": 5.7,
+    "num_votes": 40661,
+    "imdb_url": "https://www.imdb.com/title/tt1535616/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt15514498",
+    "primary_title": "Eenie Meanie",
+    "original_title": "Eenie Meanie",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2025,
+    "end_year": null,
+    "runtime_minutes": 106,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 5.9,
+    "num_votes": 14136,
+    "imdb_url": "https://www.imdb.com/title/tt15514498/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt1582466",
+    "primary_title": "Adhurs",
+    "original_title": "Adhurs",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2010,
+    "end_year": null,
+    "runtime_minutes": 150,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Thriller"
+    ],
+    "average_rating": 6.8,
+    "num_votes": 3651,
+    "imdb_url": "https://www.imdb.com/title/tt1582466/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt1610452",
+    "primary_title": "Band Baaja Baaraat",
+    "original_title": "Band Baaja Baaraat",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2010,
+    "end_year": null,
+    "runtime_minutes": 139,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 7.2,
+    "num_votes": 20015,
+    "imdb_url": "https://www.imdb.com/title/tt1610452/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt16303830",
+    "primary_title": "Nothing Serious",
+    "original_title": "Yeonae ppajin romaenseu",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2021,
+    "end_year": null,
+    "runtime_minutes": 94,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.5,
+    "num_votes": 1023,
+    "imdb_url": "https://www.imdb.com/title/tt16303830/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt16464084",
+    "primary_title": "Stay the Night",
+    "original_title": "Stay the Night",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2022,
+    "end_year": null,
+    "runtime_minutes": 89,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.7,
+    "num_votes": 1787,
+    "imdb_url": "https://www.imdb.com/title/tt16464084/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt1650042",
+    "primary_title": "Dead Season",
+    "original_title": "Dead Season",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2012,
+    "end_year": null,
+    "runtime_minutes": 85,
+    "genres": [
+      "Horror",
+      "Sci-Fi"
+    ],
+    "average_rating": 4.6,
+    "num_votes": 3306,
+    "imdb_url": "https://www.imdb.com/title/tt1650042/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt1650554",
+    "primary_title": "Kick-Ass 2",
+    "original_title": "Kick-Ass 2",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2013,
+    "end_year": null,
+    "runtime_minutes": 103,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Crime"
+    ],
+    "average_rating": 6.5,
+    "num_votes": 302191,
+    "imdb_url": "https://www.imdb.com/title/tt1650554/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt1667150",
+    "primary_title": "What Women Want",
+    "original_title": "Wo zhi nü ren xin",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2011,
+    "end_year": null,
+    "runtime_minutes": 116,
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Sci-Fi"
+    ],
+    "average_rating": 5.5,
+    "num_votes": 1474,
+    "imdb_url": "https://www.imdb.com/title/tt1667150/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt1692189",
+    "primary_title": "Don Seenu",
+    "original_title": "Don Seenu",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2010,
+    "end_year": null,
+    "runtime_minutes": 164,
+    "genres": [
+      "Action",
+      "Comedy"
+    ],
+    "average_rating": 6.0,
+    "num_votes": 1289,
+    "imdb_url": "https://www.imdb.com/title/tt1692189/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt1753640",
+    "primary_title": "Crook: It's Good to Be Bad",
+    "original_title": "Crook: It's Good to Be Bad",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2010,
+    "end_year": null,
+    "runtime_minutes": 121,
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "average_rating": 5.1,
+    "num_votes": 2536,
+    "imdb_url": "https://www.imdb.com/title/tt1753640/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt1798709",
+    "primary_title": "Her",
+    "original_title": "Her",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2013,
+    "end_year": null,
+    "runtime_minutes": 126,
+    "genres": [
+      "Drama",
+      "Romance",
+      "Sci-Fi"
+    ],
+    "average_rating": 7.9,
+    "num_votes": 734400,
+    "imdb_url": "https://www.imdb.com/title/tt1798709/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt1800246",
+    "primary_title": "That Awkward Moment",
+    "original_title": "That Awkward Moment",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2014,
+    "end_year": null,
+    "runtime_minutes": 94,
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "average_rating": 6.1,
+    "num_votes": 110913,
+    "imdb_url": "https://www.imdb.com/title/tt1800246/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt18411838",
+    "primary_title": "Woman in the Maze",
+    "original_title": "Woman in the Maze",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2023,
+    "end_year": null,
+    "runtime_minutes": 101,
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "average_rating": 3.5,
+    "num_votes": 1644,
+    "imdb_url": "https://www.imdb.com/title/tt18411838/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt1844635",
+    "primary_title": "The Bucks County Massacre",
+    "original_title": "The Bucks County Massacre",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2010,
+    "end_year": null,
+    "runtime_minutes": 84,
+    "genres": [
+      "Action",
+      "Horror",
+      "Thriller"
+    ],
+    "average_rating": 3.5,
+    "num_votes": 1649,
+    "imdb_url": "https://www.imdb.com/title/tt1844635/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt1876373",
+    "primary_title": "Lost and Found in Armenia",
+    "original_title": "Lost and Found in Armenia",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2012,
+    "end_year": null,
+    "runtime_minutes": 100,
+    "genres": [
+      "Comedy"
+    ],
+    "average_rating": 6.1,
+    "num_votes": 2031,
+    "imdb_url": "https://www.imdb.com/title/tt1876373/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt1890513",
+    "primary_title": "Ragini MMS",
+    "original_title": "Ragini MMS",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2011,
+    "end_year": null,
+    "runtime_minutes": 93,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Mystery"
+    ],
+    "average_rating": 5.1,
+    "num_votes": 3050,
+    "imdb_url": "https://www.imdb.com/title/tt1890513/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt18970380",
+    "primary_title": "The Taming of the Shrewd",
+    "original_title": "Poskromienie zlosnicy",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2022,
+    "end_year": null,
+    "runtime_minutes": 100,
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "average_rating": 4.7,
+    "num_votes": 1564,
+    "imdb_url": "https://www.imdb.com/title/tt18970380/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt19632738",
+    "primary_title": "Cherry Magic! Thirty Years of Virginity Can Make You a Wizard?!: The Movie",
+    "original_title": "Gekijôban Sanjûsai made Dôtei Da to Mahôtsukai ni Nareru rashii",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2022,
+    "end_year": null,
+    "runtime_minutes": 104,
+    "genres": [
+      "Comedy",
+      "Fantasy",
+      "Romance"
+    ],
+    "average_rating": 7.4,
+    "num_votes": 1002,
+    "imdb_url": "https://www.imdb.com/title/tt19632738/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt2050633",
+    "primary_title": "The Barrens",
+    "original_title": "The Barrens",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2012,
+    "end_year": null,
+    "runtime_minutes": 94,
+    "genres": [
+      "Horror"
+    ],
+    "average_rating": 4.6,
+    "num_votes": 5074,
+    "imdb_url": "https://www.imdb.com/title/tt2050633/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt2055765",
+    "primary_title": "The English Teacher",
+    "original_title": "The English Teacher",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2013,
+    "end_year": null,
+    "runtime_minutes": 93,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 5.8,
+    "num_votes": 13778,
+    "imdb_url": "https://www.imdb.com/title/tt2055765/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt2062661",
+    "primary_title": "Area 407",
+    "original_title": "Tape 407",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2012,
+    "end_year": null,
+    "runtime_minutes": 90,
+    "genres": [
+      "Horror",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "average_rating": 3.6,
+    "num_votes": 4227,
+    "imdb_url": "https://www.imdb.com/title/tt2062661/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt2071550",
+    "primary_title": "Open Grave",
+    "original_title": "Open Grave",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2013,
+    "end_year": null,
+    "runtime_minutes": 102,
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.1,
+    "num_votes": 32993,
+    "imdb_url": "https://www.imdb.com/title/tt2071550/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt2102465",
+    "primary_title": "At Night All Wolves Are Grey",
+    "original_title": "Varg Veum - I mørket er alle ulver grå",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2011,
+    "end_year": null,
+    "runtime_minutes": 87,
+    "genres": [
+      "Action",
+      "Crime",
+      "Thriller"
+    ],
+    "average_rating": 6.5,
+    "num_votes": 1481,
+    "imdb_url": "https://www.imdb.com/title/tt2102465/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt2149814",
+    "primary_title": "Wild Desire",
+    "original_title": "Raghba Motawahesha",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 1992,
+    "end_year": null,
+    "runtime_minutes": 110,
+    "genres": [
+      "Drama"
+    ],
+    "average_rating": 4.5,
+    "num_votes": 1896,
+    "imdb_url": "https://www.imdb.com/title/tt2149814/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt2184233",
+    "primary_title": "1 Mile to You",
+    "original_title": "1 Mile to You",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2017,
+    "end_year": null,
+    "runtime_minutes": 104,
+    "genres": [
+      "Drama",
+      "Romance",
+      "Sport"
+    ],
+    "average_rating": 6.3,
+    "num_votes": 2984,
+    "imdb_url": "https://www.imdb.com/title/tt2184233/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt2190483",
+    "primary_title": "Living",
+    "original_title": "Zhit",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2012,
+    "end_year": null,
+    "runtime_minutes": 119,
+    "genres": [
+      "Drama"
+    ],
+    "average_rating": 7.2,
+    "num_votes": 1957,
+    "imdb_url": "https://www.imdb.com/title/tt2190483/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt22036922",
+    "primary_title": "Mr. King",
+    "original_title": "Mr. King",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2023,
+    "end_year": null,
+    "runtime_minutes": 145,
+    "genres": [
+      "Drama",
+      "Romance",
+      "Thriller"
+    ],
+    "average_rating": 5.0,
+    "num_votes": 2842,
+    "imdb_url": "https://www.imdb.com/title/tt22036922/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt2231208",
+    "primary_title": "Rio 2096: A Story of Love and Fury",
+    "original_title": "Uma História de Amor e Fúria",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2013,
+    "end_year": null,
+    "runtime_minutes": 74,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "average_rating": 7.1,
+    "num_votes": 2154,
+    "imdb_url": "https://www.imdb.com/title/tt2231208/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt22334258",
+    "primary_title": "Someone Like You",
+    "original_title": "Someone Like You",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2024,
+    "end_year": null,
+    "runtime_minutes": 118,
+    "genres": [
+      "Romance"
+    ],
+    "average_rating": 5.9,
+    "num_votes": 3089,
+    "imdb_url": "https://www.imdb.com/title/tt22334258/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt2235695",
+    "primary_title": "Rebecca",
+    "original_title": "Rebecca",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2020,
+    "end_year": null,
+    "runtime_minutes": 123,
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Romance"
+    ],
+    "average_rating": 6.1,
+    "num_votes": 51078,
+    "imdb_url": "https://www.imdb.com/title/tt2235695/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt22408160",
+    "primary_title": "Kinds of Kindness",
+    "original_title": "Kinds of Kindness",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2024,
+    "end_year": null,
+    "runtime_minutes": 164,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Horror"
+    ],
+    "average_rating": 6.4,
+    "num_votes": 74338,
+    "imdb_url": "https://www.imdb.com/title/tt22408160/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt2245003",
+    "primary_title": "Miss You Already",
+    "original_title": "Miss You Already",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2015,
+    "end_year": null,
+    "runtime_minutes": 112,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.8,
+    "num_votes": 20782,
+    "imdb_url": "https://www.imdb.com/title/tt2245003/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt2253742",
+    "primary_title": "Soar Into the Sun",
+    "original_title": "Al-too-bi: Riteon too beiseu",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2012,
+    "end_year": null,
+    "runtime_minutes": 113,
+    "genres": [
+      "Action",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 5.9,
+    "num_votes": 1849,
+    "imdb_url": "https://www.imdb.com/title/tt2253742/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt23865942",
+    "primary_title": "Sarzameen",
+    "original_title": "Sarzameen",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2025,
+    "end_year": null,
+    "runtime_minutes": 137,
+    "genres": [
+      "Action",
+      "Drama",
+      "Mystery"
+    ],
+    "average_rating": 3.9,
+    "num_votes": 1748,
+    "imdb_url": "https://www.imdb.com/title/tt23865942/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt2392830",
+    "primary_title": "A Quiet Passion",
+    "original_title": "A Quiet Passion",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2016,
+    "end_year": null,
+    "runtime_minutes": 125,
+    "genres": [
+      "Biography",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.4,
+    "num_votes": 6760,
+    "imdb_url": "https://www.imdb.com/title/tt2392830/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt2395417",
+    "primary_title": "Still Life",
+    "original_title": "Still Life",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2013,
+    "end_year": null,
+    "runtime_minutes": 92,
+    "genres": [
+      "Drama"
+    ],
+    "average_rating": 7.4,
+    "num_votes": 9895,
+    "imdb_url": "https://www.imdb.com/title/tt2395417/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt2406676",
+    "primary_title": "Ek Thi Daayan",
+    "original_title": "Ek Thi Daayan",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2013,
+    "end_year": null,
+    "runtime_minutes": 135,
+    "genres": [
+      "Horror",
+      "Romance",
+      "Thriller"
+    ],
+    "average_rating": 5.8,
+    "num_votes": 5032,
+    "imdb_url": "https://www.imdb.com/title/tt2406676/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt2414040",
+    "primary_title": "An Eye for Beauty",
+    "original_title": "Le règne de la beauté",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2014,
+    "end_year": null,
+    "runtime_minutes": 102,
+    "genres": [
+      "Drama"
+    ],
+    "average_rating": 5.4,
+    "num_votes": 1680,
+    "imdb_url": "https://www.imdb.com/title/tt2414040/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt2443022",
+    "primary_title": "Dark Mountain",
+    "original_title": "Dark Mountain",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2013,
+    "end_year": null,
+    "runtime_minutes": 82,
+    "genres": [
+      "Horror",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "average_rating": 4.4,
+    "num_votes": 1078,
+    "imdb_url": "https://www.imdb.com/title/tt2443022/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt2527186",
+    "primary_title": "All Cheerleaders Die",
+    "original_title": "All Cheerleaders Die",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2013,
+    "end_year": null,
+    "runtime_minutes": 89,
+    "genres": [
+      "Comedy",
+      "Horror"
+    ],
+    "average_rating": 5.1,
+    "num_votes": 10107,
+    "imdb_url": "https://www.imdb.com/title/tt2527186/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt2537176",
+    "primary_title": "I Spit on Your Grave 2",
+    "original_title": "I Spit on Your Grave 2",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2013,
+    "end_year": null,
+    "runtime_minutes": 106,
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "average_rating": 5.7,
+    "num_votes": 36961,
+    "imdb_url": "https://www.imdb.com/title/tt2537176/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt25947954",
+    "primary_title": "Gray Matter",
+    "original_title": "Gray Matter",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2023,
+    "end_year": null,
+    "runtime_minutes": 87,
+    "genres": [
+      "Drama",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "average_rating": 5.0,
+    "num_votes": 1450,
+    "imdb_url": "https://www.imdb.com/title/tt25947954/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt2649128",
+    "primary_title": "Metro",
+    "original_title": "Metro",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2013,
+    "end_year": null,
+    "runtime_minutes": 133,
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
+    ],
+    "average_rating": 6.4,
+    "num_votes": 8611,
+    "imdb_url": "https://www.imdb.com/title/tt2649128/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt26660615",
+    "primary_title": "Life for Real",
+    "original_title": "La vie pour de vrai",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2023,
+    "end_year": null,
+    "runtime_minutes": 110,
+    "genres": [
+      "Comedy"
+    ],
+    "average_rating": 5.7,
+    "num_votes": 1413,
+    "imdb_url": "https://www.imdb.com/title/tt26660615/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt2669336",
+    "primary_title": "Time Lapse",
+    "original_title": "Time Lapse",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2014,
+    "end_year": null,
+    "runtime_minutes": 104,
+    "genres": [
+      "Mystery",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "average_rating": 6.5,
+    "num_votes": 53663,
+    "imdb_url": "https://www.imdb.com/title/tt2669336/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt26899693",
+    "primary_title": "Attack of the Meth Gator",
+    "original_title": "Methgator",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2023,
+    "end_year": null,
+    "runtime_minutes": 89,
+    "genres": [
+      "Horror",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "average_rating": 3.3,
+    "num_votes": 1208,
+    "imdb_url": "https://www.imdb.com/title/tt26899693/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt27114092",
+    "primary_title": "Major Grom: The Game",
+    "original_title": "Mayor Grom. Igra",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2024,
+    "end_year": null,
+    "runtime_minutes": 168,
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 2145,
+    "imdb_url": "https://www.imdb.com/title/tt27114092/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt27487934",
+    "primary_title": "The Greatest of All Time",
+    "original_title": "The Greatest of All Time",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2024,
+    "end_year": null,
+    "runtime_minutes": 183,
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "average_rating": 5.7,
+    "num_votes": 26653,
+    "imdb_url": "https://www.imdb.com/title/tt27487934/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt27490380",
+    "primary_title": "13 Bombs",
+    "original_title": "13 Bom di Jakarta",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2023,
+    "end_year": null,
+    "runtime_minutes": 143,
+    "genres": [
+      "Action",
+      "Crime",
+      "Thriller"
+    ],
+    "average_rating": 6.5,
+    "num_votes": 2106,
+    "imdb_url": "https://www.imdb.com/title/tt27490380/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt27802490",
+    "primary_title": "Exhuma",
+    "original_title": "Pamyo",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2024,
+    "end_year": null,
+    "runtime_minutes": 134,
+    "genres": [
+      "Horror",
+      "Mystery"
+    ],
+    "average_rating": 6.9,
+    "num_votes": 31227,
+    "imdb_url": "https://www.imdb.com/title/tt27802490/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt2819358",
+    "primary_title": "Goynar Baksho",
+    "original_title": "Goynar Baksho",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2013,
+    "end_year": null,
+    "runtime_minutes": 141,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Family"
+    ],
+    "average_rating": 7.2,
+    "num_votes": 1911,
+    "imdb_url": "https://www.imdb.com/title/tt2819358/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt28607951",
+    "primary_title": "Anora",
+    "original_title": "Anora",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2024,
+    "end_year": null,
+    "runtime_minutes": 139,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 7.4,
+    "num_votes": 308330,
+    "imdb_url": "https://www.imdb.com/title/tt28607951/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt2901962",
+    "primary_title": "Kummeli V",
+    "original_title": "Kummeli V",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2014,
+    "end_year": null,
+    "runtime_minutes": 102,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Sci-Fi"
+    ],
+    "average_rating": 4.8,
+    "num_votes": 1282,
+    "imdb_url": "https://www.imdb.com/title/tt2901962/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt2908446",
+    "primary_title": "The Divergent Series: Insurgent",
+    "original_title": "The Divergent Series: Insurgent",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2015,
+    "end_year": null,
+    "runtime_minutes": 119,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Romance"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 274355,
+    "imdb_url": "https://www.imdb.com/title/tt2908446/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt29344903",
+    "primary_title": "The Ugly Stepsister",
+    "original_title": "Den stygge stesøsteren",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2025,
+    "end_year": null,
+    "runtime_minutes": 109,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Horror"
+    ],
+    "average_rating": 7.0,
+    "num_votes": 49071,
+    "imdb_url": "https://www.imdb.com/title/tt29344903/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt29456979",
+    "primary_title": "Little Hearts",
+    "original_title": "Little Hearts",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2024,
+    "end_year": null,
+    "runtime_minutes": 136,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 5.9,
+    "num_votes": 3366,
+    "imdb_url": "https://www.imdb.com/title/tt29456979/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt29567402",
+    "primary_title": "Rabbit Trap",
+    "original_title": "Rabbit Trap",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2025,
+    "end_year": null,
+    "runtime_minutes": 88,
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "average_rating": 4.9,
+    "num_votes": 2844,
+    "imdb_url": "https://www.imdb.com/title/tt29567402/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt3063462",
+    "primary_title": "If I Had Wings",
+    "original_title": "If I Had Wings",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2013,
+    "end_year": null,
+    "runtime_minutes": 89,
+    "genres": [
+      "Drama",
+      "Family",
+      "Sport"
+    ],
+    "average_rating": 7.1,
+    "num_votes": 1699,
+    "imdb_url": "https://www.imdb.com/title/tt3063462/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt3092076",
+    "primary_title": "Les trois frères, le retour",
+    "original_title": "Les trois frères, le retour",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2014,
+    "end_year": null,
+    "runtime_minutes": 106,
+    "genres": [
+      "Comedy"
+    ],
+    "average_rating": 4.8,
+    "num_votes": 1955,
+    "imdb_url": "https://www.imdb.com/title/tt3092076/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt30973261",
+    "primary_title": "I Am Nevenka",
+    "original_title": "Soy Nevenka",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2024,
+    "end_year": null,
+    "runtime_minutes": 112,
+    "genres": [
+      "Biography",
+      "Drama"
+    ],
+    "average_rating": 7.0,
+    "num_votes": 1659,
+    "imdb_url": "https://www.imdb.com/title/tt30973261/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt31013030",
+    "primary_title": "Flight 404",
+    "original_title": "Rihlah 404",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2024,
+    "end_year": null,
+    "runtime_minutes": 104,
+    "genres": [
+      "Drama"
+    ],
+    "average_rating": 7.3,
+    "num_votes": 2301,
+    "imdb_url": "https://www.imdb.com/title/tt31013030/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt31226981",
+    "primary_title": "Sankrathiki Vasthunam",
+    "original_title": "Sankrathiki Vasthunam",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2025,
+    "end_year": null,
+    "runtime_minutes": 160,
+    "genres": [
+      "Action",
+      "Comedy"
+    ],
+    "average_rating": 6.1,
+    "num_votes": 4323,
+    "imdb_url": "https://www.imdb.com/title/tt31226981/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt31242102",
+    "primary_title": "Solo Boy",
+    "original_title": "Solo Boy",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2025,
+    "end_year": null,
+    "runtime_minutes": 133,
+    "genres": [
+      "Romance"
+    ],
+    "average_rating": 6.5,
+    "num_votes": 1816,
+    "imdb_url": "https://www.imdb.com/title/tt31242102/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt3155654",
+    "primary_title": "Hide and Seek",
+    "original_title": "Sum-bakk-og-jil",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2013,
+    "end_year": null,
+    "runtime_minutes": 107,
+    "genres": [
+      "Crime",
+      "Horror",
+      "Mystery"
+    ],
+    "average_rating": 6.3,
+    "num_votes": 2675,
+    "imdb_url": "https://www.imdb.com/title/tt3155654/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt3204632",
+    "primary_title": "Like Me",
+    "original_title": "Like Me",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2017,
+    "end_year": null,
+    "runtime_minutes": 80,
+    "genres": [
+      "Crime",
+      "Drama",
+      "Horror"
+    ],
+    "average_rating": 5.2,
+    "num_votes": 1467,
+    "imdb_url": "https://www.imdb.com/title/tt3204632/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt32123395",
+    "primary_title": "Altered",
+    "original_title": "Altered",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2025,
+    "end_year": null,
+    "runtime_minutes": 87,
+    "genres": [
+      "Action",
+      "Sci-Fi"
+    ],
+    "average_rating": 3.6,
+    "num_votes": 2772,
+    "imdb_url": "https://www.imdb.com/title/tt32123395/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt3238502",
+    "primary_title": "Zombie Spring Breakers",
+    "original_title": "Ibiza Undead",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2016,
+    "end_year": null,
+    "runtime_minutes": 99,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Horror"
+    ],
+    "average_rating": 3.2,
+    "num_votes": 1240,
+    "imdb_url": "https://www.imdb.com/title/tt3238502/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt32768323",
+    "primary_title": "The Assessment",
+    "original_title": "The Assessment",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2024,
+    "end_year": null,
+    "runtime_minutes": 114,
+    "genres": [
+      "Drama",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.6,
+    "num_votes": 25504,
+    "imdb_url": "https://www.imdb.com/title/tt32768323/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt33349807",
+    "primary_title": "Sugar Mill",
+    "original_title": "Pabrik Gula",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2025,
+    "end_year": null,
+    "runtime_minutes": 133,
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "average_rating": 5.8,
+    "num_votes": 3075,
+    "imdb_url": "https://www.imdb.com/title/tt33349807/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt3433074",
+    "primary_title": "Mrs. Brown's Boys D'Movie",
+    "original_title": "Mrs. Brown's Boys D'Movie",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2014,
+    "end_year": null,
+    "runtime_minutes": 94,
+    "genres": [
+      "Comedy"
+    ],
+    "average_rating": 4.2,
+    "num_votes": 5740,
+    "imdb_url": "https://www.imdb.com/title/tt3433074/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt3465074",
+    "primary_title": "88",
+    "original_title": "88",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2015,
+    "end_year": null,
+    "runtime_minutes": 88,
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "average_rating": 4.9,
+    "num_votes": 3747,
+    "imdb_url": "https://www.imdb.com/title/tt3465074/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt3564794",
+    "primary_title": "Welcome to Happiness",
+    "original_title": "Welcome to Happiness",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2015,
+    "end_year": null,
+    "runtime_minutes": 95,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Fantasy"
+    ],
+    "average_rating": 6.1,
+    "num_votes": 1429,
+    "imdb_url": "https://www.imdb.com/title/tt3564794/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt3608654",
+    "primary_title": "The Coed and the Zombie Stoner",
+    "original_title": "The Coed and the Zombie Stoner",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2014,
+    "end_year": null,
+    "runtime_minutes": 91,
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "average_rating": 3.6,
+    "num_votes": 1772,
+    "imdb_url": "https://www.imdb.com/title/tt3608654/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt3620418",
+    "primary_title": "Boy 7",
+    "original_title": "Boy 7",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2015,
+    "end_year": null,
+    "runtime_minutes": 90,
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "average_rating": 5.8,
+    "num_votes": 2526,
+    "imdb_url": "https://www.imdb.com/title/tt3620418/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt36440312",
+    "primary_title": "Dan Da Dan: Evil Eye",
+    "original_title": "Dan Da Dan: Evil Eye",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2025,
+    "end_year": null,
+    "runtime_minutes": 93,
+    "genres": [
+      "Action",
+      "Animation",
+      "Sci-Fi"
+    ],
+    "average_rating": 7.8,
+    "num_votes": 2393,
+    "imdb_url": "https://www.imdb.com/title/tt36440312/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt36491337",
+    "primary_title": "His Story of Itihaas",
+    "original_title": "His Story of Itihaas",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2025,
+    "end_year": null,
+    "runtime_minutes": 144,
+    "genres": [
+      "Drama"
+    ],
+    "average_rating": 8.7,
+    "num_votes": 1229,
+    "imdb_url": "https://www.imdb.com/title/tt36491337/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt3685218",
+    "primary_title": "Felix and Meira",
+    "original_title": "Félix et Meira",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2014,
+    "end_year": null,
+    "runtime_minutes": 105,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.7,
+    "num_votes": 1691,
+    "imdb_url": "https://www.imdb.com/title/tt3685218/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt3748528",
+    "primary_title": "Rogue One: A Star Wars Story",
+    "original_title": "Rogue One",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2016,
+    "end_year": null,
+    "runtime_minutes": 133,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "average_rating": 7.8,
+    "num_votes": 766264,
+    "imdb_url": "https://www.imdb.com/title/tt3748528/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt3778644",
+    "primary_title": "Solo: A Star Wars Story",
+    "original_title": "Solo: A Star Wars Story",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2018,
+    "end_year": null,
+    "runtime_minutes": 135,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.9,
+    "num_votes": 415073,
+    "imdb_url": "https://www.imdb.com/title/tt3778644/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt3800028",
+    "primary_title": "Pak van mijn hart",
+    "original_title": "Pak van mijn hart",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2014,
+    "end_year": null,
+    "runtime_minutes": 83,
+    "genres": [
+      "Romance"
+    ],
+    "average_rating": 5.7,
+    "num_votes": 1215,
+    "imdb_url": "https://www.imdb.com/title/tt3800028/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt3960412",
+    "primary_title": "Popstar: Never Stop Never Stopping",
+    "original_title": "Popstar: Never Stop Never Stopping",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2016,
+    "end_year": null,
+    "runtime_minutes": 87,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Music"
+    ],
+    "average_rating": 6.7,
+    "num_votes": 74853,
+    "imdb_url": "https://www.imdb.com/title/tt3960412/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt3982774",
+    "primary_title": "Hadi Insallah",
+    "original_title": "Hadi Insallah",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2014,
+    "end_year": null,
+    "runtime_minutes": 96,
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "average_rating": 5.4,
+    "num_votes": 4572,
+    "imdb_url": "https://www.imdb.com/title/tt3982774/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt4073890",
+    "primary_title": "Andron",
+    "original_title": "Andròn: The Black Labyrinth",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2015,
+    "end_year": null,
+    "runtime_minutes": 100,
+    "genres": [
+      "Action",
+      "Sci-Fi"
+    ],
+    "average_rating": 2.7,
+    "num_votes": 3333,
+    "imdb_url": "https://www.imdb.com/title/tt4073890/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt4076926",
+    "primary_title": "The Heyday of the Insensitive Bastards",
+    "original_title": "The Heyday of the Insensitive Bastards",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2015,
+    "end_year": null,
+    "runtime_minutes": 97,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 4.3,
+    "num_votes": 1976,
+    "imdb_url": "https://www.imdb.com/title/tt4076926/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt4085084",
+    "primary_title": "Disorder",
+    "original_title": "Maryland",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2015,
+    "end_year": null,
+    "runtime_minutes": 98,
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 7049,
+    "imdb_url": "https://www.imdb.com/title/tt4085084/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt4264426",
+    "primary_title": "Bite",
+    "original_title": "Bite",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2015,
+    "end_year": null,
+    "runtime_minutes": 88,
+    "genres": [
+      "Horror"
+    ],
+    "average_rating": 4.9,
+    "num_votes": 6129,
+    "imdb_url": "https://www.imdb.com/title/tt4264426/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt4383594",
+    "primary_title": "Nine Lives",
+    "original_title": "Nine Lives",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2016,
+    "end_year": null,
+    "runtime_minutes": 87,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Family"
+    ],
+    "average_rating": 5.3,
+    "num_votes": 26087,
+    "imdb_url": "https://www.imdb.com/title/tt4383594/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt4411584",
+    "primary_title": "The Secret: Dare to Dream",
+    "original_title": "The Secret: Dare to Dream",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2020,
+    "end_year": null,
+    "runtime_minutes": 107,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.6,
+    "num_votes": 20502,
+    "imdb_url": "https://www.imdb.com/title/tt4411584/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt4435072",
+    "primary_title": "Liger",
+    "original_title": "Liger",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2022,
+    "end_year": null,
+    "runtime_minutes": 140,
+    "genres": [
+      "Action",
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 2.6,
+    "num_votes": 49443,
+    "imdb_url": "https://www.imdb.com/title/tt4435072/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt4439102",
+    "primary_title": "Officer Downe",
+    "original_title": "Officer Downe",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2016,
+    "end_year": null,
+    "runtime_minutes": 88,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Sci-Fi"
+    ],
+    "average_rating": 4.3,
+    "num_votes": 2397,
+    "imdb_url": "https://www.imdb.com/title/tt4439102/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt4602066",
+    "primary_title": "The Catcher Was a Spy",
+    "original_title": "The Catcher Was a Spy",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2018,
+    "end_year": null,
+    "runtime_minutes": 94,
+    "genres": [
+      "Biography",
+      "Drama",
+      "War"
+    ],
+    "average_rating": 6.3,
+    "num_votes": 13861,
+    "imdb_url": "https://www.imdb.com/title/tt4602066/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt4616250",
+    "primary_title": "The Perfect Weapon",
+    "original_title": "The Perfect Weapon",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2016,
+    "end_year": null,
+    "runtime_minutes": 88,
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "average_rating": 2.9,
+    "num_votes": 2583,
+    "imdb_url": "https://www.imdb.com/title/tt4616250/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt4642970",
+    "primary_title": "Llamageddon",
+    "original_title": "Llamageddon",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2015,
+    "end_year": null,
+    "runtime_minutes": 69,
+    "genres": [
+      "Comedy",
+      "Sci-Fi"
+    ],
+    "average_rating": 3.9,
+    "num_votes": 2067,
+    "imdb_url": "https://www.imdb.com/title/tt4642970/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt4669264",
+    "primary_title": "Beirut",
+    "original_title": "Beirut",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2018,
+    "end_year": null,
+    "runtime_minutes": 109,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Crime"
+    ],
+    "average_rating": 6.5,
+    "num_votes": 27255,
+    "imdb_url": "https://www.imdb.com/title/tt4669264/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt4729430",
+    "primary_title": "Klaus",
+    "original_title": "Klaus",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2019,
+    "end_year": null,
+    "runtime_minutes": 96,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "average_rating": 8.2,
+    "num_votes": 242771,
+    "imdb_url": "https://www.imdb.com/title/tt4729430/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt4932154",
+    "primary_title": "Center of My World",
+    "original_title": "Die Mitte der Welt",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2016,
+    "end_year": null,
+    "runtime_minutes": 115,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 7.1,
+    "num_votes": 7995,
+    "imdb_url": "https://www.imdb.com/title/tt4932154/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt5197544",
+    "primary_title": "Baar Baar Dekho",
+    "original_title": "Baar Baar Dekho",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2016,
+    "end_year": null,
+    "runtime_minutes": 141,
+    "genres": [
+      "Drama",
+      "Romance",
+      "Sci-Fi"
+    ],
+    "average_rating": 5.4,
+    "num_votes": 8269,
+    "imdb_url": "https://www.imdb.com/title/tt5197544/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt5259966",
+    "primary_title": "No Manches Frida",
+    "original_title": "No manches Frida",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2016,
+    "end_year": null,
+    "runtime_minutes": 114,
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "average_rating": 5.5,
+    "num_votes": 3150,
+    "imdb_url": "https://www.imdb.com/title/tt5259966/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt5271432",
+    "primary_title": "Adi Kapyare Kootamani",
+    "original_title": "Adi Kapyare Kootamani",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2015,
+    "end_year": null,
+    "runtime_minutes": 131,
+    "genres": [
+      "Comedy",
+      "Horror"
+    ],
+    "average_rating": 6.7,
+    "num_votes": 2158,
+    "imdb_url": "https://www.imdb.com/title/tt5271432/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt5465370",
+    "primary_title": "Akira",
+    "original_title": "Akira",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2016,
+    "end_year": null,
+    "runtime_minutes": 137,
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "average_rating": 5.9,
+    "num_votes": 4703,
+    "imdb_url": "https://www.imdb.com/title/tt5465370/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt5534434",
+    "primary_title": "Victor Crowley",
+    "original_title": "Victor Crowley",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2017,
+    "end_year": null,
+    "runtime_minutes": 83,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Horror"
+    ],
+    "average_rating": 5.5,
+    "num_votes": 8319,
+    "imdb_url": "https://www.imdb.com/title/tt5534434/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt5697870",
+    "primary_title": "Lucknow Central",
+    "original_title": "Lucknow Central",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2017,
+    "end_year": null,
+    "runtime_minutes": 133,
+    "genres": [
+      "Action",
+      "Drama",
+      "Music"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 3209,
+    "imdb_url": "https://www.imdb.com/title/tt5697870/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt5999530",
+    "primary_title": "Before We Vanish",
+    "original_title": "Sanpo suru shinryakusha",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2017,
+    "end_year": null,
+    "runtime_minutes": 129,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 3190,
+    "imdb_url": "https://www.imdb.com/title/tt5999530/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt6290798",
+    "primary_title": "UFO",
+    "original_title": "UFO",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2018,
+    "end_year": null,
+    "runtime_minutes": 88,
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Sci-Fi"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 13250,
+    "imdb_url": "https://www.imdb.com/title/tt6290798/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt6295898",
+    "primary_title": "The Tag-Along 2",
+    "original_title": "Hong yi xiao nu hai 2",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2017,
+    "end_year": null,
+    "runtime_minutes": 113,
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "average_rating": 5.7,
+    "num_votes": 1329,
+    "imdb_url": "https://www.imdb.com/title/tt6295898/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt6570372",
+    "primary_title": "Gags the Clown",
+    "original_title": "Gags The Clown",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2018,
+    "end_year": null,
+    "runtime_minutes": 89,
+    "genres": [
+      "Comedy",
+      "Horror"
+    ],
+    "average_rating": 4.8,
+    "num_votes": 1034,
+    "imdb_url": "https://www.imdb.com/title/tt6570372/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt6888938",
+    "primary_title": "White Chamber",
+    "original_title": "White Chamber",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2018,
+    "end_year": null,
+    "runtime_minutes": 89,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "average_rating": 4.4,
+    "num_votes": 1689,
+    "imdb_url": "https://www.imdb.com/title/tt6888938/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt6988366",
+    "primary_title": "Beyond the Rush",
+    "original_title": "Beyond the Rush",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2024,
+    "end_year": null,
+    "runtime_minutes": 110,
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "average_rating": 8.5,
+    "num_votes": 1127,
+    "imdb_url": "https://www.imdb.com/title/tt6988366/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt7209510",
+    "primary_title": "Glossary of Broken Dreams",
+    "original_title": "Glossary of Broken Dreams",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2018,
+    "end_year": null,
+    "runtime_minutes": 99,
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 5.5,
+    "num_votes": 5898,
+    "imdb_url": "https://www.imdb.com/title/tt7209510/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt7225386",
+    "primary_title": "25 km/h",
+    "original_title": "25 km/h",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2018,
+    "end_year": null,
+    "runtime_minutes": 116,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 7.2,
+    "num_votes": 6595,
+    "imdb_url": "https://www.imdb.com/title/tt7225386/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt7660450",
+    "primary_title": "The Prophecy of the Armadillo",
+    "original_title": "La profezia dell'armadillo",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2018,
+    "end_year": null,
+    "runtime_minutes": 99,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "average_rating": 5.8,
+    "num_votes": 1283,
+    "imdb_url": "https://www.imdb.com/title/tt7660450/",
+    "selected_for_categories": [
+      "Drama"
+    ]
+  },
+  {
+    "imdb_id": "tt7778680",
+    "primary_title": "Photograph",
+    "original_title": "Photograph",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2019,
+    "end_year": null,
+    "runtime_minutes": 110,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "average_rating": 6.8,
+    "num_votes": 6817,
+    "imdb_url": "https://www.imdb.com/title/tt7778680/",
+    "selected_for_categories": [
+      "Romance"
+    ]
+  },
+  {
+    "imdb_id": "tt7838494",
+    "primary_title": "The Waiter",
+    "original_title": "The Waiter",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2018,
+    "end_year": null,
+    "runtime_minutes": 104,
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Drama"
+    ],
+    "average_rating": 6.0,
+    "num_votes": 1585,
+    "imdb_url": "https://www.imdb.com/title/tt7838494/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  },
+  {
+    "imdb_id": "tt8239806",
+    "primary_title": "The White Storm 2: Drug Lords",
+    "original_title": "So duk 2: Tin dei duei kuet",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2019,
+    "end_year": null,
+    "runtime_minutes": 99,
+    "genres": [
+      "Action",
+      "Crime"
+    ],
+    "average_rating": 6.1,
+    "num_votes": 1729,
+    "imdb_url": "https://www.imdb.com/title/tt8239806/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt8587122",
+    "primary_title": "Secrets in the Hot Spring",
+    "original_title": "Qie xiao jin jia de lu guan",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2018,
+    "end_year": null,
+    "runtime_minutes": 108,
+    "genres": [
+      "Comedy",
+      "Horror"
+    ],
+    "average_rating": 6.2,
+    "num_votes": 1111,
+    "imdb_url": "https://www.imdb.com/title/tt8587122/",
+    "selected_for_categories": [
+      "Horror"
+    ]
+  },
+  {
+    "imdb_id": "tt8706988",
+    "primary_title": "The Resistance Fighter",
+    "original_title": "Kurier",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2019,
+    "end_year": null,
+    "runtime_minutes": 114,
+    "genres": [
+      "Action",
+      "Drama",
+      "History"
+    ],
+    "average_rating": 5.9,
+    "num_votes": 2001,
+    "imdb_url": "https://www.imdb.com/title/tt8706988/",
+    "selected_for_categories": [
+      "Action"
+    ]
+  },
+  {
+    "imdb_id": "tt9362930",
+    "primary_title": "Blue Beetle",
+    "original_title": "Blue Beetle",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2023,
+    "end_year": null,
+    "runtime_minutes": 127,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "average_rating": 5.9,
+    "num_votes": 119919,
+    "imdb_url": "https://www.imdb.com/title/tt9362930/",
+    "selected_for_categories": [
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdb_id": "tt9372172",
+    "primary_title": "Ballsy Girl",
+    "original_title": "Forte",
+    "title_type": "movie",
+    "is_adult": false,
+    "start_year": 2020,
+    "end_year": null,
+    "runtime_minutes": 95,
+    "genres": [
+      "Comedy"
+    ],
+    "average_rating": 5.1,
+    "num_votes": 1027,
+    "imdb_url": "https://www.imdb.com/title/tt9372172/",
+    "selected_for_categories": [
+      "Comedy"
+    ]
+  }
+]
