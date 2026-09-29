@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Stat } from "@/components/ui";
 import { EXAMPLES } from "@/lib/examples";
+import { PROJECT } from "@/lib/project";
 import { datasetStats } from "@/lib/queries";
 import { sparqlHref } from "@/lib/rdf";
 
@@ -20,6 +21,9 @@ export default function Home() {
   return (
     <div className="space-y-12">
       <section className="space-y-5">
+        <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+          {PROJECT.course} capstone · {PROJECT.group} · {PROJECT.university}
+        </p>
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Movies as Linked Open Data</h1>
         <p className="max-w-3xl text-lg text-slate-600 dark:text-slate-300">
           {s.movies} IMDb movies (1980–2025) with their cast, crew, genres and credits — published as 5★ Linked Data with English and
