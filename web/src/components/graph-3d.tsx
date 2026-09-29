@@ -24,9 +24,17 @@ type Props = {
   fitSignal?: number;
   onNodeClick?: (id: string) => void;
   onNodeDoubleClick?: (id: string) => void;
+  /** Height of node labels in scene units. */
+  labelSize?: number;
+  /** Height of link labels (when linkLabels is on). */
+  linkLabelSize?: number;
+  /** Preferred distance between linked nodes; larger spreads the graph out. */
+  linkDistance?: number;
 };
 
-function makeNode(THREE: Three, SpriteText: typeof SpriteTextClass, node: SimNode) {
+type Sizes = { label: number };
+
+function makeNode(THREE: Three, SpriteText: typeof SpriteTextClass, node: SimNode, sizes: Sizes) {
   const size = node.size ?? 5;
   const group = new THREE.Group();
   const geometry =
@@ -40,10 +48,12 @@ function makeNode(THREE: Three, SpriteText: typeof SpriteTextClass, node: SimNod
     opacity: node.shape === "wire" ? 0.8 : 1,
   });
   group.add(new THREE.Mesh(geometry, material));
-  const label = new SpriteText(node.label, node.shape === "cube" ? 2.2 : 3.2, "#e2e8f0");
-  label.backgroundColor = "rgba(15,23,42,0.55)";
-  label.padding = 1;
-  label.position.y = size + 4;
+  const label = new SpriteText(node.label, node.shape === "cube" ? sizes.label * 0.7 : sizes.label, "#f1f5f9");
+  label.fontWeight = "600";
+  label.backgroundColor = "rgba(15,23,42,0.7)";
+  label.padding = [2, 1];
+  label.borderRadius = 2;
+  label.position.y = size + sizes.label * 0.9;
   group.add(label);
   return group;
 }
@@ -63,8 +73,22 @@ function withCurvature(links: Link3D[]): (Link3D & { curvature: number })[] {
 }
 
 /** Force-directed 3D graph (three.js / WebGL). Loaded only in the browser, only when rendered. */
-export default function Graph3D({ nodes, links, height, linkLabels = false, fitSignal = 0, onNodeClick, onNodeDoubleClick }: Props) {
+export default function Graph3D({
+  nodes,
+  links,
+  height,
+  linkLabels = false,
+  fitSignal = 0,
+  onNodeClick,
+  onNodeDoubleClick,
+  labelSize = 4,
+  linkLabelSize = 2.5,
+  linkDistance = 60,
+}: Props) {
+  // The canvas sits absolutely inside a fixed-size frame, so it can never widen the page layout.
+  const frame = useRef<HTMLDivElement>(null);
   const host = useRef<HTMLDivElement>(null);
+  const touched = useRef(false);
   const graph = useRef<Instance | null>(null);
   const nodeObjects = useRef(new Map<string, SimNode>());
   const linkObjects = useRef(new Map<string, SimLink>());
@@ -72,6 +96,8 @@ export default function Graph3D({ nodes, links, height, linkLabels = false, fitS
   const lastClick = useRef<{ id: string; at: number } | null>(null);
   const handlers = useRef({ onNodeClick, onNodeDoubleClick, linkLabels });
   handlers.current = { onNodeClick, onNodeDoubleClick, linkLabels };
+  const sizes = useRef({ labelSize, linkLabelSize, linkDistance });
+  sizes.current = { labelSize, linkLabelSize, linkDistance };
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -82,7 +108,9 @@ export default function Graph3D({ nodes, links, height, linkLabels = false, fitS
     Promise.all([import("3d-force-graph"), import("three-spritetext"), import("three")]).then(
       ([{ default: ForceGraph }, { default: SpriteText }, THREE]) => {
         const element = host.current;
-        if (disposed || !element) return;
+        const outer = frame.current;
+        if (disposed || !element || !outer) return;
+        const fit = () => instance.zoomToFit(600, 50);
         const click = (id: string) => {
           const now = Date.now();
           const previous = lastClick.current;
@@ -95,17 +123,17 @@ export default function Graph3D({ nodes, links, height, linkLabels = false, fitS
           }
         };
         const instance = new ForceGraph(element, { controlType: "orbit" })
-          .width(element.clientWidth)
-          .height(height)
+          .width(outer.clientWidth)
+          .height(outer.clientHeight)
           .backgroundColor("#0f172a")
           .showNavInfo(false)
           .nodeLabel((node) => (node as SimNode).label)
-          .nodeThreeObject((node) => makeNode(THREE, SpriteText, node as SimNode))
+          .nodeThreeObject((node) => makeNode(THREE, SpriteText, node as SimNode, { label: sizes.current.labelSize }))
           .linkColor((link) => ((link as SimLink).faint ? "rgba(148,163,184,0.45)" : "#94a3b8"))
           .linkOpacity(0.7)
-          .linkWidth(0.6)
+          .linkWidth(0.8)
           .linkCurvature((link) => (link as SimLink).curvature)
-          .linkDirectionalArrowLength(3.5)
+          .linkDirectionalArrowLength(5)
           .linkDirectionalArrowRelPos(1)
           .linkDirectionalParticles((link) => ((link as SimLink).faint ? 2 : 0))
           .linkDirectionalParticleWidth(1.2)
@@ -113,7 +141,11 @@ export default function Graph3D({ nodes, links, height, linkLabels = false, fitS
           .linkThreeObjectExtend(true)
           .linkThreeObject((link) => {
             const { label } = link as SimLink;
-            return handlers.current.linkLabels && label ? new SpriteText(label, 2.2, "#cbd5e1") : new THREE.Object3D();
+            if (!handlers.current.linkLabels || !label) return new THREE.Object3D();
+            const text = new SpriteText(label, sizes.current.linkLabelSize, "#a5b4fc");
+            text.backgroundColor = "rgba(15,23,42,0.6)";
+            text.padding = 1;
+            return text;
           })
           .linkPositionUpdate((object, { start, end }, link) => {
             const curve = (link as { __curve?: { getPoint(t: number): Point } }).__curve;
@@ -129,16 +161,23 @@ export default function Graph3D({ nodes, links, height, linkLabels = false, fitS
           .onEngineStop(() => {
             if (!pendingFit.current) return;
             pendingFit.current = false;
-            instance.zoomToFit(600, 40);
+            fit();
           });
+        instance.renderer().setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+        (instance.d3Force("link") as { distance?: (d: number) => unknown } | undefined)?.distance?.(sizes.current.linkDistance);
+        (instance.d3Force("charge") as { strength?: (s: number) => unknown } | undefined)?.strength?.(-sizes.current.linkDistance * 4);
         const controls = instance.controls() as OrbitControls;
         controls.autoRotate = true;
         controls.autoRotateSpeed = 0.8;
         controls.addEventListener("start", () => {
           controls.autoRotate = false;
+          touched.current = true;
         });
-        observer = new ResizeObserver(() => instance.width(element.clientWidth));
-        observer.observe(element);
+        observer = new ResizeObserver(() => {
+          instance.width(outer.clientWidth).height(outer.clientHeight);
+          if (!touched.current) fit();
+        });
+        observer.observe(outer);
         graph.current = instance;
         setReady(true);
       },
@@ -185,8 +224,12 @@ export default function Graph3D({ nodes, links, height, linkLabels = false, fitS
   }, [ready, nodes, links]);
 
   useEffect(() => {
-    if (fitSignal) graph.current?.zoomToFit(600, 40);
+    if (fitSignal) graph.current?.zoomToFit(600, 50);
   }, [fitSignal]);
 
-  return <div ref={host} style={{ height }} className="w-full overflow-hidden rounded-xl border border-slate-800 bg-slate-900" />;
+  return (
+    <div ref={frame} style={{ height }} className="relative w-full min-w-0 overflow-hidden rounded-xl border border-slate-800 bg-slate-900">
+      <div ref={host} className="absolute inset-0" />
+    </div>
+  );
 }

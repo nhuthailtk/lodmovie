@@ -223,6 +223,8 @@ export default function Explorer({ start }: { start: string }) {
           nodes={graph3d.nodes}
           links={graph3d.links}
           height={620}
+          labelSize={4.5}
+          linkDistance={70}
           fitSignal={fit}
           onNodeClick={(id) => actRef.current(id, "click")}
           onNodeDoubleClick={(id) => actRef.current(id, "double")}

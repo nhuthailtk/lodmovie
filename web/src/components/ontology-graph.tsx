@@ -62,7 +62,7 @@ export default function OntologyGraph({ nodes, edges }: { nodes: DiagramNode[]; 
         label: n.label,
         color: n.external ? "#cbd5e1" : "#6366f1",
         shape: n.external ? "wire" : "sphere",
-        size: n.external ? 5 : 7,
+        size: n.external ? 6 : 9,
       })),
     [nodes],
   );
@@ -103,7 +103,7 @@ export default function OntologyGraph({ nodes, edges }: { nodes: DiagramNode[]; 
 
   return (
     <div className="grid gap-4 lg:grid-cols-[1fr_18rem]">
-      <div className="space-y-3">
+      <div className="min-w-0 space-y-3">
         <div className="flex flex-wrap items-center gap-3">
           <ViewToggle {...view} />
           <button type="button" className="btn" onClick={reset}>
@@ -116,6 +116,9 @@ export default function OntologyGraph({ nodes, edges }: { nodes: DiagramNode[]; 
             links={links3d}
             height={560}
             linkLabels
+            labelSize={7}
+            linkLabelSize={4}
+            linkDistance={120}
             fitSignal={fit}
             onNodeClick={(id) => setSelected(nodes.find((n) => n.id === id) ?? null)}
             onNodeDoubleClick={(id) => {
