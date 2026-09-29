@@ -1,4 +1,9 @@
 @prefix mo:      <https://lod-movie.felix-nguyen.io.vn/ontology#> .
+@prefix genre:   <https://lod-movie.felix-nguyen.io.vn/resource/genre/> .
+@prefix prof:    <https://lod-movie.felix-nguyen.io.vn/resource/profession/> .
+@prefix movie:   <https://lod-movie.felix-nguyen.io.vn/resource/movie/> .
+@prefix person:  <https://lod-movie.felix-nguyen.io.vn/resource/person/> .
+@prefix credit:  <https://lod-movie.felix-nguyen.io.vn/resource/credit/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -7,61 +12,230 @@
 @prefix schema:  <https://schema.org/> .
 @prefix foaf:    <http://xmlns.com/foaf/0.1/> .
 @prefix dbo:     <http://dbpedia.org/ontology/> .
+@prefix dbr:     <http://dbpedia.org/resource/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
 <https://lod-movie.felix-nguyen.io.vn/ontology>
     a owl:Ontology ;
     dcterms:title "LOD Movie Ontology"@en ;
-    dcterms:description "Vocabulary for a Linked Open Data dataset of IMDb movies, the people who made them, their genres and their principal credits. Reuses schema.org, the DBpedia ontology, FOAF and SKOS."@en ;
+    dcterms:description "Vocabulary for a Linked Open Data dataset of IMDb movies, the people who made them, their genres and their principal credits. Reuses schema.org, the DBpedia ontology, FOAF and SKOS. Version 1.1 adds a Man/Woman partition of Person, role properties (leading/supporting actor, male/female lead), Love/Animal-documentary/Animated movie definitions, cardinality constraints, datatype ranges, keys, disjointness and external alignments."@en ;
     dcterms:creator "Felix Nguyen" ;
     dcterms:created "2026-09-28"^^xsd:date ;
-    owl:versionInfo "1.0.0" .
+    dcterms:modified "2026-09-29"^^xsd:date ;
+    owl:versionInfo "1.1.0" .
 
 #################################################################
-# Classes
+# 1. Custom datatypes (value-range constraints)
 #################################################################
+
+mo:RatingValue a rdfs:Datatype ;
+    rdfs:label "rating value"@en ;
+    rdfs:comment "Decimal between 1 and 10 inclusive."@en ;
+    owl:onDatatype xsd:decimal ;
+    owl:withRestrictions ( [ xsd:minInclusive "1"^^xsd:decimal ] [ xsd:maxInclusive "10"^^xsd:decimal ] ) .
+
+mo:ReleaseYearValue a rdfs:Datatype ;
+    rdfs:label "release year value"@en ;
+    rdfs:comment "Integer year from 1888 (earliest known motion picture) to 2100."@en ;
+    owl:onDatatype xsd:integer ;
+    owl:withRestrictions ( [ xsd:minInclusive 1888 ] [ xsd:maxInclusive 2100 ] ) .
+
+mo:CalendarYearValue a rdfs:Datatype ;
+    rdfs:label "calendar year value"@en ;
+    rdfs:comment "Integer year from 1000 to 2100, used for birth and death years."@en ;
+    owl:onDatatype xsd:integer ;
+    owl:withRestrictions ( [ xsd:minInclusive 1000 ] [ xsd:maxInclusive 2100 ] ) .
+
+mo:TconstValue a rdfs:Datatype ;
+    rdfs:label "tconst value"@en ;
+    rdfs:comment "IMDb title identifier: 'tt' followed by at least 7 digits."@en ;
+    owl:onDatatype xsd:string ;
+    owl:withRestrictions ( [ xsd:pattern "^tt[0-9]{7,}$" ] ) .
+
+mo:NconstValue a rdfs:Datatype ;
+    rdfs:label "nconst value"@en ;
+    rdfs:comment "IMDb name identifier: 'nm' followed by at least 7 digits."@en ;
+    owl:onDatatype xsd:string ;
+    owl:withRestrictions ( [ xsd:pattern "^nm[0-9]{7,}$" ] ) .
+
+#################################################################
+# 2. Classes
+#################################################################
+
+# ---- Movie and its subtypes -----------------------------------
 
 mo:Movie a owl:Class ;
     rdfs:label "Movie"@en ;
     rdfs:comment "A feature film listed on IMDb with title type 'movie'."@en ;
     rdfs:subClassOf schema:Movie ;
-    owl:equivalentClass dbo:Film .
+    owl:equivalentClass dbo:Film ;
+    owl:hasKey ( mo:tconst ) ;
+    # every movie has exactly one primary title and exactly one IMDb tconst
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:primaryTitle ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:tconst ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
+    # at most one release year, runtime, rating, vote count
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:releaseYear ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ] ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:runtimeMinutes ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ] ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:averageRating ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ] ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:numVotes ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ] .
+
+mo:LoveMovie a owl:Class ;
+    rdfs:label "Love movie"@en ;
+    rdfs:comment "A movie with at least one male leading actor and at least one female leading actor. It is also tagged with the Romance genre."@en ;
+    rdfs:subClassOf mo:Movie ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:hasMaleLead ;
+                      owl:someValuesFrom mo:Man ] ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:hasFemaleLead ;
+                      owl:someValuesFrom mo:Woman ] ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:hasGenre ;
+                      owl:hasValue genre:Romance ] .
+
+mo:AnimalDocumentary a owl:Class ;
+    rdfs:label "Animal documentary"@en ;
+    rdfs:comment "A documentary about animals. It may have no human actor."@en ;
+    rdfs:subClassOf mo:Movie ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:hasGenre ;
+                      owl:hasValue genre:Documentary ] .
+
+mo:AnimatedMovie a owl:Class ;
+    rdfs:label "Animated movie"@en ;
+    rdfs:comment "An animated feature. It may have no live actor."@en ;
+    rdfs:subClassOf mo:Movie ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:hasGenre ;
+                      owl:hasValue genre:Animation ] .
+
+# General class axiom:  Movie AND NOT (hasActor some Thing)  SubClassOf  AnimalDocumentary OR AnimatedMovie
+[ a owl:Class ;
+  owl:intersectionOf ( mo:Movie
+                       [ a owl:Class ;
+                         owl:complementOf [ a owl:Restriction ;
+                                            owl:onProperty mo:hasActor ;
+                                            owl:someValuesFrom owl:Thing ] ] ) ]
+    rdfs:subClassOf [ a owl:Class ; owl:unionOf ( mo:AnimalDocumentary mo:AnimatedMovie ) ] ;
+    rdfs:comment "A movie without an actor is either an Animal documentary or an Animated movie."@en .
+
+# ---- Person, Man, Woman ---------------------------------------
 
 mo:Person a owl:Class ;
     rdfs:label "Person"@en ;
-    rdfs:comment "A person credited on at least one movie in the dataset, as cast or crew."@en ;
-    rdfs:subClassOf schema:Person , foaf:Person .
+    rdfs:comment "A person credited on at least one movie in the dataset, as cast or crew. Every Person is a Man or a Woman, never both."@en ;
+    rdfs:subClassOf schema:Person , foaf:Person ;
+    owl:equivalentClass [ a owl:Class ; owl:unionOf ( mo:Man mo:Woman ) ] ;
+    owl:hasKey ( mo:nconst ) ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:nconst ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:birthYear ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ] ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:deathYear ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ] .
+
+mo:Man a owl:Class ;
+    rdfs:label "Man"@en ;
+    rdfs:comment "A male person."@en ;
+    rdfs:subClassOf mo:Person ;
+    owl:disjointWith mo:Woman .
+
+mo:Woman a owl:Class ;
+    rdfs:label "Woman"@en ;
+    rdfs:comment "A female person."@en ;
+    rdfs:subClassOf mo:Person .
+
+# ---- Genre, Profession, scheme concepts ------------------------
 
 mo:Genre a owl:Class ;
     rdfs:label "Genre"@en ;
     rdfs:comment "A movie genre, modelled as a SKOS concept in the genre scheme. Genres are individuals, not subclasses of Movie."@en ;
-    rdfs:subClassOf skos:Concept .
+    rdfs:subClassOf skos:Concept ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty skos:inScheme ; owl:hasValue mo:GenreScheme ] ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty skos:prefLabel ; owl:minCardinality "1"^^xsd:nonNegativeInteger ] ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:isTargetGenre ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ] .
+
+mo:TargetGenre a owl:Class ;
+    rdfs:label "Target genre"@en ;
+    rdfs:comment "A genre the dataset was sampled from: Action, Comedy, Drama, Horror, Romance, Sci-Fi."@en ;
+    owl:equivalentClass [ a owl:Class ;
+                          owl:intersectionOf ( mo:Genre
+                                               [ a owl:Restriction ; owl:onProperty mo:isTargetGenre ;
+                                                 owl:hasValue "true"^^xsd:boolean ] ) ] .
 
 mo:Profession a owl:Class ;
     rdfs:label "Profession"@en ;
     rdfs:comment "A job or role in film-making (for example actor, director, cinematographer), modelled as a SKOS concept. Used both for a person's primary professions and for the role of a credit."@en ;
-    rdfs:subClassOf skos:Concept .
+    rdfs:subClassOf skos:Concept ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty skos:inScheme ; owl:hasValue mo:ProfessionScheme ] ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty skos:prefLabel ; owl:minCardinality "1"^^xsd:nonNegativeInteger ] .
+
+# ---- Credit (n-ary relation) and its subtypes ------------------
 
 mo:Credit a owl:Class ;
     rdfs:label "Credit"@en ;
-    rdfs:comment "One principal credit: a person working on a movie in a given role, with a billing order and, for cast, the characters played. An n-ary relation node that links a Movie, a Person and a Profession."@en .
+    rdfs:comment "One principal credit: a person working on a movie in a given role, with a billing order and, for cast, the characters played. An n-ary relation node that links a Movie, a Person and a Profession."@en ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:creditFor ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:creditedPerson ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:creditRole ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty mo:billingOrder ; owl:cardinality "1"^^xsd:nonNegativeInteger ] .
+
+mo:ActorCredit a owl:Class ;
+    rdfs:label "Actor credit"@en ;
+    rdfs:comment "A credit whose role is actor, actress or self. Only these credits may carry character names."@en ;
+    owl:equivalentClass [ a owl:Class ;
+                          owl:intersectionOf ( mo:Credit
+                                               [ a owl:Restriction ; owl:onProperty mo:creditRole ;
+                                                 owl:someValuesFrom [ a owl:Class ; owl:oneOf ( prof:actor prof:actress prof:self ) ] ] ) ] .
+
+mo:DirectorCredit a owl:Class ;
+    rdfs:label "Director credit"@en ;
+    rdfs:comment "A credit whose role is director."@en ;
+    owl:equivalentClass [ a owl:Class ;
+                          owl:intersectionOf ( mo:Credit
+                                               [ a owl:Restriction ; owl:onProperty mo:creditRole ;
+                                                 owl:hasValue prof:director ] ) ] .
+
+mo:WriterCredit a owl:Class ;
+    rdfs:label "Writer credit"@en ;
+    rdfs:comment "A credit whose role is writer."@en ;
+    owl:equivalentClass [ a owl:Class ;
+                          owl:intersectionOf ( mo:Credit
+                                               [ a owl:Restriction ; owl:onProperty mo:creditRole ;
+                                                 owl:hasValue prof:writer ] ) ] .
+
+# ---- Scheme classes ---------------------------------------------
+
+mo:GenreScheme a skos:ConceptScheme ;
+    skos:prefLabel "LOD Movie genres"@en .
+
+mo:ProfessionScheme a skos:ConceptScheme ;
+    skos:prefLabel "LOD Movie professions"@en .
+
+# ---- Pairwise disjointness of the top-level entity types --------
+
+[ a owl:AllDisjointClasses ;
+  owl:members ( mo:Movie mo:Person mo:Genre mo:Profession mo:Credit ) ] .
 
 #################################################################
-# Object properties
+# 3. Object properties
 #################################################################
+
+# ---- Movie to Genre --------------------------------------------
 
 mo:hasGenre a owl:ObjectProperty ;
     rdfs:label "has genre"@en ;
     rdfs:comment "A genre IMDb assigns to the movie."@en ;
     rdfs:domain mo:Movie ;
     rdfs:range mo:Genre ;
-    rdfs:subPropertyOf schema:genre .
+    rdfs:subPropertyOf schema:genre ;
+    owl:inverseOf mo:genreOf .
+
+mo:genreOf a owl:ObjectProperty ;
+    rdfs:label "genre of"@en ;
+    rdfs:comment "A movie tagged with this genre. Inverse of has genre; not materialized."@en ;
+    rdfs:domain mo:Genre ;
+    rdfs:range mo:Movie .
 
 mo:sampledForGenre a owl:ObjectProperty ;
     rdfs:label "sampled for genre"@en ;
     rdfs:comment "Provenance: the target genre whose random sample selected this movie for the dataset."@en ;
     rdfs:domain mo:Movie ;
-    rdfs:range mo:Genre .
+    rdfs:range mo:TargetGenre .
+
+# ---- Director ---------------------------------------------------
 
 mo:directedBy a owl:ObjectProperty ;
     rdfs:label "directed by"@en ;
@@ -69,6 +243,7 @@ mo:directedBy a owl:ObjectProperty ;
     rdfs:domain mo:Movie ;
     rdfs:range mo:Person ;
     rdfs:subPropertyOf schema:director ;
+    owl:equivalentProperty dbo:director ;
     owl:inverseOf mo:directorOf .
 
 mo:directorOf a owl:ObjectProperty ;
@@ -77,12 +252,16 @@ mo:directorOf a owl:ObjectProperty ;
     rdfs:domain mo:Person ;
     rdfs:range mo:Movie .
 
+# ---- Actor role hierarchy ---------------------------------------
+#   hasMaleLead, hasFemaleLead  ->  hasLeadingActor  ->  hasActor
+#   hasSupportingActor                               ->  hasActor
+
 mo:hasActor a owl:ObjectProperty ;
     rdfs:label "has actor"@en ;
-    rdfs:comment "A principal cast member of the movie."@en ;
+    rdfs:comment "A principal cast member of the movie. Super-property of every actor role."@en ;
     rdfs:domain mo:Movie ;
     rdfs:range mo:Person ;
-    rdfs:subPropertyOf schema:actor ;
+    rdfs:subPropertyOf schema:actor , dbo:starring ;
     owl:inverseOf mo:actedIn .
 
 mo:actedIn a owl:ObjectProperty ;
@@ -90,6 +269,67 @@ mo:actedIn a owl:ObjectProperty ;
     rdfs:comment "A movie this person acted in. Inverse of has actor; not materialized in the data."@en ;
     rdfs:domain mo:Person ;
     rdfs:range mo:Movie .
+
+mo:hasLeadingActor a owl:ObjectProperty ;
+    rdfs:label "has leading actor"@en ;
+    rdfs:comment "A leading actor of the movie. Every leading actor is an actor."@en ;
+    rdfs:domain mo:Movie ;
+    rdfs:range mo:Person ;
+    rdfs:subPropertyOf mo:hasActor ;
+    owl:inverseOf mo:leadingActorIn .
+
+mo:leadingActorIn a owl:ObjectProperty ;
+    rdfs:label "leading actor in"@en ;
+    rdfs:domain mo:Person ;
+    rdfs:range mo:Movie ;
+    rdfs:subPropertyOf mo:actedIn .
+
+mo:hasSupportingActor a owl:ObjectProperty ;
+    rdfs:label "has supporting actor"@en ;
+    rdfs:comment "A supporting actor of the movie. Every supporting actor is an actor."@en ;
+    rdfs:domain mo:Movie ;
+    rdfs:range mo:Person ;
+    rdfs:subPropertyOf mo:hasActor ;
+    owl:inverseOf mo:supportingActorIn .
+
+mo:supportingActorIn a owl:ObjectProperty ;
+    rdfs:label "supporting actor in"@en ;
+    rdfs:domain mo:Person ;
+    rdfs:range mo:Movie ;
+    rdfs:subPropertyOf mo:actedIn .
+
+mo:hasMaleLead a owl:ObjectProperty ;
+    rdfs:label "has male lead"@en ;
+    rdfs:comment "A male leading actor. The range is Man, so any value is inferred to be a Man. Every male lead is a leading actor."@en ;
+    rdfs:domain mo:Movie ;
+    rdfs:range mo:Man ;
+    rdfs:subPropertyOf mo:hasLeadingActor ;
+    owl:inverseOf mo:maleLeadIn .
+
+mo:maleLeadIn a owl:ObjectProperty ;
+    rdfs:label "male lead in"@en ;
+    rdfs:domain mo:Man ;
+    rdfs:range mo:Movie ;
+    rdfs:subPropertyOf mo:leadingActorIn .
+
+mo:hasFemaleLead a owl:ObjectProperty ;
+    rdfs:label "has female lead"@en ;
+    rdfs:comment "A female leading actor. The range is Woman, so any value is inferred to be a Woman. Every female lead is a leading actor."@en ;
+    rdfs:domain mo:Movie ;
+    rdfs:range mo:Woman ;
+    rdfs:subPropertyOf mo:hasLeadingActor ;
+    owl:inverseOf mo:femaleLeadIn .
+
+mo:femaleLeadIn a owl:ObjectProperty ;
+    rdfs:label "female lead in"@en ;
+    rdfs:domain mo:Woman ;
+    rdfs:range mo:Movie ;
+    rdfs:subPropertyOf mo:leadingActorIn .
+
+# Design choice: nobody is both leading and supporting actor of the same movie.
+mo:hasLeadingActor owl:propertyDisjointWith mo:hasSupportingActor .
+
+# ---- Writer -----------------------------------------------------
 
 mo:writtenBy a owl:ObjectProperty ;
     rdfs:label "written by"@en ;
@@ -104,6 +344,8 @@ mo:writerOf a owl:ObjectProperty ;
     rdfs:comment "A movie this person wrote. Inverse of written by; not materialized in the data."@en ;
     rdfs:domain mo:Person ;
     rdfs:range mo:Movie .
+
+# ---- Credit relation --------------------------------------------
 
 mo:hasCredit a owl:ObjectProperty ;
     rdfs:label "has credit"@en ;
@@ -130,6 +372,8 @@ mo:creditRole a owl:ObjectProperty , owl:FunctionalProperty ;
     rdfs:domain mo:Credit ;
     rdfs:range mo:Profession .
 
+# ---- Person to Profession / Movie -------------------------------
+
 mo:primaryProfession a owl:ObjectProperty ;
     rdfs:label "primary profession"@en ;
     rdfs:comment "One of the person's main professions according to IMDb."@en ;
@@ -143,83 +387,206 @@ mo:knownFor a owl:ObjectProperty ;
     rdfs:range mo:Movie .
 
 #################################################################
-# Datatype properties
+# 4. Datatype properties
 #################################################################
 
-mo:primaryTitle a owl:DatatypeProperty ;
+# ---- Titles -------------------------------------------------------
+
+mo:title a owl:DatatypeProperty ;
+    rdfs:label "title"@en ;
+    rdfs:comment "Any title of a movie. Super-property of primary title and original title."@en ;
+    rdfs:domain mo:Movie ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf schema:name .
+
+mo:primaryTitle a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "primary title"@en ;
     rdfs:comment "The IMDb primary title exactly as crawled; its language is not recorded. Language-tagged English and Vietnamese titles are given with rdfs:label and schema:name."@en ;
     rdfs:domain mo:Movie ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf mo:title .
 
-mo:originalTitle a owl:DatatypeProperty ;
+mo:originalTitle a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "original title"@en ;
     rdfs:comment "The title in the original language of the movie."@en ;
     rdfs:domain mo:Movie ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf mo:title .
 
-mo:releaseYear a owl:DatatypeProperty ;
+# ---- Movie measures -----------------------------------------------
+
+mo:releaseYear a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "release year"@en ;
-    rdfs:comment "Calendar year of first release, as an integer to keep SPARQL filters simple."@en ;
+    rdfs:comment "Calendar year of first release, as an integer to keep SPARQL filters simple. Range 1888 to 2100."@en ;
     rdfs:domain mo:Movie ;
-    rdfs:range xsd:integer .
+    rdfs:range mo:ReleaseYearValue .
 
-mo:runtimeMinutes a owl:DatatypeProperty ;
+mo:runtimeMinutes a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "runtime (minutes)"@en ;
-    rdfs:comment "Running time of the movie in minutes."@en ;
+    rdfs:comment "Running time of the movie in minutes. Must be greater than zero."@en ;
     rdfs:domain mo:Movie ;
-    rdfs:range xsd:integer .
+    rdfs:range xsd:positiveInteger .
 
-mo:averageRating a owl:DatatypeProperty ;
+mo:averageRating a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "average rating"@en ;
     rdfs:comment "Weighted average IMDb user rating from 1 to 10."@en ;
     rdfs:domain mo:Movie ;
-    rdfs:range xsd:decimal .
+    rdfs:range mo:RatingValue .
 
-mo:numVotes a owl:DatatypeProperty ;
+mo:numVotes a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "number of votes"@en ;
-    rdfs:comment "Number of IMDb user votes behind the average rating."@en ;
+    rdfs:comment "Number of IMDb user votes behind the average rating. Zero or more."@en ;
     rdfs:domain mo:Movie ;
-    rdfs:range xsd:integer .
+    rdfs:range xsd:nonNegativeInteger .
+
+# ---- Identifiers ----------------------------------------------------
 
 mo:imdbId a owl:DatatypeProperty ;
     rdfs:label "IMDb ID"@en ;
-    rdfs:comment "The IMDb identifier: tconst (tt...) for movies, nconst (nm...) for people. Also Wikidata property P345."@en ;
+    rdfs:comment "The IMDb identifier: tconst (tt...) for movies, nconst (nm...) for people. Also Wikidata property P345. Use the more specific tconst or nconst sub-properties, which carry the pattern and key constraints."@en ;
     rdfs:domain [ a owl:Class ; owl:unionOf ( mo:Movie mo:Person ) ] ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/P345> .
 
-mo:birthYear a owl:DatatypeProperty ;
+mo:tconst a owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "tconst"@en ;
+    rdfs:comment "IMDb title identifier, unique per movie (used as owl:hasKey of Movie)."@en ;
+    rdfs:domain mo:Movie ;
+    rdfs:range mo:TconstValue ;
+    rdfs:subPropertyOf mo:imdbId .
+
+mo:nconst a owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "nconst"@en ;
+    rdfs:comment "IMDb name identifier, unique per person (used as owl:hasKey of Person)."@en ;
+    rdfs:domain mo:Person ;
+    rdfs:range mo:NconstValue ;
+    rdfs:subPropertyOf mo:imdbId .
+
+# ---- Person attributes ----------------------------------------------
+
+mo:birthYear a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "birth year"@en ;
     rdfs:comment "Calendar year the person was born."@en ;
     rdfs:domain mo:Person ;
-    rdfs:range xsd:integer .
+    rdfs:range mo:CalendarYearValue ;
+    skos:closeMatch dbo:birthYear .
 
-mo:deathYear a owl:DatatypeProperty ;
+mo:deathYear a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "death year"@en ;
-    rdfs:comment "Calendar year the person died, if applicable."@en ;
+    rdfs:comment "Calendar year the person died, if applicable. OWL cannot check deathYear >= birthYear; see the SHACL note at the end of this file."@en ;
     rdfs:domain mo:Person ;
-    rdfs:range xsd:integer .
+    rdfs:range mo:CalendarYearValue ;
+    skos:closeMatch dbo:deathYear .
+
+# ---- Credit attributes ----------------------------------------------
 
 mo:characterName a owl:DatatypeProperty ;
     rdfs:label "character name"@en ;
-    rdfs:comment "A character played in this credit; one value per character."@en ;
-    rdfs:domain mo:Credit ;
+    rdfs:comment "A character played in this credit; one value per character. Only actor credits have it."@en ;
+    rdfs:domain mo:ActorCredit ;
     rdfs:range xsd:string .
 
-mo:billingOrder a owl:DatatypeProperty ;
+mo:billingOrder a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "billing order"@en ;
     rdfs:comment "Position of the credit in IMDb's principal credits list, starting at 1."@en ;
     rdfs:domain mo:Credit ;
-    rdfs:range xsd:integer .
+    rdfs:range xsd:positiveInteger .
 
-mo:job a owl:DatatypeProperty ;
+mo:job a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "job"@en ;
     rdfs:comment "Free-text job description from IMDb, such as 'director of photography'."@en ;
     rdfs:domain mo:Credit ;
     rdfs:range xsd:string .
 
-mo:isTargetGenre a owl:DatatypeProperty ;
+# ---- Genre attribute ------------------------------------------------
+
+mo:isTargetGenre a owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:label "is target genre"@en ;
     rdfs:comment "True for the genres the dataset was sampled from (Action, Comedy, Drama, Horror, Romance, Sci-Fi)."@en ;
     rdfs:domain mo:Genre ;
     rdfs:range xsd:boolean .
+
+#################################################################
+# 5. Controlled individuals: genres and professions (with sameAs)
+#################################################################
+
+genre:Action a mo:Genre ; skos:prefLabel "Action"@en ; skos:inScheme mo:GenreScheme ;
+    mo:isTargetGenre true ; owl:sameAs dbr:Action_film .
+genre:Comedy a mo:Genre ; skos:prefLabel "Comedy"@en ; skos:inScheme mo:GenreScheme ;
+    mo:isTargetGenre true ; owl:sameAs dbr:Comedy_film .
+genre:Drama a mo:Genre ; skos:prefLabel "Drama"@en ; skos:inScheme mo:GenreScheme ;
+    mo:isTargetGenre true ; owl:sameAs dbr:Drama_film .
+genre:Horror a mo:Genre ; skos:prefLabel "Horror"@en ; skos:inScheme mo:GenreScheme ;
+    mo:isTargetGenre true ; owl:sameAs dbr:Horror_film .
+genre:Romance a mo:Genre ; skos:prefLabel "Romance"@en ; skos:inScheme mo:GenreScheme ;
+    mo:isTargetGenre true ; owl:sameAs dbr:Romance_film .
+genre:Sci-Fi a mo:Genre ; skos:prefLabel "Sci-Fi"@en ; skos:inScheme mo:GenreScheme ;
+    mo:isTargetGenre true ; owl:sameAs dbr:Science_fiction_film .
+genre:Animation a mo:Genre ; skos:prefLabel "Animation"@en ; skos:inScheme mo:GenreScheme ;
+    mo:isTargetGenre false ; owl:sameAs dbr:Animation .
+genre:Documentary a mo:Genre ; skos:prefLabel "Documentary"@en ; skos:inScheme mo:GenreScheme ;
+    mo:isTargetGenre false ; owl:sameAs dbr:Documentary_film .
+genre:War a mo:Genre ; skos:prefLabel "War"@en ; skos:inScheme mo:GenreScheme ;
+    mo:isTargetGenre false ; owl:sameAs dbr:War_film .
+
+prof:actor a mo:Profession ; skos:prefLabel "actor"@en ; skos:inScheme mo:ProfessionScheme ; owl:sameAs dbr:Actor .
+prof:actress a mo:Profession ; skos:prefLabel "actress"@en ; skos:inScheme mo:ProfessionScheme ; skos:broadMatch dbr:Actor .
+prof:self a mo:Profession ; skos:prefLabel "self"@en ; skos:inScheme mo:ProfessionScheme .
+prof:director a mo:Profession ; skos:prefLabel "director"@en ; skos:inScheme mo:ProfessionScheme ; owl:sameAs dbr:Film_director .
+prof:writer a mo:Profession ; skos:prefLabel "writer"@en ; skos:inScheme mo:ProfessionScheme ; owl:sameAs dbr:Screenwriter .
+prof:producer a mo:Profession ; skos:prefLabel "producer"@en ; skos:inScheme mo:ProfessionScheme ; owl:sameAs dbr:Film_producer .
+prof:cinematographer a mo:Profession ; skos:prefLabel "cinematographer"@en ; skos:inScheme mo:ProfessionScheme ; owl:sameAs dbr:Cinematographer .
+prof:composer a mo:Profession ; skos:prefLabel "composer"@en ; skos:inScheme mo:ProfessionScheme ; owl:sameAs dbr:Composer .
+prof:editor a mo:Profession ; skos:prefLabel "editor"@en ; skos:inScheme mo:ProfessionScheme ; owl:sameAs dbr:Film_editing .
+
+# Genres and professions are distinct individuals (unique-name assumption for controlled vocabularies)
+[ a owl:AllDifferent ;
+  owl:distinctMembers ( genre:Action genre:Comedy genre:Drama genre:Horror genre:Romance
+                        genre:Sci-Fi genre:Animation genre:Documentary genre:War ) ] .
+[ a owl:AllDifferent ;
+  owl:distinctMembers ( prof:actor prof:actress prof:self prof:director prof:writer
+                        prof:producer prof:cinematographer prof:composer prof:editor ) ] .
+
+#################################################################
+# 6. Illustrative instance data (owl:sameAs links to DBpedia)
+#    Shows how the axioms fire. Remove for the ontology-only release.
+#################################################################
+
+movie:tt0034583 a mo:LoveMovie ;
+    mo:tconst "tt0034583" ;
+    mo:primaryTitle "Casablanca" ;
+    rdfs:label "Casablanca"@en ;
+    mo:releaseYear 1942 ;
+    mo:runtimeMinutes 102 ;
+    mo:averageRating 8.5 ;
+    mo:hasGenre genre:Drama , genre:Romance , genre:War ;
+    mo:hasMaleLead person:nm0000007 ;
+    mo:hasFemaleLead person:nm0000006 ;
+    mo:directedBy person:nm0002031 ;
+    owl:sameAs dbr:Casablanca_\(film\) .
+
+person:nm0000007 a mo:Man ;
+    mo:nconst "nm0000007" ; rdfs:label "Humphrey Bogart" ;
+    mo:birthYear 1899 ; mo:deathYear 1957 ;
+    mo:primaryProfession prof:actor ;
+    owl:sameAs dbr:Humphrey_Bogart .
+
+person:nm0000006 a mo:Woman ;
+    mo:nconst "nm0000006" ; rdfs:label "Ingrid Bergman" ;
+    mo:birthYear 1915 ; mo:deathYear 1982 ;
+    mo:primaryProfession prof:actress ;
+    owl:sameAs dbr:Ingrid_Bergman .
+
+person:nm0002031 a mo:Man ;
+    mo:nconst "nm0002031" ; rdfs:label "Michael Curtiz" ;
+    mo:primaryProfession prof:director ;
+    owl:sameAs dbr:Michael_Curtiz .
+
+#################################################################
+# 7. Constraints OWL cannot express (enforce with SHACL/SPARQL)
+#################################################################
+# * deathYear >= birthYear
+# * a Credit's creditedPerson must appear via the matching hasActor / directedBy / writtenBy
+#   on the same movie (materialize with a SPARQL CONSTRUCT on creditRole)
+# * closed-world checks such as "a Movie with no actor" are only inferred under OWL's
+#   open-world assumption; validate them with SHACL sh:qualifiedMinCount instead
