@@ -222,7 +222,7 @@ export default function Explorer({ start }: { start: string }) {
         <Graph3D
           nodes={graph3d.nodes}
           links={graph3d.links}
-          height={620}
+          height={760}
           labelSize={4.5}
           linkDistance={70}
           fitSignal={fit}
@@ -230,7 +230,7 @@ export default function Explorer({ start }: { start: string }) {
           onNodeDoubleClick={(id) => actRef.current(id, "double")}
         />
       ) : (
-        <div ref={host} className="h-[620px] w-full rounded-xl border border-slate-200 bg-white dark:border-slate-800" />
+        <div ref={host} className="h-[760px] w-full rounded-xl border border-slate-200 bg-white dark:border-slate-800" />
       )}
       <ul className="flex flex-wrap gap-4 text-xs text-slate-500">
         {Object.entries(COLORS).map(([name, color]) => (

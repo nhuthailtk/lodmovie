@@ -102,19 +102,22 @@ export default function OntologyGraph({ nodes, edges }: { nodes: DiagramNode[]; 
   }
 
   return (
-    <div className="grid gap-4 lg:grid-cols-[1fr_18rem]">
-      <div className="min-w-0 space-y-3">
-        <div className="flex flex-wrap items-center gap-3">
-          <ViewToggle {...view} />
-          <button type="button" className="btn" onClick={reset}>
-            {view.mode === "3d" ? "Fit view" : "Reset layout"}
-          </button>
-        </div>
+    <div className="space-y-3">
+      <div className="flex flex-wrap items-center gap-3">
+        <ViewToggle {...view} />
+        <button type="button" className="btn" onClick={reset}>
+          {view.mode === "3d" ? "Fit view" : "Reset layout"}
+        </button>
+        {view.mode === "2d" && (
+          <span className="text-sm text-slate-500">Drag nodes to rearrange, scroll to zoom, click a class for details.</span>
+        )}
+      </div>
+      <div className="relative min-w-0">
         {view.mode === "3d" ? (
           <Graph3D
             nodes={nodes3d}
             links={links3d}
-            height={560}
+            height={760}
             linkLabels
             labelSize={7}
             linkLabelSize={4}
@@ -127,13 +130,16 @@ export default function OntologyGraph({ nodes, edges }: { nodes: DiagramNode[]; 
             }}
           />
         ) : (
-          <div ref={host} className="h-[560px] w-full rounded-xl border border-slate-200 bg-white dark:border-slate-800" />
+          <div ref={host} className="h-[760px] w-full rounded-xl border border-slate-200 bg-white dark:border-slate-800" />
         )}
-      </div>
-      <aside className="card space-y-2 text-sm">
-        {selected ? (
-          <>
-            <h3 className="font-semibold">{selected.label}</h3>
+        {selected && (
+          <aside className="absolute right-3 top-3 w-72 max-w-[calc(100%-1.5rem)] space-y-2 rounded-xl border border-slate-200 bg-white/95 p-4 text-sm text-slate-900 shadow-lg">
+            <div className="flex items-start justify-between gap-2">
+              <h3 className="font-semibold">{selected.label}</h3>
+              <button type="button" aria-label="Close" className="text-slate-500 hover:text-slate-900" onClick={() => setSelected(null)}>
+                ×
+              </button>
+            </div>
             {selected.external ? (
               <p className="text-slate-500">External vocabulary term this ontology aligns to.</p>
             ) : (
@@ -145,18 +151,12 @@ export default function OntologyGraph({ nodes, edges }: { nodes: DiagramNode[]; 
                 ) : (
                   <p className="text-slate-500">None.</p>
                 )}
-                <a className="link" href={`#${selected.label}`}>Documentation ↓</a>
+                <a className="text-indigo-600 hover:underline" href={`#${selected.label}`}>Documentation ↓</a>
               </>
             )}
-          </>
-        ) : (
-          <p className="text-slate-500">
-            {view.mode === "3d"
-              ? "Drag the background to rotate, drag nodes to move them, scroll to zoom. Click a class to see its datatype properties; double-click to jump to its documentation. Bright arrows are object properties (domain → range); faint arrows with moving particles are alignments to schema.org, DBpedia, FOAF and SKOS; wireframe spheres are external vocabularies."
-              : "Drag nodes to rearrange, scroll to zoom. Click a class to see its datatype properties. Solid arrows are object properties (domain → range); dashed arrows are alignments to schema.org, DBpedia, FOAF and SKOS."}
-          </p>
+          </aside>
         )}
-      </aside>
+      </div>
     </div>
   );
 }
