@@ -12,12 +12,15 @@
   },
   "dependencies": {
     "@zazuko/yasgui": "^4.6.2",
+    "3d-force-graph": "^1.80.0",
     "cytoscape": "^3.34.3",
     "next": "16.3.6",
     "oxigraph": "^0.5.11",
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "sparqljs": "^3.7.4"
+    "sparqljs": "^3.7.4",
+    "three": "^0.186.1",
+    "three-spritetext": "^1.10.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -25,6 +28,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/sparqljs": "^3.1.12",
+    "@types/three": "^0.186.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.6",
     "tailwindcss": "^4",

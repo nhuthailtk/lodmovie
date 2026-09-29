@@ -1,7 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type cytoscape from "cytoscape";
+import Graph3D, { type Link3D, type Node3D } from "./graph-3d";
+import { useViewMode, ViewToggle } from "./view-mode";
 import type { DiagramEdge, DiagramNode } from "@/lib/ontology";
 
 const STYLE: cytoscape.StylesheetJson = [
@@ -50,8 +52,27 @@ export default function OntologyGraph({ nodes, edges }: { nodes: DiagramNode[]; 
   const host = useRef<HTMLDivElement>(null);
   const cy = useRef<cytoscape.Core | null>(null);
   const [selected, setSelected] = useState<DiagramNode | null>(null);
+  const [fit, setFit] = useState(0);
+  const view = useViewMode();
+
+  const nodes3d = useMemo(
+    () =>
+      nodes.map((n): Node3D => ({
+        id: n.id,
+        label: n.label,
+        color: n.external ? "#cbd5e1" : "#6366f1",
+        shape: n.external ? "wire" : "sphere",
+        size: n.external ? 5 : 7,
+      })),
+    [nodes],
+  );
+  const links3d = useMemo(
+    () => edges.map((e): Link3D => ({ id: e.id, source: e.source, target: e.target, label: e.label, faint: e.kind !== "object" })),
+    [edges],
+  );
 
   useEffect(() => {
+    if (view.mode !== "2d") return;
     let destroyed = false;
     import("cytoscape").then(({ default: cytoscapeFactory }) => {
       if (destroyed || !host.current) return;
@@ -73,15 +94,38 @@ export default function OntologyGraph({ nodes, edges }: { nodes: DiagramNode[]; 
       cy.current?.destroy();
       cy.current = null;
     };
-  }, [nodes, edges]);
+  }, [nodes, edges, view.mode]);
+
+  function reset() {
+    if (view.mode === "3d") setFit((n) => n + 1);
+    else cy.current?.layout(LAYOUT).run();
+  }
 
   return (
     <div className="grid gap-4 lg:grid-cols-[1fr_18rem]">
-      <div className="relative">
-        <div ref={host} className="h-[560px] w-full rounded-xl border border-slate-200 bg-white dark:border-slate-800" />
-        <button type="button" className="btn absolute right-3 top-3 bg-white text-slate-900" onClick={() => cy.current?.layout(LAYOUT).run()}>
-          Reset layout
-        </button>
+      <div className="space-y-3">
+        <div className="flex flex-wrap items-center gap-3">
+          <ViewToggle {...view} />
+          <button type="button" className="btn" onClick={reset}>
+            {view.mode === "3d" ? "Fit view" : "Reset layout"}
+          </button>
+        </div>
+        {view.mode === "3d" ? (
+          <Graph3D
+            nodes={nodes3d}
+            links={links3d}
+            height={560}
+            linkLabels
+            fitSignal={fit}
+            onNodeClick={(id) => setSelected(nodes.find((n) => n.id === id) ?? null)}
+            onNodeDoubleClick={(id) => {
+              const node = nodes.find((n) => n.id === id);
+              if (node && !node.external) window.location.hash = node.label;
+            }}
+          />
+        ) : (
+          <div ref={host} className="h-[560px] w-full rounded-xl border border-slate-200 bg-white dark:border-slate-800" />
+        )}
       </div>
       <aside className="card space-y-2 text-sm">
         {selected ? (
@@ -104,8 +148,9 @@ export default function OntologyGraph({ nodes, edges }: { nodes: DiagramNode[]; 
           </>
         ) : (
           <p className="text-slate-500">
-            Drag nodes to rearrange, scroll to zoom. Click a class to see its datatype properties. Solid arrows are object properties (domain →
-            range); dashed arrows are alignments to schema.org, DBpedia, FOAF and SKOS.
+            {view.mode === "3d"
+              ? "Drag the background to rotate, drag nodes to move them, scroll to zoom. Click a class to see its datatype properties; double-click to jump to its documentation. Bright arrows are object properties (domain → range); faint arrows with moving particles are alignments to schema.org, DBpedia, FOAF and SKOS; wireframe spheres are external vocabularies."
+              : "Drag nodes to rearrange, scroll to zoom. Click a class to see its datatype properties. Solid arrows are object properties (domain → range); dashed arrows are alignments to schema.org, DBpedia, FOAF and SKOS."}
           </p>
         )}
       </aside>
