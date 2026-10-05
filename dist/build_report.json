@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-09-28T08:57:32+00:00",
+  "built_at": "2026-10-05T02:16:07+00:00",
   "inputs": [
     "D:\\KHDL\\semantic-web\\code\\data"
   ],
@@ -11,7 +11,7 @@
     "professions": 42
   },
   "triples": {
-    "ontology": 179,
+    "ontology": 696,
     "data": 97085,
     "links": 7162,
     "void": 56
