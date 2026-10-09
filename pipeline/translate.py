@@ -4,6 +4,9 @@ Workflow for movies without titles:
     python -m pipeline.translate --todo    # writes translations/todo.csv
     (Claude Code fills in title_en and title_vi in todo.csv)
     python -m pipeline.translate --merge   # validates and merges into translations/movie_titles.csv
+
+movie_titles.csv is only the source store. pipeline.transform writes each title into the RDF as
+rdfs:label and schema:name with @en and @vi tags, so the final .ttl must be rebuilt after a merge.
 """
 
 from __future__ import annotations
