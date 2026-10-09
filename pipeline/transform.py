@@ -76,6 +76,7 @@ def _add_movie(graph: Graph, movie: Movie, title: TitleRow | None, warnings: lis
     uri = movie_uri(movie.imdb_id)
     graph.add((uri, RDF.type, MO.Movie))
     graph.add((uri, MO.imdbId, Literal(movie.imdb_id)))
+    graph.add((uri, MO.tconst, Literal(movie.imdb_id)))
     graph.add((uri, MO.primaryTitle, Literal(movie.primary_title)))
     if movie.original_title:
         graph.add((uri, MO.originalTitle, Literal(movie.original_title)))
@@ -111,6 +112,7 @@ def _add_person(graph: Graph, person: Person, movie_ids) -> None:
     graph.add((uri, RDFS.label, Literal(person.name)))
     graph.add((uri, SCHEMA.name, Literal(person.name)))
     graph.add((uri, MO.imdbId, Literal(person.person_id)))
+    graph.add((uri, MO.nconst, Literal(person.person_id)))
     if person.birth_year is not None:
         graph.add((uri, MO.birthYear, Literal(person.birth_year)))
     if person.death_year is not None:
