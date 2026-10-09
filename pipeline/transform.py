@@ -9,8 +9,6 @@ from .config import MO, SCHEMA, bind_namespaces
 from .load import Crawl, Credit, Movie, Person
 from .translate import TitleRow
 from .uris import (
-    GENRE_SCHEME,
-    PROFESSION_SCHEME,
     credit_uri,
     genre_uri,
     imdb_name_page,
@@ -20,6 +18,9 @@ from .uris import (
     profession_uri,
 )
 
+# IMDb has no gender field; it is derived from the actor / actress profession or credit role.
+GENDER_CLASS = {"actor": MO.Man, "actress": MO.Woman}
+
 ROLE_PROPERTY = {"actor": MO.hasActor, "director": MO.directedBy, "writer": MO.writtenBy}
 
 
@@ -27,8 +28,8 @@ def build_data_graph(crawl: Crawl, titles: dict[str, TitleRow]) -> tuple[Graph, 
     graph = bind_namespaces(Graph())
     warnings: list[str] = []
 
-    _add_scheme(graph, GENRE_SCHEME, "Movie genres")
-    _add_scheme(graph, PROFESSION_SCHEME, "Film professions")
+    _add_scheme(graph, MO.GenreScheme, "LOD Movie genres")
+    _add_scheme(graph, MO.ProfessionScheme, "LOD Movie professions")
     for name, is_target in sorted(crawl.genres.items()):
         _add_genre(graph, name, is_target)
     for name in sorted(crawl.professions):
@@ -36,8 +37,11 @@ def build_data_graph(crawl: Crawl, titles: dict[str, TitleRow]) -> tuple[Graph, 
 
     for movie in crawl.movies.values():
         _add_movie(graph, movie, titles.get(movie.imdb_id), warnings)
+    roles: dict[str, set[str]] = {}
+    for credit in crawl.credits.values():
+        roles.setdefault(credit.person_id, set()).add(credit.category)
     for person in crawl.people.values():
-        _add_person(graph, person, crawl.movies.keys())
+        _add_person(graph, person, crawl.movies.keys(), roles.get(person.person_id, set()), warnings)
     for credit in crawl.credits.values():
         _add_credit(graph, credit)
 
@@ -60,7 +64,7 @@ def _add_genre(graph: Graph, name: str, is_target: bool) -> None:
     graph.add((uri, RDF.type, MO.Genre))
     graph.add((uri, RDF.type, SKOS.Concept))
     graph.add((uri, SKOS.prefLabel, Literal(name, lang="en")))
-    graph.add((uri, SKOS.inScheme, GENRE_SCHEME))
+    graph.add((uri, SKOS.inScheme, MO.GenreScheme))
     graph.add((uri, MO.isTargetGenre, Literal(is_target)))
 
 
@@ -69,7 +73,7 @@ def _add_profession(graph: Graph, name: str) -> None:
     graph.add((uri, RDF.type, MO.Profession))
     graph.add((uri, RDF.type, SKOS.Concept))
     graph.add((uri, SKOS.prefLabel, Literal(name.replace("_", " "), lang="en")))
-    graph.add((uri, SKOS.inScheme, PROFESSION_SCHEME))
+    graph.add((uri, SKOS.inScheme, MO.ProfessionScheme))
 
 
 def _add_movie(graph: Graph, movie: Movie, title: TitleRow | None, warnings: list[str]) -> None:
@@ -106,9 +110,14 @@ def _add_movie(graph: Graph, movie: Movie, title: TitleRow | None, warnings: lis
     graph.add((uri, FOAF.isPrimaryTopicOf, page))
 
 
-def _add_person(graph: Graph, person: Person, movie_ids) -> None:
+def _add_person(graph: Graph, person: Person, movie_ids, credit_roles: set[str], warnings: list[str]) -> None:
     uri = person_uri(person.person_id)
     graph.add((uri, RDF.type, MO.Person))
+    genders = {GENDER_CLASS[r] for r in set(person.professions) | credit_roles if r in GENDER_CLASS}
+    if len(genders) == 1:
+        graph.add((uri, RDF.type, genders.pop()))
+    elif genders:
+        warnings.append(f"{person.person_id}: both actor and actress, no gender asserted (Man and Woman are disjoint)")
     graph.add((uri, RDFS.label, Literal(person.name)))
     graph.add((uri, SCHEMA.name, Literal(person.name)))
     graph.add((uri, MO.imdbId, Literal(person.person_id)))
