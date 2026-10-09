@@ -188,7 +188,7 @@ def resolve_links(
 
 
 MAPPING_FIELDS = ["source_value", "wikidata_qid", "dbpedia_resource", "match_type"]
-MATCH_PREDICATE = {"exact": SKOS.exactMatch, "close": SKOS.closeMatch}
+MATCH_PREDICATE = {"exact": SKOS.exactMatch, "close": SKOS.closeMatch, "broad": SKOS.broadMatch}
 
 
 @dataclass(frozen=True)
@@ -196,7 +196,7 @@ class Mapping:
     source_value: str
     wikidata_qid: str
     dbpedia_resource: str  # English Wikipedia / DBpedia title, may be empty
-    match_type: str  # "exact" or "close"
+    match_type: str  # "exact", "close" or "broad"
 
 
 def load_mappings(path: Path) -> dict[str, Mapping]:
@@ -210,7 +210,7 @@ def load_mappings(path: Path) -> dict[str, Mapping]:
             if not mapping.wikidata_qid:
                 continue
             if mapping.match_type not in MATCH_PREDICATE:
-                raise ValueError(f"{path}: {mapping.source_value}: match_type must be exact or close")
+                raise ValueError(f"{path}: {mapping.source_value}: match_type must be exact, close or broad")
             mappings[mapping.source_value] = mapping
     return mappings
 
