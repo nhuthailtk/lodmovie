@@ -18,7 +18,7 @@
 <https://lod-movie.felix-nguyen.io.vn/ontology>
     a owl:Ontology ;
     dcterms:title "LOD Movie Ontology"@en ;
-    dcterms:description "Vocabulary for a Linked Open Data dataset of IMDb movies, the people who made them, their genres and their principal credits. Reuses schema.org, the DBpedia ontology, FOAF and SKOS. Version 1.2.0 keeps genre as data (individuals of mo:Genre) instead of Movie subclasses: the former Love/Animal-documentary/Animated movie classes are replaced by genre-level rules and by movie classes defined from measurable attributes. It also has a Man/Woman partition of Person, role properties (leading/supporting actor, male/female lead), cardinality constraints, datatype ranges, keys, disjointness and external alignments."@en ;
+    dcterms:description "Vocabulary for a Linked Open Data dataset of IMDb movies, the people who made them, their genres and their principal credits. Reuses schema.org, the DBpedia ontology, FOAF and SKOS. Version 1.2.0 keeps genre as data (individuals of mo:Genre) instead of Movie subclasses: the former Love/Animal-documentary/Animated movie classes are dropped, and movie classes are defined only from measurable attributes. It also has a Man/Woman partition of Person, cardinality constraints, datatype ranges, keys, disjointness and external alignments."@en ;
     dcterms:creator "Felix Nguyen" ;
     dcterms:created "2026-09-28"^^xsd:date ;
     dcterms:modified "2026-10-09"^^xsd:date ;
@@ -112,21 +112,6 @@ mo:LongMovie a owl:Class ;
             [ a owl:Restriction ; owl:onProperty mo:runtimeMinutes ;
               owl:someValuesFrom [ a rdfs:Datatype ; owl:onDatatype xsd:integer ;
                                    owl:withRestrictions ( [ xsd:minInclusive 150 ] ) ] ] ) ] .
-
-# ---- Genre-level rules (general class axioms keyed on genre individuals) ----
-# Genre stays an individual of mo:Genre. A rule about a genre is a subclass axiom whose
-# left-hand side is "Movie that hasGenre <that genre>", so no Movie subclass per genre is needed.
-
-# Rule: a movie without an actor is an Animation or a Documentary.
-[ a owl:Class ;
-  owl:intersectionOf ( mo:Movie
-                       [ a owl:Class ;
-                         owl:complementOf [ a owl:Restriction ; owl:onProperty mo:hasActor ;
-                                            owl:someValuesFrom owl:Thing ] ] ) ]
-    rdfs:subClassOf [ a owl:Class ;
-                      owl:unionOf ( [ a owl:Restriction ; owl:onProperty mo:hasGenre ; owl:hasValue genre:Animation ]
-                                    [ a owl:Restriction ; owl:onProperty mo:hasGenre ; owl:hasValue genre:Documentary ] ) ] ;
-    rdfs:comment "A movie without an actor has the Animation genre or the Documentary genre."@en .
 
 # ---- Person, Man, Woman ---------------------------------------
 
@@ -266,13 +251,11 @@ mo:directorOf a owl:ObjectProperty ;
     rdfs:domain mo:Person ;
     rdfs:range mo:Movie .
 
-# ---- Actor role hierarchy ---------------------------------------
-#   hasMaleLead, hasFemaleLead  ->  hasLeadingActor  ->  hasActor
-#   hasSupportingActor                               ->  hasActor
+# ---- Actor ---------------------------------------------------------
 
 mo:hasActor a owl:ObjectProperty ;
     rdfs:label "has actor"@en ;
-    rdfs:comment "A principal cast member of the movie. Super-property of every actor role."@en ;
+    rdfs:comment "A principal cast member of the movie."@en ;
     rdfs:domain mo:Movie ;
     rdfs:range mo:Person ;
     rdfs:subPropertyOf schema:actor , dbo:starring ;
@@ -283,65 +266,6 @@ mo:actedIn a owl:ObjectProperty ;
     rdfs:comment "A movie this person acted in. Inverse of has actor; not materialized in the data."@en ;
     rdfs:domain mo:Person ;
     rdfs:range mo:Movie .
-
-mo:hasLeadingActor a owl:ObjectProperty ;
-    rdfs:label "has leading actor"@en ;
-    rdfs:comment "A leading actor of the movie. Every leading actor is an actor."@en ;
-    rdfs:domain mo:Movie ;
-    rdfs:range mo:Person ;
-    rdfs:subPropertyOf mo:hasActor ;
-    owl:inverseOf mo:leadingActorIn .
-
-mo:leadingActorIn a owl:ObjectProperty ;
-    rdfs:label "leading actor in"@en ;
-    rdfs:domain mo:Person ;
-    rdfs:range mo:Movie ;
-    rdfs:subPropertyOf mo:actedIn .
-
-mo:hasSupportingActor a owl:ObjectProperty ;
-    rdfs:label "has supporting actor"@en ;
-    rdfs:comment "A supporting actor of the movie. Every supporting actor is an actor."@en ;
-    rdfs:domain mo:Movie ;
-    rdfs:range mo:Person ;
-    rdfs:subPropertyOf mo:hasActor ;
-    owl:inverseOf mo:supportingActorIn .
-
-mo:supportingActorIn a owl:ObjectProperty ;
-    rdfs:label "supporting actor in"@en ;
-    rdfs:domain mo:Person ;
-    rdfs:range mo:Movie ;
-    rdfs:subPropertyOf mo:actedIn .
-
-mo:hasMaleLead a owl:ObjectProperty ;
-    rdfs:label "has male lead"@en ;
-    rdfs:comment "A male leading actor. The range is Man, so any value is inferred to be a Man. Every male lead is a leading actor."@en ;
-    rdfs:domain mo:Movie ;
-    rdfs:range mo:Man ;
-    rdfs:subPropertyOf mo:hasLeadingActor ;
-    owl:inverseOf mo:maleLeadIn .
-
-mo:maleLeadIn a owl:ObjectProperty ;
-    rdfs:label "male lead in"@en ;
-    rdfs:domain mo:Man ;
-    rdfs:range mo:Movie ;
-    rdfs:subPropertyOf mo:leadingActorIn .
-
-mo:hasFemaleLead a owl:ObjectProperty ;
-    rdfs:label "has female lead"@en ;
-    rdfs:comment "A female leading actor. The range is Woman, so any value is inferred to be a Woman. Every female lead is a leading actor."@en ;
-    rdfs:domain mo:Movie ;
-    rdfs:range mo:Woman ;
-    rdfs:subPropertyOf mo:hasLeadingActor ;
-    owl:inverseOf mo:femaleLeadIn .
-
-mo:femaleLeadIn a owl:ObjectProperty ;
-    rdfs:label "female lead in"@en ;
-    rdfs:domain mo:Woman ;
-    rdfs:range mo:Movie ;
-    rdfs:subPropertyOf mo:leadingActorIn .
-
-# Design choice: nobody is both leading and supporting actor of the same movie.
-mo:hasLeadingActor owl:propertyDisjointWith mo:hasSupportingActor .
 
 # ---- Writer -----------------------------------------------------
 
@@ -527,15 +451,15 @@ mo:isTargetGenre a owl:DatatypeProperty , owl:FunctionalProperty ;
 # * deathYear >= birthYear
 # * a Credit's creditedPerson must appear via the matching hasActor / directedBy / writtenBy
 #   on the same movie (materialize with a SPARQL CONSTRUCT on creditRole)
-# * closed-world checks such as "a Movie with no actor" are only inferred under OWL's
-#   open-world assumption; validate them with SHACL sh:qualifiedMinCount instead
-# * genre:Documentary is referenced by the no-actor rule but no movie of the sample has that genre,
-#   so it is defined only by label and link, not as a typed mo:Genre individual.
+# * Deliberately not modelled: a Romance movie having a male and a female lead (IMDb marks no leads,
+#   and some Romance movies have top-billed actors of one gender), a gender for every person, and
+#   any rule tying genre to the presence of actors (animation has voice actors, documentaries have
+#   people playing roles).
 # * Gender is derived, not crawled: actor -> mo:Man, actress -> mo:Woman (profession or credit role).
 #   People with neither role (crew only) have no gender assertion; nm1239813 is both and is left
 #   unasserted because Man and Woman are disjoint.
 # * Titles: rdfs:label and schema:name carry the English and Vietnamese titles (@en, @vi), taken
 #   from translations/movie_titles.csv by pipeline.transform. The CSV is only the source store;
 #   the published data must contain the language-tagged literals.
-# * Concept alignment (genre, profession) uses skos:exactMatch / closeMatch / broadMatch, as
-#   written by pipeline.link; owl:sameAs is reserved for movies and people.
+# * Concept alignment (genre, profession) uses owl:sameAs (match_type "same" in pipeline.link),
+#   and skos:broadMatch where the external concept is broader (actress -> dbr:Actor).
